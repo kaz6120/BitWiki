@@ -1,0 +1,11 @@
+{if $trackback != array()}
+<div class="plugin_trackback">
+	TrackBack
+	<ul>
+		{section name=i loop=$trackback max=5}
+			<li><a href="{$trackback[i].url}">{$trackback[i].title|escape}</a> by&nbsp;{$trackback[i].blog_name|escape}</li>
+		{/section}
+	</ul>
+	<a href="{$script}?plugin=trackback&amp;param=show&amp;page={$pagename|escape:"url"}\">more...</a>
+</div>
+{/if}

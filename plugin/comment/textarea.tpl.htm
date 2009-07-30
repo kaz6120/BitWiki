@@ -1,0 +1,10 @@
+<form class="plugin_comment" action="{$script}?plugin=comment" method="post">
+	<p>
+		<input type="hidden" name="pagename" value="{$pagename|escape}" />
+		<input type="hidden" name="num" value="{$num}" />
+		<input type="hidden" name="type" value="{$type|escape}" />
+		名前<input type="text" name="name" value="{$name|escape}" size="10" /><br />
+		<textarea name="text" cols="60" rows="5"></textarea>
+		<input type="submit" value="コメントの挿入" />
+	</p>
+</form>

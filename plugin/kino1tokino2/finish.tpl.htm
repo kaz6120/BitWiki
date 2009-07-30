@@ -1,0 +1,17 @@
+<p>
+	データの移動を完了しました。.db.kino1ファイルを削除し、引き続き<a href="{$script}?cmd=backlink&amp;param=restruct">逆リンクの再構築</a>と<a href="{$script}?cmd=fuzzylink&amp;param=restruct">あいまいリンクの再構築</a>を行ってください。
+</p>
+{if $unconverted == array()}
+<p>
+	移動しなかったページおよび添付ファイルはありません。
+</p>
+{else}
+<p>
+	以下のページおよび添付ファイルは移動しませんでした。両方の内容を確かめ、手作業でマージしてください（以下のリストはコピーアンドペーストでエディタ等に退避させて置くことをおすすめします）。
+</p>
+<ul>
+	{foreach from=$unconverted item=item}
+	<li>{$item}</li>
+	{/foreach}
+</ul>
+{/if}

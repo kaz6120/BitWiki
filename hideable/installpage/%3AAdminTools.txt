@@ -1,0 +1,11 @@
+-[[隠しページ一覧>./HiddenPageList]]
+-[[ページ間参照数の確認>./RefCount]]
+
+-[[あいまいリンクの無視リスト>:config/FuzzyLink/ignore]]
+-[[オートリンクの無視リスト>:config/AutoLink/ignore]]
+
+-&urlcall(cmd=backlink&param=restruct){逆リンクの再構築}
+-&urlcall(cmd=fuzzylink&param=restruct){あいまいリンクの再構築}
+
+-[[KinoWiki1からの移行>plugin:kino1tokino2]]
+-[[PukiWikiからの移行>plugin:puki2kino]]

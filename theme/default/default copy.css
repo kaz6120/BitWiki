@@ -1,0 +1,94 @@
+div.header
+{
+	height: 150px;
+}
+
+div.header div.menu
+{
+	text-align: right;
+	font-size: 90%;
+}
+
+div.header div.topicpath
+{
+	text-align: right;
+	font-size: 90%;
+}
+
+
+div.sidebar
+{
+	position: absolute;
+	top: 150px;
+	left: 0px;
+	width: 170px;
+	padding: 8px;
+}
+
+div.main
+{
+	margin: 0px 4px 4px 186px;
+	padding: 8px;
+}
+
+div.main h2.title
+{
+	margin-top: 0px;
+	padding-top: 8px;
+}
+
+div.floatbox
+{
+	float: right;
+	width: 27%;
+	margin: 8px;
+	padding: 8px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #808080;
+	font-size: 90%;
+}
+
+div.option
+{
+	margin: 0.5em 0px;
+	padding: 8px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #808080;
+	font-size: 90%;
+}
+
+div.footer
+{
+	margin: 1em 8px 8px 18%;
+	padding: 8px;
+	text-align: right;
+}
+
+ul
+{
+	margin: 0.5em 0px;
+	padding: 0px 0px 0px 2em;
+}
+
+pre
+{
+	margin: 0.5em 2em;
+	padding: 8px;
+	background-color: #CCCCCC;
+}
+
+blockquote
+{
+	margin: 0.5em 2em;
+	padding: 2px 8px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #808080;
+}
+
+dt
+{
+	font-weight: bold;
+}

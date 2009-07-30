@@ -1,0 +1,14 @@
+#navi([_base])
+
+-投稿者: [name]
+-優先度: [priority]
+-状態: [state]
+-カテゴリ: [category]
+-投稿日: [_date]
+-バージョン: [version]
+
+[body]
+
+----
+
+#comment

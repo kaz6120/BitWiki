@@ -1,0 +1,14 @@
+InterWikiとは、他のWikiサイトとのリンクを張りやすくする仕組みです。[[InterWikiName]]に登録しておくと
+
+ [[他のWikiサイト名:ページ名]]
+
+でそのページへのリンクになります。
+
+*登録方法
+
+[[InterWikiName]]に次の書式でURLを登録します。
+
+ -[サイト名 URL 文字コード]
+
+URLのうちページ名に相当する部分は「$1」に書き換えておきます。この「$1」はリンク時にページ名に置き換えられます。
+文字コードは[[PHPのmb_convert_encoding()>http://jp.php.net/manual/ja/function.mb-convert-encoding.php]]で使えるものを指定できます。省略時はUTF-8になります。

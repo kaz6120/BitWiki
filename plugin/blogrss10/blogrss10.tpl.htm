@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://purl.org/rss/1.0/" xml:lang="ja">
+  <channel rdf:about="{$rssurl}">
+    <title>{$sitename}</title>
+    <link>{$blogurl}</link>
+    <description>{$sitename} {$blogname}</description>
+    <dc:language>ja</dc:language>
+    <dc:date>{$list[0].timestamp|date_format:"%Y-%m-%dT%H:%M:%S+09:00"}</dc:date>
+    <items>
+      <rdf:Seq>
+        {foreach from=$list key=key item=item}
+        <rdf:li rdf:resource="{$list[$key].url}" />
+        {/foreach}
+      </rdf:Seq>
+    </items>
+  </channel>
+  {foreach from=$list key=key item=item}
+  <item rdf:about="{$list[$key].url}">
+    <title>{$list[$key].pagename}</title>
+    <link>{$list[$key].url}</link>
+    <dc:date>{$list[$key].timestamp|date_format:"%Y-%m-%dT%H:%M:%S+09:00"}</dc:date>
+  </item>
+  {/foreach}
+</rdf:RDF>

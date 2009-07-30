@@ -1,0 +1,13 @@
+{if $body != ''}
+	{$body}
+{else}
+	<p class="warning">記事がありません。</p>
+{/if}
+<div class="plugin_blogviewer_prevnext">
+	{if $body != ''}
+		<a href="{$script}?page={$pagename|escape:"url"}&amp;p={$prev}">&lt;--前へ</a>
+	{/if}
+	{if isset($next)}
+		<a href="{$script}?page={$pagename|escape:"url"}&amp;p={$next}">次へ--&gt;</a>
+	{/if}
+</div>

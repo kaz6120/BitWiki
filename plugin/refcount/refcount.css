@@ -1,0 +1,8 @@
+table.plugin_refcount tr td{
+	border-bottom: 1pt solid #404040;
+}
+
+table.plugin_refcount tr td.pagecount,
+table.plugin_refcount tr td.total{
+	text-align: right;
+}

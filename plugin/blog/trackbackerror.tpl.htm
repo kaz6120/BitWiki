@@ -1,0 +1,12 @@
+<p>
+	本文は保存されましたが、TrackBack送信中にエラーが発生しました。以下のサイトにはTrackBackされていません。
+</p>
+<dl>
+	{foreach key=key item=item from=$errormes}
+		<dt><a href={$key}>{$key|escape}</a></dt>
+		<dd>{$item|escape}</dd>
+	{/foreach}
+</dl>
+<p>
+	{$pagename|makelink} を表示する
+</p>

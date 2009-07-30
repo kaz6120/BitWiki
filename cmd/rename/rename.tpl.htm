@@ -1,0 +1,13 @@
+{if $newname}
+	<p class="warning">パスワードが違います。</p>
+{/if}
+<form class="search" action="{$script}?cmd=rename&amp;page={$pagename|escape:"url"}" method="post">
+	<p>ページ名を変更します。</p>
+	<ul>
+		<li>元のページ名：{$pagename|escape}</li>
+		<li>新しいページ名：<input type="text" name="newname" value="{$newname|escape}" size="60" /></li>
+	</ul>
+	<p>
+		パスワード：<input type="password" name="password" value="" size="10" />&nbsp;<input type="submit" value="submit" />
+	</p>
+</form>

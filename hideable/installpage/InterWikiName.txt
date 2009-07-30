@@ -1,0 +1,19 @@
+これはリンク集ではありません。詳しくは[[ヘルプ/InterWiki]]をどうぞ。
+
+*WikiClone
+-[KinoWiki http://kinowiki.net/?$1]
+-[PukiWiki http://pukiwiki.org/?$1]
+-[YukiWiki http://www.hyuki.com/yukiwiki/wiki.cgi?$1 euc]
+
+-[Wikipedia http://ja.wikipedia.org/wiki/$1]]
+
+*php
+-[php http://jp2.php.net/manual-lookup.php?pattern=$1]
+
+*検索エンジン
+-[google http://www.google.co.jp/search?q=$1&ie=UTF-8&hl=ja&lr=lang_ja] 日本語のページを検索
+
+*KinoWiki関連
+-[edit ?cmd=edit&page=$1] 編集画面の呼び出し
+-[plugin ?plugin=$1] URL指定型プラグインの呼び出し
+-[plugin_blog_continue ?plugin=blog&continue=$1] blogプラグインで使用

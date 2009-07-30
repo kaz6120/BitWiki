@@ -1,0 +1,33 @@
+<p>
+	「{$pagename|makelink}」へのTrackBack Ping URLは <input type="text" value="{$pingurl|escape}" readonly="readonly" size="{$pingurl|escape|count_characters}" onfocus="this.select()" /> です。
+</p>
+<hr />
+{foreach from=$trackback item=item}
+<dl class="plugin_trackback">
+	<dt><a href="{$item.url}">{$item.title|default:"（無題）"|escape}</a> <span class="attr">(From: {$item.blog_name|default:$item.url|escape} &nbsp; Recieved: {$item.timestamp|date_format:"%Y-%m-%d %H:%M:%S"})</span></dt>
+	<dd>
+		{$item.excerpt|escape}
+	</dd>
+</dl>
+{foreachelse}
+<p>
+	{$pagename|makelink}へのTrackBackはありません。
+</p>
+{/foreach}
+<hr />
+<form action="{$script}?plugin=trackback&amp;param=ping&amp;page={$pagename|escape:"url"}" method="post">
+	<p>
+		「{$pagename|makelink}」へTrackBack Pingを手動送信
+	</p>
+	<dl>
+		<dt>記事URL</dt>
+		<dd><input type="text" name="url" size="50" value="http://" /></dd>
+		<dt>サイト名</dt>
+		<dd><input type="text" name="blog_name" size="50" value="" /></dd>
+		<dt>記事タイトル</dt>
+		<dd><input type="text" name="title" size="50" value="" /></dd>
+		<dt>記事の概要</dt>
+		<dd><textarea name="excerpt" cols="50" rows="3"></textarea></dd>
+	</dl>
+	<input type="submit" />
+</form>

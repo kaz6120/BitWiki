@@ -1,0 +1,17 @@
+<form class="plugin_tracker" action="{$script}?plugin=tracker" method="post">
+	<table>
+		{foreach from=$table item=item}
+			<tr>
+				<th>{$item.title|escape}</th>
+				<td>{$item.data}</td>
+			</tr>
+		{/foreach}
+		<tr>
+			<td class="submit" colspan="2">
+				<input type="hidden" name="config" value="{$config|escape}" />
+				<input type="hidden" name="base" value="{$base|escape}" />
+				<input type="submit" value="投稿" />
+			</td>
+		</tr>
+	</table>
+</form>

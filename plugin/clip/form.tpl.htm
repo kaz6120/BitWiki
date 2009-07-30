@@ -1,0 +1,18 @@
+<p>
+	次の内容をclipします。
+</p>
+<form name="clip" action="{$script}?plugin=clip" method="post">
+	<p>
+		<input type="hidden" name="param" value="write" />
+		タイトル：<input type="text" name="title" id="title" size="60" value="{$title|escape}" /><br />
+		URL：<input type="text" name="url" size="60" value="{$url|escape}" /><br />
+		<textarea name="comment" cols="60" rows="5"></textarea><br />
+		<input type="submit" value="実行"/>
+	</p>
+</form>
+<script type="text/javascript" language="JavaScript">
+<!--
+document.clip.title.value	= unescape('{$title}');
+document.clip.comment.focus();
+//-->
+</script>

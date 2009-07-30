@@ -1,0 +1,14 @@
+<table class="plugin_refcount">
+	<tr>
+		<th>ページ名</th>
+		<th>ページ数</th>
+		<th>リンク数</th>
+	</tr>
+	{foreach from=$list item=item}
+	<tr>
+		<td>{$item.pagename|makelink}</td>
+		<td class="pagecount">{$item.pagecount}</td>
+		<td class="total">{$item.total}</td>
+	</tr>
+	{/foreach}
+</table>

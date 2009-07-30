@@ -1,0 +1,8 @@
+<p>
+	ファイル {$filename|escape} はすでに存在します。
+</p>
+<ul>
+	<li><a href="{$script}?cmd=attach&amp;page={$pagename|escape:"url"}">別のファイルを添付する</a></li>
+	<li><a href="{$script}?cmd=attach&amp;param=rename&amp;file={$filename|escape:"url"}&amp;page={$pagename|escape:"url"}">元のファイルを別の名前にする</a>（変更後、あらためて添付しなおしてください）</li>
+	<li><a href="{$script}?cmd=attach&amp;param=delete&amp;file={$filename|escape:"url"}&amp;page={$pagename|escape:"url"}">元のファイルを削除する</a>（変更後、あらためて添付しなおしてください）</li>
+</ul>

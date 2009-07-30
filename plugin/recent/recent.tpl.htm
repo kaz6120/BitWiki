@@ -1,0 +1,12 @@
+<div class="plugin_recent">
+{foreach from=$list key=date item=datelist}
+	<span class="plugin_recent_date">{$date}</span>
+	<div class="plugin_recent_page">
+	{foreach from=$datelist item=item}
+		{$item}<br />
+	{/foreach}
+	</div>
+{foreachelse}
+	<div class="recentsubtitles">ページは１つもありません。</div>
+{/foreach}
+</div>

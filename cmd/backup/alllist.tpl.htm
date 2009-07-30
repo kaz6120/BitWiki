@@ -1,0 +1,9 @@
+<ul>
+{foreach from=$list item=pagename}
+	<li>
+		<a href="{$script}?cmd=backup&amp;param=list&amp;page={$pagename|escape:"url"}">{$pagename|escape}</a>
+	</li>
+{foreachelse}
+	<li>バックアップは１つもありません。</li>
+{/foreach}
+</ul>

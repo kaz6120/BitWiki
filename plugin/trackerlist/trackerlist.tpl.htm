@@ -1,0 +1,16 @@
+{if isset($list)}
+<table>
+	<tr>
+		{foreach from=$varname item=item}
+			<th>{$item|escape}</th>
+		{/foreach}
+	</tr>
+	{foreach from=$list item=row}
+		<tr>
+			{foreach from=$varname item=item}
+				<td{if isset($row.bgcolor.$item)} style="background-color: {$row.bgcolor.$item}"{/if}>{if isset($row.var.$item)}{$row.var._page|makelink:$row.var.$item}{/if}</td>
+			{/foreach}
+		</tr>
+	{/foreach}
+</table>
+{/if}

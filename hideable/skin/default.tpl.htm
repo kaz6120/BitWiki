@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<head>
+<link rel="stylesheet" type="text/css" href="{$theme_url}default.css" />
+<link rel="stylesheet" type="text/css" href="{$theme_url}parsed.css" />
+<link rel="stylesheet" type="text/css" href="{$script}?cmd=csscollector" />
+<link rel="stylesheet" type="text/css" href="{$theme_url}{$theme}/{$theme}.css" />
+<link rel="alternate" type="application/xml+rss" title="RSS1.0" href="{$script}?plugin=rss10" />
+<title>{$sitename|escape} - {$title|escape}</title>
+{foreach from=$headeroption item=item}
+	{$item}
+{/foreach}
+</head>
+
+<body>
+
+<div class="header">
+<h1>{$sitename|strip_tags}</h1>
+ <div class="globalmenu">
+  <ul>
+   <li><a href="{$script}">トップ</a></li>
+   <li><a href="{$script}?cmd=new{if isset($pagename)}&amp;page={$pagename|escape:"url"}{/if}">新規</a></li>
+   <li><a href="{$script}?cmd=list">一覧</a></li>
+   <li><a href="{$script}?cmd=search">検索</a></li>
+   <li><a href="{$script}?%E3%83%98%E3%83%AB%E3%83%97">ヘルプ</a></li>
+  </ul>
+ </div>
+</div>
+
+{if isset($pagename)}
+<div class="pagemenu">
+ <ul>
+  <li><a href="{$script}?cmd=edit&amp;page={$pagename|escape:"url"}">編集</a></li>
+  <li><a href="{$script}?cmd=diff&amp;page={$pagename|escape:"url"}">差分</a></li>
+  <li><a href="{$script}?cmd=backup&amp;param=list&amp;page={$pagename|escape:"url"}">バックアップ</a></li>
+  <li><a href="{$script}?cmd=rename&amp;page={$pagename|escape:"url"}">リネーム</a></li>
+  <li><a href="{$script}?cmd=attach&amp;page={$pagename|escape:"url"}">添付ファイル</a></li>
+ </ul>
+</div>
+{/if}
+
+<div class="main">
+
+
+<h2 class="title">{$title|escape}</h2>
+{if isset($command.fuzzylink)}
+<div class="floatbox">
+{$command.fuzzylink}
+</div>
+{/if}
+
+<div class="body">
+{$body}
+</div>
+
+
+{if isset($command.footnote)}<div class="option">{$command.footnote}</div>{/if}
+{if isset($command.attach)}<div class="option">{$command.attach}</div>{/if}
+{if isset($command.backlink)}<div class="option">{$command.backlink}</div>{/if}
+{if isset($plugin.trackback)}<div class="option">{$plugin.trackback}</div>{/if}
+{if isset($plugin.referrer)}<div class="option">{$plugin.referrer}</div>{/if}
+{foreach from=$command item=item}
+{if $item != $command.sidebar
+&& $item != $command.footnote
+&& $item != $command.attach
+&& $item != $command.backlink
+&& $item != $command.fuzzylink}
+<div class="option">
+{$item}
+</div>
+{/if}
+{/foreach}
+{foreach from=$plugin item=item}
+{if $item != $plugin.trackback
+&& $item != $plugin.referrer}
+<div class="option">
+{$item}
+</div>
+{/if}
+{/foreach}
+</div>
+
+
+<div class="sidebar">
+{$command.sidebar}
+</div>
+
+<div class="footer">
+{if isset($lastmodified)}Last-modified: {$lastmodified|time2date}&nbsp;&nbsp;({$lastmodified|old})<br />{/if}
+{if isset($pagename)}{$pagename|tinyurl}<br />{/if}
+Running Time: {$runningtime}sec.<br />
+<a href="http://kinowiki.net/">KinoWiki {$version}</a>
+</div>
+
+{foreach from=$option item=item}
+{$item}
+{/foreach}
+
+</body>
+</html>

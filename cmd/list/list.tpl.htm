@@ -1,0 +1,10 @@
+{if $pagelist == null}
+	<p>ページは１つもありません。</p>
+{else}
+	<ul>
+		{foreach from=$pagelist item=pagename}
+			<li>{$pagename|makelink}</li>
+		{/foreach}
+	</ul>
+	<p>計{$pagelist|@count}ページ</p>
+{/if}

@@ -1,0 +1,54 @@
+/*css有効時に隠したいテキスト*/
+.hidden{
+	display: none;
+}
+
+/*警告*/
+.warning{
+    color: #CC0000;
+    padding: 10px;
+    margin: 10px !important;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border: 3px solid #CC0000 !important;
+    background-color: #fff9f9 !important;
+}
+
+/*
+ * 差分表示
+ */
+span.diff_add{
+	color: red;
+}
+
+span.diff_del{
+	color: blue;
+}
+
+
+/*
+ * 検索語のハイライト
+ */
+span.search {
+	color: black;
+	background-color: yellow;
+}
+
+span.word1{ color: black; background-color: #ffff66; }
+span.word2{ color: black; background-color: #a0ffff; }
+span.word3{ color: black; background-color: #99ff99; }
+span.word4{ color: black; background-color: #ff9999; }
+span.word5{ color: black; background-color: #ff66ff; }
+span.word6{ color: white; background-color: #880000; }
+span.word7{ color: white; background-color: #00aa00; }
+span.word8{ color: white; background-color: #886800; }
+span.word9{ color: white; background-color: #004699; }
+span.word10{ color: white; background-color: #990099; }
+
+
+/*
+ * 画像のリンク枠を表示させない
+ */
+a img {
+	border-width: 0;
+}

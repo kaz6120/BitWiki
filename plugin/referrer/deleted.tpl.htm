@@ -1,0 +1,7 @@
+<p>以下のReferrerを削除しました。</p>
+<ul class="plugin_referrer">
+	{foreach from=$url item=item}
+		<li><a href="{$item|escape}">{$item|escape}</a></li>
+	{/foreach}
+</ul>
+<p><a href="{$script}?plugin=referrer&amp;page={$pagename|escape:"url"}">Referrer一覧に戻る</a></p>

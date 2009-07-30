@@ -1,0 +1,36 @@
+table.plugin_blogcalendar
+{
+	font-size: 80%;
+	border-style: none;
+}
+
+table.plugin_blogcalendar tr,
+table.plugin_blogcalendar td
+{
+	border-style: none;
+}
+
+td.plugin_blogcalendar_current_month
+{
+	text-align: center;
+}
+
+td.plugin_blogcalendar_prev_month
+{
+	text-align: left;
+}
+
+td.plugin_blogcalendar_next_month
+{
+	text-align: right;
+}
+
+td.plugin_blogcalendar_prefix
+{
+	text-align: center;
+}
+
+td.plugin_blogcalendar_day
+{
+	text-align: right;
+}

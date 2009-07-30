@@ -1,0 +1,14 @@
+<form action="{$script}?cmd=backup&amp;param=delete&amp;page={$pagename|escape:"url"}" method="post">
+	{if $iserror == true}
+		<p>
+			<span class="warning">パスワードが違います。</span>
+		<p>
+	{/if}
+	<p>
+		{$pagename|escape} のバックアップを削除します。
+	</p>
+	<p>
+		<input type="hidden" name="pagename" value="{$pagename|escape}" />
+		パスワード: <input type="password" name="password" size="10" /><input type="submit" value="削除" />
+	</p>
+</form>

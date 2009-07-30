@@ -1,0 +1,26 @@
+<table class="plugin_blogcalendar" summary="calendar">
+	<tr>
+		<td class="plugin_blogcalendar_prev_month" colspan="2"><a href="{$script}?page={$page|escape:"url"}&amp;year={if $month == 1}{math equation="y - 1" y=$year}{else}{$year}{/if}&amp;month={if $month == 1}12{else}{math equation="m - 1" m=$month}{/if}">前</a></td>
+		<td class="plugin_blogcalendar_current_month" colspan="3">{$year}年<br />{$month}月</td>
+		<td class="plugin_blogcalendar_next_month" colspan="2"><a href="{$script}?page={$page|escape:"url"}&amp;year={if $month == 12}{math equation="y + 1" y=$year}{else}{$year}{/if}&amp;month={if $month == 12}1{else}{math equation="m + 1" m=$month}{/if}">次</a></td>
+	</tr>
+	<tr>
+		<td class="plugin_blogcalendar_prefix" colspan="7">[{$prefix|makelink}]</td>
+	</tr>
+	<tr>
+		<td class="plugin_blogcalendar_sunday">日</td>
+		<td class="plugin_blogcalendar_monday">月</td>
+		<td class="plugin_blogcalendar_tuesday">火</td>
+		<td class="plugin_blogcalendar_wednesday">水</td>
+		<td class="plugin_blogcalendar_thursday">木</td>
+		<td class="plugin_blogcalendar_friday">金</td>
+		<td class="plugin_blogcalendar_saturday">土</td>
+	</tr>
+	{foreach from=$table item=line}
+	<tr>
+		{foreach from=$line item=day}
+		<td class="plugin_blogcalendar_day">{$day}</td>
+		{/foreach}
+	</tr>
+	{/foreach}
+</table>

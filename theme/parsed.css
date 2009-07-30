@@ -1,0 +1,134 @@
+/*見出し１のアンカー*/
+span.sanchor{
+}
+
+/*見出し１*/
+h3{
+}
+
+/*見出し２*/
+h4{
+}
+
+/*見出し３*/
+h5{
+}
+
+/*見出し４*/
+h6{
+}
+
+/*水平線*/
+hr{
+}
+
+/*整形済みテキスト*/
+pre{
+}
+
+/*引用*/
+blockquote{
+}
+
+/*番号なし箇条書き*/
+ul{
+}
+
+/*番号つき箇条書き*/
+ol{
+}
+
+/*定義リスト*/
+dl{
+}
+
+/*定義内容*/
+dd{
+}
+
+/*テーブル*/
+table{
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	border-collapse: collapse;
+	border-style: solid;
+	border-width: 1px;
+}
+
+tr{
+	border-style: solid;
+	border-width: 1px;
+}
+
+td{
+	border-style: solid;
+	border-width: 1px;
+	padding: 0.2em;
+}
+
+th{
+	border-style: solid;
+	border-width: 1px;
+	padding: 0.2em;
+}
+
+/*意味段落*/
+div.paragraph{
+	margin: 1.4em 0px;
+}
+
+/*形式段落*/
+div.paragraph p{
+	margin: 0px;
+}
+
+/*サイト外へのリンク*/
+a.externallink{
+	padding-left: 12px;
+	background-image: url("external.png");
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+
+/*メールアドレスへのリンク*/
+a.maillink{
+	padding-left: 12px;
+	background-image: url("mail.png");
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+
+/*InterWikiのリンク*/
+a.interwiki{
+}
+
+/*存在しないInterWikiName*/
+span.nointerwikiname{
+	background-color: #FFFACC;
+}
+
+/*存在しないページへのリンク*/
+a.noexistpage{
+	background-color: #FFFACC;
+}
+
+/*強調*/
+em{
+}
+
+strong{
+}
+
+/*あいまいリンク*/
+a.fuzzylink{
+}
+
+/*脚注へのリンク*/
+a.footnote{
+	font-size: 50%;
+	vertical-align: text-top;
+}
+
+/*脚注のブロック*/
+div.footnote{
+}

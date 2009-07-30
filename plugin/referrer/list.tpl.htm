@@ -1,0 +1,11 @@
+{if $referrer != array()}
+<div class="plugin_referrer">
+	Referrer
+	<ul>
+		{section name=i loop=$referrer max=5}
+			<li>{$referrer[i].count}: <a href="{$referrer[i].url|escape}">{$referrer[i].url|escape}</a></li>
+		{/section}
+	</ul>
+	<a href="{$script}?plugin=referrer&amp;page={$pagename|escape:"url"}">more...</a>
+</div>
+{/if}

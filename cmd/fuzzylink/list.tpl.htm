@@ -1,0 +1,6 @@
+<p>「{$key|escape}」のリンク先として次のページが候補に挙がっています。</p>
+<ul>
+	{foreach from=$pagelist item=pagename}
+		<li>{$pagename|makelink}</li>
+	{/foreach}
+</ul>

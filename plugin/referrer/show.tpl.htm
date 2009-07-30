@@ -1,0 +1,18 @@
+{if count($referrer) > 0}
+	{if count($checkedurl) > 0}
+		<p class="warning">パスワードが違います。</p>
+	{/if}
+	<form class="plugin_referrer" action="{$script}?plugin=referrer&amp;page={$pagename|escape:"url"}" method="post">
+		<input type="hidden" name="param" value="delete" />
+		<ul class="plugin_referrer">
+		{foreach from=$referrer item=item}
+			<li><input type="checkbox" name="url[]" value="{$item.url|escape}" {if in_array($item.url, $checkedurl)}checked="checked"{/if} />{$item.count}: <a href="{$item.url|escape}">{$item.url|escape}</a></li>
+		{/foreach}
+		</ul>
+	<p>パスワード：<input type="password" name="password" /> <input type="submit" value="削除" /></p>
+	</form>
+{else}
+	<p>
+		{$pagename|makelink}のReferrerはありません。
+	</p>
+{/if}
