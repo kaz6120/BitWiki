@@ -20,6 +20,12 @@ class Plugin_bbsres extends Plugin
 	
 	function do_url()
 	{
+        // Spam Blocking
+        $keywords = 'penis|buy|vimax|sonia|online|cheap|lady|viagra|sex';
+        if (preg_match('/.*('. $keywords . ')/i', trim(Vars::$post['text']))) {
+            redirect(Page::getinstance(Vars::$post['pagename']));
+        }
+
 		if(!keys_exists(Vars::$post, 'num', 'pagename')){
 			throw new PluginException('パラメータが足りません。', $this);
 		}
