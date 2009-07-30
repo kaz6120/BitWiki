@@ -152,8 +152,8 @@ class FuzzyLink
 		$db = DataBase::getinstance();
 		$list = array();
 		$_word = $db->escape($word);
-		//$result = $db->query("SELECT DISTINCT pagename FROM fuzzylink_list WHERE php('mb_ereg', '(?:^|/)' || exp || '$', '$_word') ORDER BY pagename");
-        $result = $db->query("SELECT DISTINCT pagename FROM fuzzylink_list ORDER BY pagename");
+        $result = $db->query("SELECT DISTINCT pagename FROM fuzzylink_list WHERE php('mb_ereg', '(?:^|/)' || exp || '$', '$_word') ORDER BY pagename");
+        //$result = $db->query("SELECT DISTINCT pagename FROM fuzzylink_list ORDER BY pagename");
 		while($row = $db->fetch($result)){
 			$list[] = $row['pagename'];
 		}
