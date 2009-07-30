@@ -167,7 +167,8 @@ div.option
 /* FOOTER */
 div.footer
 {
-    margin: 1em 8px 8px 18%;
+    border-top: 1px solid #99cc00;
+    margin: 4em 8px 8px 18%;
     padding: 8px;
     text-align: right;
 }
