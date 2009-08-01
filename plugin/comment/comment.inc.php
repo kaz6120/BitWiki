@@ -15,8 +15,7 @@ class Plugin_comment extends Plugin
 		if(mb_ereg('^(.*?),(.*)$', $param1, $m)){
 			$type = strtolower(trim($m[1])) == 'below' ? 'below' : 'above';
 			$input = strtolower(trim($m[2])) == 'textarea' ? 'textarea' : 'line';
-		}
-		else{
+		} else{
 			$type = 'above';
 			$input = 'line';
 		}
@@ -29,10 +28,9 @@ class Plugin_comment extends Plugin
 		$smarty->assign('type', $type);
 		$smarty->assign('pagename', $page->getpagename());
 		$smarty->assign('name', isset(Vars::$cookie['name']) ? Vars::$cookie['name'] : '');
-		if($input == 'textarea'){
+		if ($input == 'textarea') {
 			return $smarty->fetch('textarea.tpl.htm');
-		}
-		else{
+		} else{
 			return $smarty->fetch('line.tpl.htm');
 		}
 	}
@@ -40,12 +38,6 @@ class Plugin_comment extends Plugin
 	
 	function do_url()
 	{
-        // Spam Blocking
-        $keywords = 'penis|buy|vimax|sonia|online|cheap|lady|viagra|sex';
-        if (preg_match('/.*('. $keywords . ')/i', trim(Vars::$post['text']))) {
-            redirect(Page::getinstance(Vars::$post['pagename']));
-        }
-
 		if(!keys_exists(Vars::$post, 'num', 'type', 'pagename')){
 			throw new PluginException('パラメータが足りません。', $this);
 		}
