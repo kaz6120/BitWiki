@@ -44,4 +44,3 @@ class Plugin_blogcalendar extends Plugin
 	}
 }
 
-?>

@@ -1,36 +1,34 @@
-table.plugin_blogcalendar
-{
-	font-size: 80%;
-	border-style: none;
+table.plugin_blogcalendar {
+    width: 200px;
+    border: 1px solid #99CC00;
+    border-collapse: collapse;
+    font: 100%/160% sans-serif;
 }
 
 table.plugin_blogcalendar tr,
-table.plugin_blogcalendar td
-{
+table.plugin_blogcalendar td {
 	border-style: none;
+    border: 1px solid #99CC00;
+    padding: 0.3em;
+
 }
 
-td.plugin_blogcalendar_current_month
-{
+td.plugin_blogcalendar_current_month {
 	text-align: center;
 }
 
-td.plugin_blogcalendar_prev_month
-{
+td.plugin_blogcalendar_prev_month {
 	text-align: left;
 }
 
-td.plugin_blogcalendar_next_month
-{
+td.plugin_blogcalendar_next_month {
 	text-align: right;
 }
 
-td.plugin_blogcalendar_prefix
-{
+td.plugin_blogcalendar_prefix {
 	text-align: center;
 }
 
-td.plugin_blogcalendar_day
-{
+td.plugin_blogcalendar_day {
 	text-align: right;
 }
