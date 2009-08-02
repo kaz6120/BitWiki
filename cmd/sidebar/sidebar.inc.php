@@ -13,5 +13,3 @@ class Command_sidebar extends Command
 	}
 }
 
-
-?>

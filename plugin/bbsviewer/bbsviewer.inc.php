@@ -49,5 +49,3 @@ class Plugin_bbsviewer extends Plugin
 	}
 }
 
-
-?>

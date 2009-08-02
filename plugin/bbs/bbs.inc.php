@@ -63,5 +63,3 @@ class Plugin_bbs extends Plugin
 	}
 }
 
-
-?>

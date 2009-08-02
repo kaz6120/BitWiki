@@ -312,4 +312,3 @@ class PageException extends MyException
 	}
 }
 
-?>
