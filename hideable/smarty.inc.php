@@ -1,6 +1,8 @@
 <?php
 /* 
  * $Id: smarty.inc.php,v 1.6 2005/07/10 12:09:13 youka Exp $
+ *
+ * @version: 9.8.2
  */
 require_once('smarty/Smarty.class.php');
 
@@ -20,6 +22,7 @@ class MySmarty extends Smarty
 		$this->assign('sitename', SITENAME);
 		$this->assign('defaultpage', DEFAULTPAGE);
 		$this->assign('version', KINOWIKI_VERSION);
+        $this->assign('rev_version', KINOWIKI_REV_VERSION);
 		$this->assign('theme_url', dirname(SCRIPTURL) . '/' . THEME_DIR);
 		$this->assign('plugin_url', dirname(SCRIPTURL) . '/' . PLUGIN_DIR);
 		$this->assign('command_url', dirname(SCRIPTURL) . '/' . COMMAND_DIR);
