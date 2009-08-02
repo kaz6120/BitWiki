@@ -1,9 +1,9 @@
 <form class="plugin_bbsres" action="{$script}?plugin=bbsres" method="post">
-	<p>
-		<input type="hidden" name="pagename" value="{$pagename|escape}" />
-		<input type="hidden" name="num" value="{$num}" />
-		名前<input type="text" name="name" value="{$name|escape}" size="10" /><br />
-		<textarea name="text" cols="60" rows="5"></textarea>
-		<input type="submit" value="コメントの挿入" />
-	</p>
+ <p>
+  <input type="hidden" name="pagename" value="{$pagename|escape}" />
+  <input type="hidden" name="num" value="{$num}" />
+  <label for="name">名前</label><input type="text" name="name" id="name" value="{$name|escape}" size="10" /><br />
+  <textarea name="text" cols="60" rows="5"></textarea><br />
+  <input type="submit" value="コメントの挿入" />
+ </p>
 </form>
