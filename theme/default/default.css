@@ -109,18 +109,21 @@ div.main
 } h2.plugin_bbsviewer_title {
     margin: 1em 0;
     padding: 4px 7px;
-    background: #222222;
+    background: #444444;
     color: #ffffff;
-    font-size: 1.4em, sans-serif;
+    font-size: 120%;
 } h2.plugin_bbsviewer_title a {
     color: #ffffff;
 } h2.plugin_bbsviewer_title a:hover {
     color: #cccccc;
+    text-decoration: none;
 } div.main h3 {
     margin: 20px 0;
     border-bottom: 1px dotted;
     color: #b97c00;
     font: bold normal 1.3em/140% sans-serif;
+} div.main h4 {
+    margin: 5px 15px;
 } div.main p {
     margin: 1em;
 } div.main ul,
