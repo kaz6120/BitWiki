@@ -118,5 +118,3 @@ class MySmarty extends Smarty
 		return convert_Page(Page::getinstance($param['page']));
 	}
 }
-
-?>

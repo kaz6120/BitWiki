@@ -193,7 +193,7 @@ class KinoWiki
 	 */
 	function run()
 	{
-		try{
+		try {
 			//コントローラの本体処理実行前動作
 			foreach(Command::getCommands() as $cmd){
 				$cmd->doing();
@@ -215,8 +215,7 @@ class KinoWiki
 			
 			//レンダリング
 			Renderer::getinstance()->render($ret);
-		}
-		catch(MyException $exc){
+		} catch(MyException $exc) {
 			$text['title'] = 'error';
 			$text['body'] = $exc->getMessage();
 			Renderer::getinstance()->render($text);
@@ -232,10 +231,9 @@ class KinoWiki
 	private static function installcheck()
 	{
 		$db = DataBase::getinstance();
-		if($db->istable('purepage')){
+		if ($db->istable('purepage')) {
 			return true;
-		}
-		else{
+		} else {
 			$db->exec(file_get_contents(HIDEABLE_DIR . 'sql/kinowiki.sql'));
 			$dir = opendir(HIDEABLE_DIR . '/sql');
 			while(($filename = readdir($dir)) !== false){
@@ -267,5 +265,3 @@ class KinoWiki
 	}
 }
 
-
-?>
