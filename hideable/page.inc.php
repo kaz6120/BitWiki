@@ -1,6 +1,8 @@
 <?php
 /* 
  * $Id: page.inc.php,v 1.6 2005/12/01 06:47:15 youka Exp $
+ *
+ * @version: 9.8.2
  */
 
 

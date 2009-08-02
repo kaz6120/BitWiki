@@ -1,4 +1,7 @@
 <?php
+/**
+ * @version: 9.8.2
+ */
 
 class Plugin_bbs extends Plugin
 {
