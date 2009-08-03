@@ -1,13 +1,13 @@
 {if $body != ''}
-	{$body}
+{$body}
 {else}
-	<p class="warning">記事がありません。</p>
+<p>最後のページです。これ以上スレッドはありません。</p>
 {/if}
 <div class="plugin_bbsviewer_prevnext">
-	{if $body != ''}
-		<a href="{$script}?page={$pagename|escape:"url"}&amp;p={$prev}">&lt;--前へ</a>
-	{/if}
-	{if isset($next)}
-		<a href="{$script}?page={$pagename|escape:"url"}&amp;p={$next}">次へ--&gt;</a>
-	{/if}
+{if isset($next)}
+<a href="{$script}?page={$pagename|escape:"url"}&amp;p={$next}">&laquo; 次へ</a>
+{/if}
+{if $body != ''}
+<a href="{$script}?page={$pagename|escape:"url"}&amp;p={$prev}">前へ &raquo;</a>
+{/if}
 </div>

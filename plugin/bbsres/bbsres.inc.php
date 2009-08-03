@@ -1,4 +1,7 @@
 <?php
+/*
+ * @version: 9.8.3
+ */
 
 class Plugin_bbsres extends Plugin
 {
