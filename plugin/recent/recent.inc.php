@@ -35,4 +35,3 @@ class Plugin_recent extends Plugin
 	}
 }
 
-?>

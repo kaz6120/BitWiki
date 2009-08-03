@@ -1,12 +1,13 @@
+<h2>Recent</h2>
 <div class="plugin_recent">
 {foreach from=$list key=date item=datelist}
-	<span class="plugin_recent_date">{$date}</span>
-	<div class="plugin_recent_page">
-	{foreach from=$datelist item=item}
-		{$item}<br />
-	{/foreach}
-	</div>
+<h3 class="plugin_recent_date">{$date}</h3>
+<ul class="plugin_recent_page">
+{foreach from=$datelist item=item}
+<li>{$item}</li>
+{/foreach}
+</ul>
 {foreachelse}
-	<div class="recentsubtitles">ページは１つもありません。</div>
+<div class="recentsubtitles">ページは１つもありません。</div>
 {/foreach}
 </div>
