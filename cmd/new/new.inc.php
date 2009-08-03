@@ -25,4 +25,3 @@ class Command_new extends Command
 	}
 }
 
-?>
