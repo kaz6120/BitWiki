@@ -30,5 +30,3 @@ class Plugin_bloginclude extends Plugin
 	}
 }
 
-
-?>
