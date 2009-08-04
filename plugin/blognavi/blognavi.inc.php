@@ -1,6 +1,8 @@
 <?php
 /*
  * $Id: blognavi.inc.php,v 1.1.1.1 2005/06/12 15:38:46 youka Exp $
+ * 
+ * @version: 9.8.5
  */
 
 
@@ -13,7 +15,7 @@ class Plugin_blognavi extends Plugin
 	
 	function do_block($page, $param1, $param2)
 	{
-		if(!mb_ereg('^(.+?)/\d{4}-\d{2}-\d{2}', $page->getpagename(), $m)){
+		if (!mb_ereg('^(.+?)/\d{4}-\d{2}-\d{2}', $page->getpagename(), $m)) {
 			throw new PluginException('このページからは呼び出せません(1)', $this);
 		}
 		$home = $m[1];
@@ -32,19 +34,27 @@ class Plugin_blognavi extends Plugin
 		}
 		
 		$str[] = '<div class="plugin_blognavi">';
-		if($prev != null){
-			$str[] = '[' . makelink($prev, $this->prevmes) . ']';
-		}
-		else{
-			$str[] = '[' . htmlspecialchars($this->prevmes) . ']';
-		}
+		//if($prev != null){
+			//$str[] = '[' . makelink($prev, $this->prevmes) . ']';
+		//} else{
+			//$str[] = '[' . htmlspecialchars($this->prevmes) . ']';
+		//}
+
 		if($next != null){
 			$str[] = '[' . makelink($next, $this->nextmes) . ']';
-		}
-		else{
+		} else{
 			$str[] = '[' . htmlspecialchars($this->nextmes) . ']';
 		}
+
 		$str[] = '[' . makelink($home, $this->homemes) . ']';
+
+		if($prev != null){
+			$str[] = '[' . makelink($prev, $this->prevmes) . ']';
+		} else{
+			$str[] = '[' . htmlspecialchars($this->prevmes) . ']';
+		}
+
+		//$str[] = '[' . makelink($home, $this->homemes) . ']';
 		$str[] = '</div>';
 		return join("\n", $str);
 	}
@@ -260,4 +270,3 @@ class Plugin_blognavi_ColumnList
 		return $this->date_col[$datepage];
 	}
 }
-?>
