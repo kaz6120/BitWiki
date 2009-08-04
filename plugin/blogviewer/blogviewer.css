@@ -1,3 +1,32 @@
-div.plugin_blogviewer_prevnext{
-	font-size: 80%;
+div.plugin_bloginclude_body,
+div.plugin_blogviewer_body {
+    margin: 1em;
+    border: 1px solid #dddddd;
+    padding: 1em;
+}
+
+h2.plugin_bloginclude_title,
+h2.plugin_blogviewer_title {
+    border-bottom: 1px solid #dddddd;
+    padding: 4px 0;
+    font-size: 120%;
+}
+
+div.plugin_blognavi {
+    text-align: center;
+}
+
+div.plugin_blogviewer_prevnext {
+    margin: 1em 0;
+    text-align: center;
+	font-size: 85%;
+} div.plugin_blogviewer_prevnext a {
+    display: inline;
+    margin-right: 1px;
+    padding: 4px 8px;
+    border: 1px solid #999999;
+    background: #eeeeee;
+    text-decoration: none;
+} div.plugin_blogviewer_prevnext a:hover {
+    background-color: #f3f3e4;
 }
