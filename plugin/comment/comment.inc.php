@@ -75,4 +75,3 @@ class Plugin_comment extends Plugin
 	}
 }
 
-?>

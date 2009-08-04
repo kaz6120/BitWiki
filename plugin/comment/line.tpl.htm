@@ -1,10 +1,12 @@
 <form class="plugin_comment" action="{$script}?plugin=comment" method="post">
-	<p>
-		<input type="hidden" name="pagename" value="{$pagename|escape}" />
-		<input type="hidden" name="num" value="{$num}" />
-		<input type="hidden" name="type" value="{$type|escape}" />
-		名前<input type="text" name="name" value="{$name|escape}" size="10" />
-		<input type="text" name="text" size="60" />
-		<input type="submit" value="コメントの挿入" />
-	</p>
+<fieldset>
+<p>
+<input type="hidden" name="pagename" value="{$pagename|escape}" />
+<input type="hidden" name="num" value="{$num}" />
+<input type="hidden" name="type" value="{$type|escape}" />
+<input type="text" id="name" name="name" value="{$name|escape}" size="10" /> <label for="name">名前</label><br />
+<input type="text" name="text" size="60" /><br />
+<input type="submit" value="コメントの挿入" />
+</p>
+</fieldset>
 </form>
