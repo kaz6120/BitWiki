@@ -1,28 +1,37 @@
 <form action="{$script}?plugin=blog" method="post">
-	<p>
-		{$blogname|escape} への追加
-	</p>
-	<p>
-		<input type="hidden" name="blogname" value="{$blogname|escape}" />
-		<input type="text" name="continue" size="30" value="{$continue|escape}" />からの続き（省略可）<br />
-		<textarea name="text" cols="60" rows="15">{$text|escape}</textarea><br />
-		<input type="checkbox" id="sendingtrackback" name="sendingtrackback" value="on" checked /><label for="sendingtrackback">本文中のリンクにTrackBackを送る</label><br />
-		日付：<input type="text" name="date" size="12" maxlength="10" value="{$date|default:$smarty.now|date_format:"%Y-%m-%d"|escape}" /><br />
-		タイトル：<input type="text" name="subject" size="50" value="{$subject|escape}" /><br />
-		カテゴリ：<input type="text" name="category" size="50" value="{$category|escape}" /><br />
-		パスワード：<input type="password" name="password" size="12" value="{$password|escape}" /><br />
-		<input type="submit" />
-	</p>
-	<p>
-		カテゴリの選択：<br />
-		{foreach item=line from=$categorybutton}
-			{foreach item=item from=$line}
-				<input type="button" value="{$item|escape}" onclick="category.value += '|{$item|escape}|'" onkeypress="category.value += '|{$item|escape}|'" />
-			{/foreach}
-			<br />
-		{/foreach}
-	</p>
-	<p>
-		パスワードのcookieを削除したい場合はパスワード欄を空にして送信してください。
-	</p>
+<p>
+<input type="hidden" name="blogname" value="{$blogname|escape}" />
+</p>
+{if $continue != ''}
+<p><input type="text" name="continue" size="40" value="{$continue|escape}" /> からの続き（省略可)</p>
+{/if}
+<p>
+<input type="text" id="date" name="date" size="12" maxlength="10" value="{$date|default:$smarty.now|date_format:"%Y-%m-%d"|escape}" /> <label for="date">日付</label>
+</p>
+<p>
+<input type="text" id="subject" name="subject" size="50" value="{$subject|escape}" /> <label for="subject">タイトル</label>
+</p>
+<p>
+<textarea name="text" cols="60" rows="15">{$text|escape}</textarea>
+</p>
+<p>
+<input type="text" id="category" name="category" size="50" value="{$category|escape}" /> <label for="category">カテゴリー</label>
+<fieldset>
+<legend>カテゴリの選択（クリックして挿入)</legend>
+<ul>
+{foreach item=line from=$categorybutton}
+{foreach item=item from=$line}
+<li><a onclick="category.value += '|{$item|escape}|'" onkeypress="category.value += '|{$item|escape}|'" />{$item|escape}</a></li>
+{/foreach}
+{/foreach}
+</ul>
+</fieldset>
+<p>
+<input type="checkbox" id="sendingtrackback" name="sendingtrackback" value="on" checked /><label for="sendingtrackback">本文中のリンクにTrackBackを送る</label>
+</p>
+</p>
+<p>パスワードのcookieを削除したい場合はパスワード欄を空にして送信してください。<br />
+<input type="password" id="password" name="password" size="12" value="{$password|escape}" /> <label for="password">パスワード</label>
+</p>
+<p><input type="submit" value="エントリーをポスト" /></p>
 </form>

@@ -50,7 +50,7 @@ class Plugin_blog extends Plugin
 				$this->categorypagename = $this->blogname . '/' . $this->category_prefix;
 				$this->password = isset(Vars::$cookie['plugin_blog']) ? Vars::$cookie['plugin_blog'] : '';
 				$this->continuefrom = Vars::$get['continue'];
-				$ret['title'] = $this->blogname . ' への追加';
+				$ret['title'] = $this->blogname . ' への新規エントリー';
 				$ret['body'] = $this->getform();
 				return $ret;
 			}
@@ -346,5 +346,3 @@ class Plugin_blog extends Plugin
 	}
 }
 
-
-?>
