@@ -2,7 +2,7 @@
 
 /**
  * Style Name : Elastic Tango (KinoWiki-Rev Default CSS)
- * Author     : kaz6120
+ * Author     : KinoWiki-Rev project, kaz6120
  * Version    : 9.8.6
  */
 
@@ -45,47 +45,31 @@ body {
 
 /* HEADER */
 #header {
-    height: 80px;
+    height: 60px;
     margin: 0;
     padding: 10px 10px 10px 30px;
-    background: url(./images/header-1.png) top repeat-x;
+    background: url(./images/header-1.png) bottom repeat-x;
     color: #ffffff;
 } #header h1 {
+    float: left;
     margin-top: 10px;
-    font-family: Georgia, serif;
+    font: bold italic 200%/100% Georgia, Times, serif;
     text-shadow: #336600 1px 2px 2px;
 } 
 
-#header .menu {
-/*
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    */
-    float:right;
-    padding: 5px;
-    border: 1px solid #ace500;
-    background: #99CC00;
-    border: 1px solid #99CC00;
-    color: #ffff66 !important;
-    
-    background: white;
-    border: 1px solid #ca8300;
-    text-align: right;
-    font-size: 90%;
-}
-
 #globalmenu {
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
     float: right;
-    padding: 2px 15px;
+    margin: 5px 10px;
+    padding: 1px 10px;
     background: #f3f3e4;
     background: url(./images/header-2.png) top repeat-x;
     font-size: 12px;
     /*border: 1px solid #ca8300;*/
     /*border: 1px solid #336600;*/
 } #globalmenu ul {
-    margin:  0.5em;
+    margin:  5px;
     /*text-shadow: 1px 2px 2px #336600;*/
 } #globalmenu li {
     display: inline;
@@ -111,7 +95,7 @@ body {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     position: absolute;
-    top: 120px;
+    top: 100px;
     left: 10px;
     width: 200px;
     padding:15px;
@@ -139,10 +123,24 @@ body {
     padding:1em;
 }
 
-/* MAIN CONTENT */
+/* PAGE CONTENT */
+#pagemenu {
+    float: right;
+    margin: 30px 0 20px 10px;
+    padding: 10px 10px 10px 25px;
+    background: #f3f3e4;
+    font-size: 12px;
+    border: 1px solid #ca8300;
+    border-right: none;
+} #pagemenu ul {
+    margin: 0;
+    list-style-type: square;
+}
+
+
 #content
 {
-    margin: 0px 4px 4px 250px;
+    margin: 20px 4px 4px 250px;
     padding: 2em;
 } #content h2.title {
     margin: 0 0 20px 0;
@@ -176,19 +174,6 @@ body {
     margin: 1em;
     padding: 0 0 0 2em;
     line-height: 1.8em;
-}
-
-#pagemenu {
-    float: right;
-    margin: 20px 0 20px 10px;
-    padding: 10px 10px 10px 25px;
-    background: #f3f3e4;
-    font-size: 12px;
-    border: 1px solid #ca8300;
-    border-right: none;
-} #pagemenu ul {
-    margin: 0;
-    list-style-type: square;
 }
 
 
