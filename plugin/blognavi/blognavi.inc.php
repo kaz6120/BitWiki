@@ -2,7 +2,7 @@
 /*
  * $Id: blognavi.inc.php,v 1.1.1.1 2005/06/12 15:38:46 youka Exp $
  * 
- * @version: 9.8.5
+ * @version: 9.8.6
  */
 
 
@@ -21,40 +21,32 @@ class Plugin_blognavi extends Plugin
 		$home = $m[1];
 		$datelist = Plugin_blognavi_DateList::getinstance($home);
 		$collist = Plugin_blognavi_ColumnList::getinstance($datelist);
-		if($datelist->isdatepage($page->getpagename())){
+		if ($datelist->isdatepage($page->getpagename())) {
 			$prev = $datelist->getprev($page->getpagename());
 			$next = $datelist->getnext($page->getpagename());
-		}
-		else if($collist->iscolumnpage($page->getpagename())){
+		} else if ($collist->iscolumnpage($page->getpagename())) {
 			$prev = $collist->getprev($page->getpagename());
 			$next = $collist->getnext($page->getpagename());
-		}
-		else{
+		} else {
 			throw new PluginException('このページからは呼び出せません(2)', $this);
 		}
 		
 		$str[] = '<div class="plugin_blognavi">';
-		//if($prev != null){
-			//$str[] = '[' . makelink($prev, $this->prevmes) . ']';
-		//} else{
-			//$str[] = '[' . htmlspecialchars($this->prevmes) . ']';
-		//}
 
-		if($next != null){
-			$str[] = '[' . makelink($next, $this->nextmes) . ']';
+		if ($next != null) {
+			$str[] = '[ ' . makelink($next, $this->nextmes) . ' ]';
 		} else{
-			$str[] = '[' . htmlspecialchars($this->nextmes) . ']';
+			$str[] = '[ ' . htmlspecialchars($this->nextmes) . ' ]';
 		}
 
-		$str[] = '[' . makelink($home, $this->homemes) . ']';
+		$str[] = '[ ' . makelink($home, $this->homemes) . ' ]';
 
-		if($prev != null){
-			$str[] = '[' . makelink($prev, $this->prevmes) . ']';
+		if ($prev != null) {
+			$str[] = '[ ' . makelink($prev, $this->prevmes) . ' ]';
 		} else{
-			$str[] = '[' . htmlspecialchars($this->prevmes) . ']';
+			$str[] = '[ ' . htmlspecialchars($this->prevmes) . ' ]';
 		}
 
-		//$str[] = '[' . makelink($home, $this->homemes) . ']';
 		$str[] = '</div>';
 		return join("\n", $str);
 	}
@@ -71,7 +63,7 @@ class Plugin_blognavi_DateList
 	function getinstance($home)
 	{
 		static $ins = array();
-		if(!isset($ins[$home])){
+		if (!isset($ins[$home])) {
 			$ins[$home] = new Plugin_blognavi_DateList($home);
 		}
 		return $ins[$home];
@@ -88,7 +80,7 @@ class Plugin_blognavi_DateList
 		$query .= " WHERE php('mb_ereg', '$_pattern', pagename)";
 		$result = $db->query($query);
 		$this->datepage = array();
-		while($row = $db->fetch($result)){
+		while($row = $db->fetch($result)) {
 			$this->datepage[] = $row['pagename'];
 		}
 		sort($this->datepage);
@@ -104,7 +96,7 @@ class Plugin_blognavi_DateList
 	function getprev($datepage)
 	{
 		$p = array_search($datepage, $this->datepage);
-		if($p === false){
+		if ($p === false) {
 			return false;
 		}
 		
@@ -115,7 +107,7 @@ class Plugin_blognavi_DateList
 	function getnext($datepage)
 	{
 		$p = array_search($datepage, $this->datepage);
-		if($p === false){
+		if ($p === false) {
 			return false;
 		}
 		
@@ -125,7 +117,7 @@ class Plugin_blognavi_DateList
 	
 	function getlast()
 	{
-		if($this->datepage == array()){
+		if ($this->datepage == array()) {
 			return null;
 		}
 		return $this->datepage[count($this->datepage)-1];
@@ -152,7 +144,7 @@ class Plugin_blognavi_ColumnList
 	function getinstance($datepagelist)
 	{
 		static $ins = array();
-		if(!isset($ins[$datepagelist->gethome()])){
+		if (!isset($ins[$datepagelist->gethome()])) {
 			$ins[$datepagelist->gethome()] = new Plugin_blognavi_ColumnList($datepagelist);
 		}
 		return $ins[$datepagelist->gethome()];
@@ -168,11 +160,11 @@ class Plugin_blognavi_ColumnList
 	
 	function iscolumnpage($str)
 	{
-		if(!mb_ereg($this->pattern, $str, $m) || !$this->datepagelist->isdatepage($m[1])){
+		if (!mb_ereg($this->pattern, $str, $m) || !$this->datepagelist->isdatepage($m[1])) {
 			return false;
 		}
 		
-		if(!isset($this->date_col[$m[1]])){
+		if (!isset($this->date_col[$m[1]])) {
 			$this->read($m[1]);
 		}
 		return isset($this->col_date[$str]);
@@ -183,10 +175,10 @@ class Plugin_blognavi_ColumnList
 	{
 		$source = Page::getinstance($datepage)->getsource();
 		$this->date_col[$datepage] = array();
-		if(mb_ereg('<bloginclude>(.*)</bloginclude>', $source, $m)){
+		if (mb_ereg('<bloginclude>(.*)</bloginclude>', $source, $m)) {
 			$a = array_map('trim', explode("\n", $m[1]));
-			foreach($a as $item){
-				if($item != ''){
+			foreach($a as $item) {
+				if ($item != '') {
 					$this->date_col[$datepage][] = $item;
 					$this->col_date[$item] = $datepage;
 				}
@@ -198,21 +190,21 @@ class Plugin_blognavi_ColumnList
 	
 	function getprev($columnpage)
 	{
-		if(!$this->iscolumnpage($columnpage)){
+		if (!$this->iscolumnpage($columnpage)) {
 			return false;
 		}
 		
 		$datepage = $this->col_date[$columnpage];
 		$p = array_search($columnpage, $this->date_col[$datepage]);
-		if($p != 0){
+		if ($p != 0) {
 			return $this->date_col[$datepage][$p-1];
 		}
 		else{
 			$d = $this->datepagelist->getprev($datepage);
-			if($d == null){
+			if ($d == null) {
 				return null;
 			}
-			if(!isset($this->date_col[$d])){
+			if (!isset($this->date_col[$d])) {
 				$this->read($d);
 			}
 			return $this->date_col[$d][count($this->date_col[$d])-1];
@@ -222,21 +214,20 @@ class Plugin_blognavi_ColumnList
 	
 	function getnext($columnpage)
 	{
-		if(!$this->iscolumnpage($columnpage)){
+		if (!$this->iscolumnpage($columnpage)) {
 			return false;
 		}
 		
 		$datepage = $this->col_date[$columnpage];
 		$p = array_search($columnpage, $this->date_col[$datepage]);
-		if($p != count($this->date_col[$datepage])-1){
+		if ($p != count($this->date_col[$datepage])-1) {
 			return $this->date_col[$datepage][$p+1];
-		}
-		else{
+		} else {
 			$d = $this->datepagelist->getnext($datepage);
-			if($d == null){
+			if ($d == null) {
 				return null;
 			}
-			if(!isset($this->date_col[$d])){
+			if (!isset($this->date_col[$d])) {
 				$this->read($d);
 			}
 			return $this->date_col[$d][0];
@@ -247,11 +238,11 @@ class Plugin_blognavi_ColumnList
 	function getlast()
 	{
 		$datepage = $this->datepagelist->getlast();
-		if($datepage == null){
+		if ($datepage == null) {
 			return null;
 		}
 		
-		if(!isset($this->date_col[$datepage])){
+		if (!isset($this->date_col[$datepage])) {
 			$this->read($datepage);
 		}
 		return $this->date_col[$datepage][count($this->date_col[$datepage])-1];
@@ -260,11 +251,11 @@ class Plugin_blognavi_ColumnList
 	
 	function getlist($datepage)
 	{
-		if(!$this->datepagelist->isdatepage($datepage)){
+		if (!$this->datepagelist->isdatepage($datepage)) {
 			return false;
 		}
 		
-		if(!isset($this->date_col[$datepage])){
+		if (!isset($this->date_col[$datepage])) {
 			$this->read($datepage);
 		}
 		return $this->date_col[$datepage];

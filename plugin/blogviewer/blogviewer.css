@@ -2,8 +2,10 @@ div.plugin_bloginclude_body,
 div.plugin_blogviewer_body {
     width: 80%;
     margin: 1em;
-    border: 1px solid #dddddd;
     padding: 1em;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border: 1px solid #99CC00;
 }
 
 h2.plugin_bloginclude_title,
