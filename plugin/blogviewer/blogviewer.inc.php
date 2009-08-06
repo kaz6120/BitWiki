@@ -10,7 +10,7 @@ class Plugin_blogviewer extends Plugin
 {
 	function do_block($page, $param1, $param2)
 	{
-		if(!mb_ereg('^\s*(.+?)\s*,\s*(\d+)\s*$', $param1, $m) || $m[2] <= 0){
+		if(!mb_ereg('^\s*(.+?)\s*,\s*(\d+)\s*$', $param1, $m) || $m[2] <= 0) {
 			throw new PluginException('引数が正しくありません。', $this);
 		}
 		$home = $m[1];
@@ -21,12 +21,12 @@ class Plugin_blogviewer extends Plugin
 		$datelist = Plugin_blognavi_DateList::getinstance($home);
 		$collist = Plugin_blognavi_ColumnList::getinstance($datelist);
 		$pagename = $collist->getlast();
-		for($i = 0; $i < $num*$p; $i++){
+		for($i = 0; $i < $num*$p; $i++) {
 			$pagename = $collist->getprev($pagename);
 		}
 		$ret = array();
-		for($i = 0; $i < $num; $i++){
-			if($pagename == null){
+		for($i = 0; $i < $num; $i++) {
+			if($pagename == null) {
 				break;
 			}
 			$ret[] = $this->includepage($pagename);
@@ -35,7 +35,7 @@ class Plugin_blogviewer extends Plugin
 		
 		$smarty = $this->getSmarty();
 		$smarty->assign('pagename', $page->getpagename());
-		if($p > 0){
+		if($p > 0) {
 			$smarty->assign('next', $p - 1);
 		}
 		$smarty->assign('prev', $p + 1);
@@ -54,5 +54,3 @@ class Plugin_blogviewer extends Plugin
 	}
 }
 
-
-?>
