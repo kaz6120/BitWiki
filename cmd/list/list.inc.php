@@ -1,9 +1,9 @@
 <?php
 /* 
  * $Id: list.inc.php,v 1.2 2005/06/19 12:26:09 youka Exp $
+ *
+ * @version: 9.8.6
  */
-
-
 
 class Command_list extends Command 
 {
