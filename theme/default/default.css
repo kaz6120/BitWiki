@@ -1,3 +1,24 @@
+@charset "utf-8";
+
+/**
+ * Style Name : Elastic Tango (KinoWiki-Rev Default CSS)
+ * Author     : kaz6120
+ * Version    : 9.8.6
+ */
+
+/* CSS DEBUGGER (Comment "IN" to use) */
+/*
+* { outline: 2px dotted red }
+* * { outline: 2px dotted green }
+* * * { outline: 2px dotted orange }
+* * * * { outline: 2px dotted blue }
+* * * * * { outline: 1px solid red }
+* * * * * * { outline: 1px solid green }
+* * * * * * * { outline: 1px solid orange }
+* * * * * * * * { outline: 1px solid blue }
+*/
+
+
 /* INITIALIZE */
 * {
     margin: 0;
@@ -19,25 +40,23 @@ a {
 
 /* BASE */
 body {
-    font: 0.875em/160% HiraMaruPro-W4, "Trebuchet MS", "Bitstrema Vera Sans", Arial, "Lucida Grande", sans-serif;
+    font: 0.875em/160% "Trebuchet MS", "Lucida Grande", "Bitstrema Vera Sans", Arial, HiraMaruPro-W4, sans-serif;
 }
 
 /* HEADER */
-div.header
-{
+#header {
     height: 80px;
     margin: 0;
     padding: 10px 10px 10px 30px;
     background: url(./images/header-1.png) top repeat-x;
     color: #ffffff;
-} div.header h1 {
+} #header h1 {
     margin-top: 10px;
     font-family: Georgia, serif;
     text-shadow: #336600 1px 2px 2px;
-}
+} 
 
-div.header div.menu
-{
+#header .menu {
 /*
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -55,20 +74,31 @@ div.header div.menu
     font-size: 90%;
 }
 
-div.globalmenu {
+#globalmenu {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
     float: right;
+    padding: 2px 15px;
     background: #f3f3e4;
+    background: url(./images/header-2.png) top repeat-x;
     font-size: 12px;
-      border: 1px solid #ca8300;
-} div.globalmenu ul {
+    /*border: 1px solid #ca8300;*/
+    /*border: 1px solid #336600;*/
+} #globalmenu ul {
     margin:  0.5em;
-    padding: 0;
-} div.globalmenu li {
+    /*text-shadow: 1px 2px 2px #336600;*/
+} #globalmenu li {
     display: inline;
+    margin: 8px;
+    /*border: 1px solid #336600;*/
+} #globalmenu a {
+    color: #ffffff;
+} #globalmenu a:hover {
+    color: #ffff66;
+    text-decoration: none;
 }
 
-
-div.header div.topicpath
+#header div.topicpath
 {
     float:left;
     margin: 5px;
@@ -77,7 +107,7 @@ div.header div.topicpath
 }
 
 /* SIDEBAR */
-div.sidebar {
+#sidebar {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     position: absolute;
@@ -86,19 +116,19 @@ div.sidebar {
     width: 200px;
     padding:15px;
     background: #f3f3e4;
-} div.sidebar h2 {
+} #sidebar h2 {
     padding: 0 5px;
     border-bottom: 1px solid;
     color: #99CC00;
     font: bold italic 130%/180% Georgia, serif;
     text-align: right;
-} div.sidebar h3 {
+} #sidebar h3 {
     padding: 0 5px;
     border-bottom: 1px solid;
     color: #99CC00;
     font: bold italic 110%/180% Georgia, serif;
     text-align: right;
-} div.sidebar ul {
+} #sidebar ul {
     margin: 1em 0;
     padding-left: 1em;
     line-height: 160%;
@@ -109,12 +139,12 @@ div.sidebar {
     padding:1em;
 }
 
-/* MAIN */
-div.main
+/* MAIN CONTENT */
+#content
 {
     margin: 0px 4px 4px 250px;
     padding: 2em;
-} div.main h2.title {
+} #content h2.title {
     margin: 0 0 20px 0;
     padding-top: 8px;
     border-bottom: 1px solid;
@@ -132,23 +162,23 @@ div.main
 } h2.plugin_bbsviewer_title a:hover {
     color: #cccccc;
     text-decoration: none;
-} div.main h3 {
+} #content h3 {
     margin: 20px 0;
     border-bottom: 1px dotted;
     color: #b97c00;
     font: bold normal 1.3em/140% sans-serif;
-} div.main h4 {
+} #content h4 {
     margin: 5px 15px;
-} div.main p {
+} #content p {
     margin: 1em;
-} div.main ul,
-  div.main ol {
+} #content ul,
+  #content ol {
     margin: 1em;
     padding: 0 0 0 2em;
     line-height: 1.8em;
 }
 
-div.pagemenu {
+#pagemenu {
     float: right;
     margin: 20px 0 20px 10px;
     padding: 10px 10px 10px 25px;
@@ -156,7 +186,7 @@ div.pagemenu {
     font-size: 12px;
     border: 1px solid #ca8300;
     border-right: none;
-} div.pagemenu ul {
+} #pagemenu ul {
     margin: 0;
     list-style-type: square;
 }
@@ -183,7 +213,7 @@ div.option
 }
 
 /* FOOTER */
-div.footer
+#footer
 {
     /*border-top: 1px solid #99cc00;*/
     border-top: 1px solid #dddddd;
@@ -212,12 +242,12 @@ blockquote
 }
 
 /* LIST */
-div.main ul li {
+#content ul li {
     list-style-image: url(./images/list-marker-level-1.png);
-} div.main ul>li ul>li,
-  div.main  ol>li ul>li {
+} #content ul>li ul>li,
+  #content  ol>li ul>li {
     list-style-image: url(./images/list-marker-level-2.png);
-} div.main  ol>li {
+} #content  ol>li {
     list-style-image: none;
 }
 
