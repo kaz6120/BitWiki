@@ -21,5 +21,3 @@ class Command_list extends Command
 		return $ret;
 	}
 }
-
-?>
