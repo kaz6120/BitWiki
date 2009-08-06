@@ -74,7 +74,7 @@ class Renderer
 	{
 		static $ins;
 		
-		if(empty($ins)){
+		if (empty($ins)) {
 			$ins = new self;
 		}
 		return $ins;
@@ -95,17 +95,17 @@ class Renderer
 	function render($value)
 	{
 		$command = array();
-		foreach(Command::getCommands() as $c){
+		foreach(Command::getCommands() as $c) {
 			$html = $c->getbody();
-			if($html != ''){
+			if ($html != '') {
 				$command[substr(get_class($c), 8)] = $html;
 			}
 		}
 		
 		$plugin = array();
-		foreach(Plugin::getPlugins() as $c){
+		foreach(Plugin::getPlugins() as $c) {
 			$html = $c->getbody();
-			if($html != ''){
+			if ($html != '') {
 				$plugin[substr(get_class($c), 7)] = $html;
 			}
 		}
