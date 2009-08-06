@@ -2,7 +2,7 @@
 /* 
  * $Id: page.inc.php,v 1.6 2005/12/01 06:47:15 youka Exp $
  *
- * @version: 9.8.2
+ * @version: 9.8.6
  */
 
 
@@ -19,21 +19,21 @@ class Page
 	protected static $notifier;
 	
 	//Notifier関連
-	static function attach($obj){ self::initNotifier(); self::$notifier->attach($obj); }
-	static function detach($obj){ self::initNotifier(); self::$notifier->detach($obj); }
-	protected function notify(){ self::$notifier->notify($this); }
+	static function attach($obj) { self::initNotifier(); self::$notifier->attach($obj); }
+	static function detach($obj) { self::initNotifier(); self::$notifier->detach($obj); }
+	protected function notify() { self::$notifier->notify($this); }
 	protected static function initNotifier()
 	{
-		if(empty(self::$notifier)){
+		if (empty(self::$notifier)) {
 			self::$notifier = new NotifierImpl();
 		}
 	}
 	
 	
 	/** ページ名を取得する。@return string */
-	function getpagename(){ return $this->pagename; }
+	function getpagename() { return $this->pagename; }
 	/** 存在するページならtrueを返す。@return bool */
-	function isnull(){ return $this->pagename == ''; }
+	function isnull() { return $this->pagename == ''; }
 	
 	
 	/**
@@ -63,7 +63,7 @@ class Page
 		$query  = "SELECT pagename FROM purepage";
 		$query .= " WHERE num = '$_num'";
 		$row = $db->fetch($db->query($query));
-		if($row !== false){
+		if ($row !== false) {
 			return self::getinstance($row[0]);
 		}
 		else{
@@ -167,7 +167,7 @@ class Page
 		$_time = time();
 		
 		$query = "SELECT timestamp FROM purepage WHERE pagename = '$_pagename'";
-		if($db->fetch($db->query($query)) !== false){
+		if ($db->fetch($db->query($query)) !== false) {
 			$query  = 'INSERT INTO pagebackup';
 			$query .= ' SELECT NULL, pagename, source, timestamp, realtimestamp';
 			$query .= "  FROM purepage WHERE pagename = '$_pagename'";
@@ -175,7 +175,7 @@ class Page
 			
 			$query  = 'UPDATE purepage SET';
 			$query .= "  source = '$_source',";
-			if(!$notimestamp){
+			if (!$notimestamp) {
 				$query .= "  timestamp = $_time,";
 			}
 			$query .= "  realtimestamp = $_time";
@@ -257,7 +257,7 @@ class Page
 		$db = DataBase::getinstance();
 		
 		$_pagename = $db->escape($this->pagename);
-		if($num == 0){
+		if ($num == 0) {
 			$query  = "SELECT $result FROM allpage";
 			$query .= " WHERE pagename = '$_pagename'";
 		}
