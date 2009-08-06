@@ -2,9 +2,7 @@
 <p>
 <input type="hidden" name="blogname" value="{$blogname|escape}" />
 </p>
-{if $continue != ''}
 <p><input type="text" name="continue" size="40" value="{$continue|escape}" /> からの続き（省略可)</p>
-{/if}
 <p>
 <input type="text" id="date" name="date" size="12" maxlength="10" value="{$date|default:$smarty.now|date_format:"%Y-%m-%d"|escape}" /> <label for="date">日付</label>
 </p>

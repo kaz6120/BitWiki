@@ -1,6 +1,8 @@
 <?php
 /*
  * $Id: blog.inc.php,v 1.3 2005/12/24 00:14:03 youka Exp $
+ *
+ * @version: 9.8.6
  */
 
 class Plugin_blog extends Plugin
@@ -31,7 +33,7 @@ class Plugin_blog extends Plugin
 	
 	function do_block($page, $param1, $param2)
 	{
-		if(trim($param1) == ''){
+		if (trim($param1) == '') {
 			throw new PluginException('引数がありません。', $this);
 		}
 		
@@ -44,8 +46,8 @@ class Plugin_blog extends Plugin
 	
 	function do_url()
 	{
-		if(isset(Vars::$get['continue'])){
-			if(mb_ereg('^(.+?)/\d{4}-\d{2}-\d{2}/.+$', Vars::$get['continue'], $m)){
+		if (isset(Vars::$get['continue'])) {
+			if (mb_ereg('^(.+?)/\d{4}-\d{2}-\d{2}/.+$', Vars::$get['continue'], $m)) {
 				$this->blogname = $m[1];
 				$this->categorypagename = $this->blogname . '/' . $this->category_prefix;
 				$this->password = isset(Vars::$cookie['plugin_blog']) ? Vars::$cookie['plugin_blog'] : '';
@@ -53,13 +55,11 @@ class Plugin_blog extends Plugin
 				$ret['title'] = $this->blogname . ' への新規エントリー';
 				$ret['body'] = $this->getform();
 				return $ret;
-			}
-			else{
+			} else {
 				throw new PluginException('つづき元のページ名が正しくありません。', $this);
 			}
-		}
-		else{
-			if(isset(Vars::$post['blogname']) && Vars::$post['blogname'] != ''){
+		} else{
+			if (isset(Vars::$post['blogname']) && Vars::$post['blogname'] != '') {
 				$this->blogname = Vars::$post['blogname'];
 				$this->categorypagename = $this->blogname . '/' . $this->category_prefix;
 				$this->password = isset(Vars::$cookie['plugin_blog']) ? Vars::$cookie['plugin_blog'] : '';
@@ -86,7 +86,7 @@ class Plugin_blog extends Plugin
 		$categorybutton = array();
 		$prefix = mb_ereg_quote($this->categorypagename);
 		$exp = "^{$prefix}/(([^/]+).*)$";
-		while($row = $db->fetch($result)){
+		while($row = $db->fetch($result)) {
 			mb_ereg($exp, $row['pagename'], $m);
 			$categorybutton[$m[2]][] = $m[1];
 		}
@@ -110,7 +110,7 @@ class Plugin_blog extends Plugin
 	protected function post()
 	{
 		$error = $this->checkpostdata();
-		if($error != array()){
+		if ($error != array()) {
 			$mes = '<p class="warning">' . join("<br />\n", $error) . "</p>\n";
 			$ret['title'] = $this->blogname . ' への追加';
 			$ret['body'] = $mes . $this->getform();
@@ -118,9 +118,9 @@ class Plugin_blog extends Plugin
 		}
 		
 		$this->write();
-		if($this->sendingtrackback){
+		if ($this->sendingtrackback) {
 			$errormes = $this->sendtrackback();
-			if($errormes != array()){
+			if ($errormes != array()) {
 				$ret['title'] = $this->blogname . ' への追加';
 				$smarty = $this->getSmarty();
 				$smarty->assign('errormes', $errormes);
@@ -138,64 +138,61 @@ class Plugin_blog extends Plugin
 		$error = array();
 		
 		//タイトルの入力チェック
-		if(!isset(Vars::$post['subject']) || trim(Vars::$post['subject']) == ''){
+		if (!isset(Vars::$post['subject']) || trim(Vars::$post['subject']) == '') {
 			$error[] = 'タイトルがありません。';
 		}
 		$this->subject = Vars::$post['subject'];
 		
 		//本文の入力チェック
-		if(!isset(Vars::$post['text']) || trim(Vars::$post['text']) == ''){
+		if (!isset(Vars::$post['text']) || trim(Vars::$post['text']) == '') {
 			$error[] = '本文がありません。';
 		}
 		$this->text = Vars::$post['text'];
 		
 		//カテゴリの入力チェック
-		if(!isset(Vars::$post['category']) || !mb_ereg("[^　\s|]", Vars::$post['category'])){
+		if (!isset(Vars::$post['category']) || !mb_ereg("[^　\s|]", Vars::$post['category'])) {
 			$error[] = 'カテゴリがありません。';
 		}
 		$this->categories = array_unique(array_map('trim', explode('|', Vars::$post['category'])));
 		$i = array_search('', $this->categories);
-		if($i !== false){
+		if ($i !== false) {
 			unset($this->categories[$i]);
 		}	//array_unique()により空文字列の要素は１つだけしか存在しないので、１つ削除すればOK
 		
 		//「続き」の元記事のチェック
-		if(!isset(Vars::$post['continue']) || (trim(Vars::$post['continue']) != '' && !Page::getinstance(trim(Vars::$post['continue']))->isexist())){
+		if (!isset(Vars::$post['continue']) || 
+            (trim(Vars::$post['continue']) != '' && !Page::getinstance(trim(Vars::$post['continue']))->isexist())
+          ) {
 			$error[] = 'つづきの元のページがありません。';
 		}
 		$this->continuefrom = resolvepath(Vars::$post['continue']);
 		
 		//入力された日付のチェック
-		if(!isset(Vars::$post['date']) || trim(Vars::$post['date']) == ''){
+		if (!isset(Vars::$post['date']) || trim(Vars::$post['date']) == '') {
 			$error[] = '日付がありません。';
-		}
-		else{
-			if(!mb_ereg('^\s*(\d{4})[-/](\d{1,2})[-/](\d{1,2})\s*$', Vars::$post['date'], $m)){
+		} else {
+			if (!mb_ereg('^\s*(\d{4})[-/](\d{1,2})[-/](\d{1,2})\s*$', Vars::$post['date'], $m)) {
 				$error []= '日付の書式が正しくありません。';
-			}
-			else{
-				if(!checkdate($m[2], $m[3], $m[1])){
+			} else {
+				if (!checkdate($m[2], $m[3], $m[1])) {
 					$error[] = '日付が正しくありません。';
-				}
-				else{
+				} else {
 					$this->date = sprintf('%4d-%02d-%02d', $m[1], $m[2], $m[3]);
 				}
 			}
 		}
 		
 		//パスワードのチェック
-		if(!isset(Vars::$post['password'])){
+		if (!isset(Vars::$post['password'])) {
 			$error[] = 'パスワードがありません。';
 			setcookie('plugin_blog', '', -3600);	//パスワードが無いときはクッキーを削除
-		}
-		else{
+		} else {
 			$pass = isset($this->passwordlist[$this->blogname]) ? md5($this->passwordlist[$this->blogname]) : ADMINPASS;
-			if(md5(Vars::$post['password']) != $pass){
+			if (md5(Vars::$post['password']) != $pass) {
 				$error[] = 'パスワードが正しくありません。';
-			}
-			else{
+			} else {
 				$this->password = Vars::$post['password'];
-				if($this->cookie > 0){
+				if ($this->cookie > 0) {
 					setcookie('plugin_blog', Vars::$post['password'], time() + $this->cookie);
 				}
 			}
@@ -205,15 +202,15 @@ class Plugin_blog extends Plugin
 		$this->sendingtrackback = (isset(Vars::$post['sendingtrackback']) && Vars::$post['sendingtrackback'] == 'on') ? true : false;
 		
 		//入力から他変数の組み立て
-		if($this->date != ''){
+		if ($this->date != '') {
 			$this->datepagename = $this->blogname . '/' . $this->date;
-			if($this->subject != ''){
+			if ($this->subject != '') {
 				$this->pagename = $this->datepagename . '/' . $this->subject;
 			}
 		}
 		
 		//すでに存在するページに書くのはNG
-		if(Page::getinstance($this->pagename)->isexist()){
+		if (Page::getinstance($this->pagename)->isexist()) {
 			$error[] = 'ページがすでに存在します。タイトルを変更してください。';
 		}
 		
@@ -227,15 +224,14 @@ class Plugin_blog extends Plugin
 	 */
 	protected function write()
 	{
-		if(mb_ereg('^' . mb_ereg_quote($this->blogname) . '/.+?/(.+)$', $this->continuefrom, $m)){
+		if (mb_ereg('^' . mb_ereg_quote($this->blogname) . '/.+?/(.+)$', $this->continuefrom, $m)) {
 			$continuefrom = "[[{$m[1]}>{$this->continuefrom}]]";
-		}
-		else{
+		} else {
 			$continuefrom = '';
 		}
 		
 		$catlist = '';
-		foreach($this->categories as $c){
+		foreach($this->categories as $c) {
 			$catlist .= "&#x5b;[[$c>{$this->categorypagename}/$c]]&#x5d;";
 		}
 		
@@ -265,7 +261,7 @@ class Plugin_blog extends Plugin
 	{
 		$page = Page::getinstance($this->datepagename);
 		$old = $page->getsource();
-		if($old == ''){
+		if ($old == '') {
 			$old = "#blognavi\n\n<bloginclude>\n</bloginclude>\n\n#blognavi";
 		}
 		$old = mb_ereg_replace("<bloginclude>\n", "<bloginclude>\n{$this->pagename}\n", $old);
@@ -278,7 +274,7 @@ class Plugin_blog extends Plugin
 	 */
 	protected function _write_category()
 	{
-		foreach($this->categories as $c){
+		foreach($this->categories as $c) {
 			$list = "-({$this->date})&nbsp;&nbsp;[[{$this->subject}>{$this->pagename}]]\n";
 			$page = Page::getinstance($this->categorypagename . '/' . $c);
 			$old = $page->getsource();
@@ -292,7 +288,7 @@ class Plugin_blog extends Plugin
 	 */
 	protected function _write_continue()
 	{
-		if(!mb_ereg('^.+?/.+?/.+$', $this->continuefrom)){
+		if (!mb_ereg('^.+?/.+?/.+$', $this->continuefrom)) {
 			return;
 		}
 		
@@ -318,26 +314,25 @@ class Plugin_blog extends Plugin
 		$data['url'] = gettinyURL($this->pagename);
 		$data['blog_name'] = SITENAME . ' - ' . $this->blogname;
 		$tb = Services_Trackback::create(array('id' => 'dummy'), array('timeout' => 4, 'fetchlines' => 999999));
-		if(PEAR::isError($tb)){
+		if (PEAR::isError($tb)) {
 			throw new PluginException('TrackBack送信時にエラーが発生しました(' . $tb->getMessage() . ')。', $this);
 		}
 		
 		$ret = array();
 		$count = preg_match_all('/https?:\/\/[-a-zA-Z0-9_:@&?=+,.!\/~*%$\';#]+/u', $this->text, $m);
-		if($count){
-			foreach($m[0] as $url){
+		if ($count) {
+			foreach($m[0] as $url) {
 				$tb->set('url', $url);
 				$result = $tb->autodiscover();
-				if(!PEAR::isError($result)){
-					foreach($data as $key => $val){
+				if (!PEAR::isError($result)) {
+					foreach($data as $key => $val) {
 						$tb->set($key, $val);
 					}
 					$r = $tb->send();
-					if(PEAR::isError($r)){
+					if (PEAR::isError($r)) {
 						$ret[$url] = $r->getMessage();
 					}
-				}
-				else{
+				} else {
 					$ret[$url] = $result->getMessage();
 				}
 			}

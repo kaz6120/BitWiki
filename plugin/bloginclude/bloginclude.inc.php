@@ -8,8 +8,8 @@ class Plugin_bloginclude extends Plugin
 	function do_block($page, $param1, $param2)
 	{
 		$a = array_map('trim', explode("\n", $param2));
-		foreach($a as $item){
-			if($item != ''){
+		foreach($a as $item) {
+			if ($item != '') {
 				$ret[] = $this->includepage($item);
 			}
 		}
