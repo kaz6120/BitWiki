@@ -67,13 +67,13 @@ class KinoWiki
 	 * 実行中のPageを取得する。
 	 * @return Page
 	 */
-	function getPage(){ return $this->page; }
+	function getPage() { return $this->page; }
 	
 	/**
 	 * 実行中のControllerを取得する。
 	 * @param Controller
 	 */
-	function getController(){ return $this->controller; }
+	function getController() { return $this->controller; }
 
 	
 	/**
@@ -84,7 +84,7 @@ class KinoWiki
 	{
 		static $ins;
 		
-		if(empty($ins)){
+		if (empty($ins)) {
 			$ins = new self();
 		}
 		return $ins;
@@ -101,11 +101,11 @@ class KinoWiki
 			$ins = self::getinstance();
 			$ins->run();
 		}
-		catch(FatalException $exc){
+		catch(FatalException $exc) {
 			saveexceptiondump($exc);
 			echo $exc->getMessage();
 		}
-		catch(Exception $exc){
+		catch(Exception $exc) {
 			echo $exc->getMessage();
 		}
 	}
@@ -121,7 +121,7 @@ class KinoWiki
 		mb_regex_encoding('UTF-8');
 		
 		//SCRIPTURLの設定
-		if($_SERVER['SERVER_PORT'] == 443){
+		if ($_SERVER['SERVER_PORT'] == 443) {
 			$protocol = 'https';
 			$port = '';
 		}
@@ -141,7 +141,7 @@ class KinoWiki
 		FuzzyLink::init();
 		Mail::init();
 		//テーブルが用意されていなかった場合、初期ページを書き込む
-		if(!$isinstalled){
+		if (!$isinstalled) {
 			self::installpage();
 		}
 	}	
@@ -152,21 +152,17 @@ class KinoWiki
 	function __construct()
 	{
 		//実行中ページの設定
-		if(empty(Vars::$get['plugin']) && (empty(Vars::$get['cmd']) || mb_strtolower(Vars::$get['cmd']) == 'show'))
+		if (empty(Vars::$get['plugin']) && (empty(Vars::$get['cmd']) || mb_strtolower(Vars::$get['cmd']) == 'show'))
 		{
-			if(isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != ''){
+			if (isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != '') {
 				$this->page = Page::getinstance(rawurldecode($_SERVER['PATH_INFO']));
-			}
-			else if(isset(Vars::$get['page']) && Vars::$get['page'] != ''){
+			} else if (isset(Vars::$get['page']) && Vars::$get['page'] != '') {
 				$this->page = Page::getinstance(Vars::$get['page']);
-			}
-			else if(isset(Vars::$get['n']) && Vars::$get['n'] != ''){
+			} else if (isset(Vars::$get['n']) && Vars::$get['n'] != '') {
 				$this->page = Page::getinstancebynum(Vars::$get['n']);
-			}
-			else if(isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] != ''){
+			} else if (isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] != '') {
 				$this->page = Page::getinstance(rawurldecode($_SERVER['QUERY_STRING']));
-			}
-			else{
+			} else{
 				$this->page = Page::getinstance(DEFAULTPAGE);
 			}
 		}
@@ -175,10 +171,10 @@ class KinoWiki
 		}
 
 		//実行するControllerの取得
-		if(isset(Vars::$get['cmd']) && Vars::$get['cmd'] != ''){
+		if (isset(Vars::$get['cmd']) && Vars::$get['cmd'] != '') {
 			$this->controller = Command::getCommand(Vars::$get['cmd']);
 		}
-		else if(isset(Vars::$get['plugin']) && Vars::$get['plugin'] != ''){
+		else if (isset(Vars::$get['plugin']) && Vars::$get['plugin'] != '') {
 			$this->controller = Plugin::getPlugin(Vars::$get['plugin']);
 		}
 		else{
@@ -195,10 +191,10 @@ class KinoWiki
 	{
 		try {
 			//コントローラの本体処理実行前動作
-			foreach(Command::getCommands() as $cmd){
+			foreach(Command::getCommands() as $cmd) {
 				$cmd->doing();
 			}
-			foreach(Plugin::getPlugins() as $plugin){
+			foreach(Plugin::getPlugins() as $plugin) {
 				$plugin->doing();
 			}
 			
@@ -206,10 +202,10 @@ class KinoWiki
 			$ret = $this->controller->run();
 			
 			//コントローラの本体処理実行後動作
-			foreach(Command::getCommands() as $cmd){
+			foreach(Command::getCommands() as $cmd) {
 				$cmd->done();
 			}
-			foreach(Plugin::getPlugins() as $plugin){
+			foreach(Plugin::getPlugins() as $plugin) {
 				$plugin->done();
 			}
 			
@@ -236,9 +232,9 @@ class KinoWiki
 		} else {
 			$db->exec(file_get_contents(HIDEABLE_DIR . 'sql/kinowiki.sql'));
 			$dir = opendir(HIDEABLE_DIR . '/sql');
-			while(($filename = readdir($dir)) !== false){
+			while(($filename = readdir($dir)) !== false) {
 				$path = HIDEABLE_DIR . '/sql/' . $filename;
-				if(!is_file($path) || $filename == 'kinowiki.sql'){
+				if (!is_file($path) || $filename == 'kinowiki.sql') {
 					continue;
 				}
 				$db->exec(file_get_contents($path));
@@ -254,9 +250,9 @@ class KinoWiki
 	private static function installpage()
 	{
 		$dir = opendir(HIDEABLE_DIR . '/installpage');
-		while(($filename = readdir($dir)) !== false){
+		while(($filename = readdir($dir)) !== false) {
 			$path = HIDEABLE_DIR . '/installpage/' . $filename;
-			if(!is_file($path) || !preg_match('/^(.+)\.txt$/', $filename, $m)){
+			if (!is_file($path) || !preg_match('/^(.+)\.txt$/', $filename, $m)) {
 				continue;
 			}
 			$page = Page::getinstance(rawurldecode($m[1]));
