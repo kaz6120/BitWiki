@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta name="generator" content="KinoWiki-Rev" />
 <link rel="stylesheet" type="text/css" href="{$theme_url}default.css" />
 <link rel="stylesheet" type="text/css" href="{$theme_url}parsed.css" />
 <link rel="stylesheet" type="text/css" href="{$script}?cmd=csscollector" />
@@ -15,9 +20,9 @@
 
 <body>
 
-<div class="header">
+<div id="header">
 <h1>{$sitename|strip_tags}</h1>
- <div class="globalmenu">
+ <div id="globalmenu">
   <ul>
    <li><a href="{$script}">トップ</a></li>
    <li><a href="{$script}?cmd=new{if isset($pagename)}&amp;page={$pagename|escape:"url"}{/if}">新規</a></li>
@@ -29,7 +34,7 @@
 </div>
 
 {if isset($pagename)}
-<div class="pagemenu">
+<div id="pagemenu">
  <ul>
   <li><a href="{$script}?cmd=edit&amp;page={$pagename|escape:"url"}">編集</a></li>
   <li><a href="{$script}?cmd=diff&amp;page={$pagename|escape:"url"}">差分</a></li>
@@ -40,8 +45,7 @@
 </div>
 {/if}
 
-<div class="main">
-
+<div id="content">
 
 <h2 class="title">{$title|escape}</h2>
 {if isset($command.fuzzylink)}
@@ -50,7 +54,7 @@
 </div>
 {/if}
 
-<div class="body">
+<div class="section">
 {$body}
 </div>
 
@@ -82,11 +86,11 @@
 </div>
 
 
-<div class="sidebar">
+<div id="sidebar">
 {$command.sidebar}
 </div>
 
-<div class="footer">
+<div id="footer">
 {if isset($lastmodified)}Last-modified: {$lastmodified|time2date}&nbsp;&nbsp;({$lastmodified|old})<br />{/if}
 {if isset($pagename)}{$pagename|tinyurl}<br />{/if}
 Running Time: {$runningtime}sec.<br />
