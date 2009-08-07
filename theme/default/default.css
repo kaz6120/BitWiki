@@ -3,7 +3,7 @@
 /**
  * Style Name : Elastic Tango (KinoWiki-Rev Default CSS)
  * Author     : KinoWiki-Rev project, kaz6120
- * Version    : 9.8.6
+ * Version    : 9.8.8
  */
 
 /* CSS DEBUGGER (Comment "IN" to use) */
@@ -104,13 +104,13 @@ body {
     padding: 0 5px;
     border-bottom: 1px solid;
     color: #99CC00;
-    font: bold italic 130%/180% Georgia, serif;
+    font: bold italic 130%/180% Georgia, Times, serif;
     text-align: right;
 } #sidebar h3 {
     padding: 0 5px;
     border-bottom: 1px solid;
     color: #99CC00;
-    font: bold italic 110%/180% Georgia, serif;
+    font: bold italic 110%/180% Georgia, Times, serif;
     text-align: right;
 } #sidebar ul {
     margin: 1em 0;
@@ -152,7 +152,7 @@ body {
     border-bottom: 1px solid;
     color: #83ad23;
     color: #ca8300;
-    font: bold italic 1.5em/140% Georgia, serif;
+    font: bold italic 1.5em/140% Georgia, Times, serif;
 } h2.plugin_bbsviewer_title {
     margin: 1em 0;
     padding: 4px 7px;

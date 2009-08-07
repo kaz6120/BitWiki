@@ -1,13 +1,18 @@
-<?php /* Smarty version 2.6.9, created on 2009-07-31 00:20:35
+<?php /* Smarty version 2.6.9, created on 2009-08-08 03:29:17
          compiled from default.tpl.htm */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'default.tpl.htm', 12, false),array('modifier', 'strip_tags', 'default.tpl.htm', 21, false),array('modifier', 'time2date', 'default.tpl.htm', 92, false),array('modifier', 'old', 'default.tpl.htm', 92, false),array('modifier', 'tinyurl', 'default.tpl.htm', 93, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'default.tpl.htm', 17, false),array('modifier', 'strip_tags', 'default.tpl.htm', 26, false),array('modifier', 'time2date', 'default.tpl.htm', 96, false),array('modifier', 'old', 'default.tpl.htm', 96, false),array('modifier', 'tinyurl', 'default.tpl.htm', 97, false),)), $this); ?>
 <?php echo '<?xml'; ?>
- version="1.0" encoding="UTF-8"<?php echo '?>'; ?>
+ version="1.0" encoding="utf-8"<?php echo '?>'; ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta name="generator" content="KinoWiki-Rev" />
 <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['theme_url']; ?>
 default.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['theme_url']; ?>
@@ -32,10 +37,10 @@ parsed.css" />
 
 <body>
 
-<div class="header">
+<div id="header">
 <h1><?php echo ((is_array($_tmp=$this->_tpl_vars['sitename'])) ? $this->_run_mod_handler('strip_tags', true, $_tmp) : smarty_modifier_strip_tags($_tmp)); ?>
 </h1>
- <div class="globalmenu">
+ <div id="globalmenu">
   <ul>
    <li><a href="<?php echo $this->_tpl_vars['script']; ?>
 ">トップ</a></li>
@@ -52,7 +57,7 @@ parsed.css" />
 </div>
 
 <?php if (isset ( $this->_tpl_vars['pagename'] )): ?>
-<div class="pagemenu">
+<div id="pagemenu">
  <ul>
   <li><a href="<?php echo $this->_tpl_vars['script']; ?>
 ?cmd=edit&amp;page=<?php echo ((is_array($_tmp=$this->_tpl_vars['pagename'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'url') : smarty_modifier_escape($_tmp, 'url')); ?>
@@ -73,8 +78,7 @@ parsed.css" />
 </div>
 <?php endif; ?>
 
-<div class="main">
-
+<div id="content">
 
 <h2 class="title"><?php echo ((is_array($_tmp=$this->_tpl_vars['title'])) ? $this->_run_mod_handler('escape', true, $_tmp) : smarty_modifier_escape($_tmp)); ?>
 </h2>
@@ -85,7 +89,7 @@ parsed.css" />
 </div>
 <?php endif; ?>
 
-<div class="body">
+<div class="section">
 <?php echo $this->_tpl_vars['body']; ?>
 
 </div>
@@ -114,19 +118,20 @@ parsed.css" />
 </div>
 
 
-<div class="sidebar">
+<div id="sidebar">
 <?php echo $this->_tpl_vars['command']['sidebar']; ?>
 
 </div>
 
-<div class="footer">
+<div id="footer">
 <?php if (isset ( $this->_tpl_vars['lastmodified'] )): ?>Last-modified: <?php echo ((is_array($_tmp=$this->_tpl_vars['lastmodified'])) ? $this->_run_mod_handler('time2date', true, $_tmp) : MySmarty::time2date($_tmp)); ?>
 &nbsp;&nbsp;(<?php echo ((is_array($_tmp=$this->_tpl_vars['lastmodified'])) ? $this->_run_mod_handler('old', true, $_tmp) : MySmarty::old($_tmp)); ?>
 )<br /><?php endif;  if (isset ( $this->_tpl_vars['pagename'] )):  echo ((is_array($_tmp=$this->_tpl_vars['pagename'])) ? $this->_run_mod_handler('tinyurl', true, $_tmp) : MySmarty::tinyurl($_tmp)); ?>
 <br /><?php endif; ?>
 Running Time: <?php echo $this->_tpl_vars['runningtime']; ?>
 sec.<br />
-<a href="http://kinowiki.net/">KinoWiki <?php echo $this->_tpl_vars['version']; ?>
+<a href="http://github.com/kaz6120/KinoWiki-Rev/tree/master">KinoWiki-Rev</a> ver.<?php echo $this->_tpl_vars['rev_version']; ?>
+ extends <a href="http://kinowiki.net/">KinoWiki <?php echo $this->_tpl_vars['version']; ?>
 </a>
 </div>
 
