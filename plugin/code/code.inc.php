@@ -22,5 +22,3 @@ class Plugin_code extends Plugin
 		}
 	}
 }
-
-?>
