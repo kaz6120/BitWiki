@@ -29,11 +29,11 @@ class HTMLConverter
 	
 	function visitT_Body($e)
 	{
-		$ret = array();
-		foreach($e->getelements() as $elem){
-			$ret[] = $elem->accept($this);
-		}
-		return join("\n", $ret);
+                $ret = array();
+                foreach($e->getelements() as $elem){
+                        $ret[] = $elem->accept($this);
+                }
+                return str_replace("\n\n", "\n", join("\n", $ret));
 	}
 	
 	
