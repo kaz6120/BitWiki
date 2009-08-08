@@ -46,8 +46,7 @@ class HTMLConverter
 	function visitT_Heading($e)
 	{
 		static $list = array('',
-			'<h3 id=\"{$id}\"><a href=\"{$link}#{$id}\"><span class=\"sanchor\">■</span></a> {$str}</h3>',
-			'<h4 id=\"{$id}\">{$str}</h4>',
+			'<h4 id=\"{$id}\"><a href=\"{$link}#{$id}\"><span class=\"sanchor\">■</span></a> {$str}</h4>',
 			'<h5 id=\"{$id}\">{$str}</h5>',
 			'<h6 id=\"{$id}\">{$str}</h6>');
 		
@@ -205,12 +204,11 @@ class HTMLConverter
 	
 	function visitT_Paragraph($e)
 	{
-		$ret[] = '<div class="section">';
+                $ret = array();
 		foreach($e->getelements() as $elem){
 			$ret[] = '<p>' . $elem->accept($this) . '</p>';
 		}
-		$ret[] = '</div>';
-		return join("\n", $ret);
+		return str_replace("\n", '', join("\n", $ret));
 	}
 	
 	
