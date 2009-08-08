@@ -146,31 +146,41 @@ body {
 {
     margin: 20px 4px 4px 250px;
     padding: 2em;
+} #content .section {
+    margin: 0.2em;
 } #content h2.title {
     margin: 0 0 20px 0;
     padding-top: 8px;
     border-bottom: 1px solid;
     color: #83ad23;
     color: #ca8300;
-    font: bold italic 1.5em/140% Georgia, Times, serif;
-} h2.plugin_bbsviewer_title {
-    margin: 1em 0;
-    padding: 4px 7px;
+    font: bold italic 1.6em/140% Georgia, Times, serif;
+} #content h3 {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid #dddddd;
+    margin: 0.8em 0;
+    border: none !important;
+    padding: 5px 10px;
     background: #444444;
     color: #ffffff;
-    font-size: 120%;
-} h2.plugin_bbsviewer_title a {
+    font: bold normal 1.3em/140% sans-serif;
+} #content h3 a {
     color: #ffffff;
-} h2.plugin_bbsviewer_title a:hover {
-    color: #cccccc;
     text-decoration: none;
-} #content h3 {
-    margin: 20px 0;
+} #content h3 a:hover {
+    color: #cccccc;
+} #content h4 {
+    margin: 5px 5px;
     border-bottom: 1px dotted;
     color: #b97c00;
-    font: bold normal 1.3em/140% sans-serif;
-} #content h4 {
+    font: bold normal 1.2em/140% sans-serif;
+} #content h5 {
+    margin: 5px 10px;
+    font: bold normal 1.1em/120% sans-serif;
+} #content h6 {
     margin: 5px 15px;
+    font: bold normal 1.0em/120% sans-serif;
 } #content p {
     margin: 1em;
 } #content ul,
@@ -180,6 +190,22 @@ body {
     line-height: 1.8em;
 }
 
+/* CONTENT PLUGINS  */
+/*.plugin_bbsviewer_title {*/
+    /*-webkit-border-radius: 5px;*/
+    /*-moz-border-radius: 5px;*/
+    /*border: 1px solid #dddddd;*/
+    /*margin: 1em 0;*/
+    /*border: none !important;*/
+    /*padding: 4px 7px;*/
+    /*background: #444444;*/
+    /*color: #ffffff;*/
+/*} .plugin_bbsviewer_title a {*/
+    /*color: #ffffff;*/
+/*} .plugin_bbsviewer_title a:hover {*/
+    /*color: #cccccc;*/
+    /*text-decoration: none;*/
+/*}*/
 
 div.floatbox
 {
@@ -286,11 +312,17 @@ table {
   ---------------------------------------------
 */
 fieldset {
-    width: 50%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    width: 70%;
     margin: 1em;
     border: 1px solid #dddddd;
     padding: 0.5em 1em;
-} fieldset ul {
+} legend {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid #dddddd;
+    padding: 5px 15px;
 }
 
 
