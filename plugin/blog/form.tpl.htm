@@ -1,4 +1,6 @@
 <form action="{$script}?plugin=blog" method="post">
+<fieldset>
+<legend>新規エントリー</legend>
 <p>
 <input type="hidden" name="blogname" value="{$blogname|escape}" />
 </p>
@@ -32,4 +34,5 @@
 <input type="password" id="password" name="password" size="12" value="{$password|escape}" /> <label for="password">パスワード</label>
 </p>
 <p><input type="submit" value="エントリーをポスト" /></p>
+</fieldset>
 </form>
