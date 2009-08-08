@@ -1,6 +1,8 @@
 <?php
 /*
  * $Id: htmlconverter.inc.php,v 1.6 2005/09/06 01:14:55 youka Exp $
+ *
+ * @version: 9.8.8
  */
 
  
@@ -203,7 +205,7 @@ class HTMLConverter
 	
 	function visitT_Paragraph($e)
 	{
-		$ret[] = '<div class="paragraph">';
+		$ret[] = '<div class="section">';
 		foreach($e->getelements() as $elem){
 			$ret[] = '<p>' . $elem->accept($this) . '</p>';
 		}
@@ -411,6 +413,3 @@ class Footnote
 		return '<div class="footnote">' . join("<br />\n", $str) . '</div>';
 	}
 }
-
-
-?>
