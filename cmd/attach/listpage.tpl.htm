@@ -1,7 +1,0 @@
-<ul>
-	{foreach from=$list item=pagename}
-		<li><a href="{$script}?cmd=attach&amp;param=list&amp;page={$pagename|escape:"url"}">{$pagename|escape}</a></li>
-	{foreachelse}
-		<li>添付ファイルを持つページはありません。</li>
-	{/foreach}
-</ul>
