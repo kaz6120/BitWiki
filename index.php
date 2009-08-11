@@ -1,89 +1,87 @@
 <?php
-/* 
- * $Id: index.php,v 1.2 2005/06/29 10:54:02 youka Exp $
- */
-
 /*
- * 設定ここから 
+ * BitWiki index.php
+ *
+ * based on KinoWiki/index.php,v 1.2 2005/06/29 10:54:02 youka
+ *
+ * @version 9.8.11
  */
 
-//サイト名
-define('SITENAME', 'KinoWiki-Rev');
+/**
+ * BEGIN SETTINGS 
+ */
 
-//トップページのページ名
+// Site name
+define('SITENAME', 'BitWiki');
+
+// Name of the top page
 define('DEFAULTPAGE', 'FrontPage');
 
-//WikiFarmのID。ファイル名（拡張子を除く）と一致させるのが無難。
+// WikiFram ID
 define('WIKIID', 'index');
 
-//HTMLのテンプレート。スキン用ディレクトリにあるファイルを指定。
-define('SKINFILE', 'default.tpl.htm');
+// HTML template file
+define('SKINFILE', 'default.tpl.html');
 
-//使用するテーマ。テーマ用ディレクトリ（THEME_DIR）に入れてあるディレクトリ名を指定。
+// Theme to use.
 define('THEME', 'default');
 
-//パスワード。md5()で括るか、md5で暗号化したものをセットする。
+// Admin Password. Use md() or md5 hashed code.
 define('ADMINPASS', md5('password'));
 
-//メールの設定
-define('MAIL_USE', false);	//メールを使う場合はtrue、使わない場合はfalse。
-define('MAIL_DIFF', true);	//差分のみを送る場合はtrue、差分＋全文送るならfalse。
-define('MAIL_SMTP', 'localhost');	//Windowsでのみ有効
-define('MAIL_SMTP_PORT', 25);	//Windowsでのみ有効
+// Mail settings
+define('MAIL_USE', false);	  // Use mail:true, Don't use mail:false
+define('MAIL_DIFF', true);	  // Send diff only:true, diff and whole text:false
+define('MAIL_SMTP', 'localhost'); // Windows only option
+define('MAIL_SMTP_PORT', 25);	  // WIndows only option
 define('MAIL_FROM', 'yourmail@example.com');
 define('MAIL_TO', 'yourmail@example.com');
 
 
 /*
- * 以下は細かな設定です。
- * よくわからない場合はデフォルトのままでかまいません。
+ * SETTINGS DETAIL
  */
 
-//添付ファイルの最大サイズ（byte）
+// Max attachiment size
 define('ATTACH_MAXSIZE', 2000000);
 
-//あいまいリンクのつづりミス許容ページ名最小文字数
-//ここで設定した文字数以上のページ名は１文字違っていてもあいまいリンクされる。
-//運用途中で変更した場合はあいまいリンクの再構築が必要。
+// Fuzzy link settings
 define('FUZZYLINK_SPELLMISSMINSIZE', 5);
 
 /*
- * ディレクトリの設定
+ * DIRECTORY SETTINGS 
  */
 
-//本体を保存するディレクトリ
+// Core php files
 define('HIDEABLE_DIR', './hideable/');
 
-//DBファイルおよびエラーログを保存するディレクトリ
-//このディレクトリには書き込み権限を設定しなければならない
+// SQLite database file 
+// (Please don't forget to set permissions read/writable
 define('DATA_DIR', HIDEABLE_DIR . 'data/');
 
-//コマンド用ファイルを保存するディレクトリ
-define('COMMAND_DIR', './cmd/');
+// Command files 
+define('COMMAND_DIR', './command/');
 
-//プラグインを保存するディレクトリ
+// Plugins
 define('PLUGIN_DIR', './plugin/');
 
-//スキンを保存するディレクトリ
-define('SKIN_DIR', HIDEABLE_DIR . 'skin/');
-
-//テーマを保存するディレクトリ
+// View files
+// HTML
+define('SKIN_DIR', './theme/');
+// CSS
 define('THEME_DIR', './theme/');
 
-//コンパイル済みテンプレートを保存するディレクトリ
-//このディレクトリには書き込み権限を設定しなければならない
+// Smarty compiled files 
+// (Please don't forget to set permissions read/writeable)
 define('COMPILEDTPL_DIR', HIDEABLE_DIR . 'templates_c/');
 
 
 /*
- * 設定ここまで
+ * END SETTINGS 
  */
 
 
 
-require_once(HIDEABLE_DIR . 'kinowiki.inc.php');
+require_once(HIDEABLE_DIR . 'bitwiki.inc.php');
 
-KinoWiki::main();
-
-
-?>
+BitWiki::main();

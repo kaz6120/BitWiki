@@ -1,0 +1,10 @@
+<form class="edit" action="{$script}?cmd=edit" method="post">
+	<p>
+		<input type="hidden" name="pagename" value="{$pagename|escape}" />
+		<input type="hidden" name="seed" value="{$seed}" />
+		<textarea name="source" rows="15" cols="60">{$source|escape}</textarea><br />
+		<input type="submit" name="preview" value="プレビュー">
+		<input type="submit" name="post" value="更新"><input type="checkbox" id="notimestamp" name="notimestamp" value="on" {if $notimestamp == true}checked{/if} /><label for="notimestamp">タイムスタンプを更新しない</label>
+		<input type="submit" name="cancel" value="キャンセル">
+	</p>
+</form>

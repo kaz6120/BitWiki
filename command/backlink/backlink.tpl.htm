@@ -1,0 +1,8 @@
+<div class="backlink">
+{section name=i loop=$backlink max=10}
+{$backlink[i].pagename|makelink}({$backlink[i].times})&nbsp;
+{if $smarty.section.i.last && isset($backlink[$smarty.section.i.index_next])}
+<a href="{$script}?cmd=backlink&amp;page={$pagename|escape:"url"}">...</a>
+{/if}
+{/section}
+</div>

@@ -1,0 +1,14 @@
+{if $timestamp != 0}
+<p>
+	{$timestamp|time2date} の１つ前との差分（バックアップNo.{$backupnumber}と{math equation="x + 1" x=$backupnumber}の差分）
+</p>
+<p>追加された行は<span class="diff_add">この色</span>になります。</p>
+<p>削除された行は<span class="diff_del">この色</span>になります。</p>
+<pre class="diff">
+{$diff|escape|decorate_diff}
+</pre>
+{else}
+<p>
+	バックアップはありません。
+</p>
+{/if}

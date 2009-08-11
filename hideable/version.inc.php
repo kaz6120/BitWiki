@@ -1,9 +1,6 @@
 <?php
 /*
- * $Id: version.inc.php,v 1.4 2005/09/05 10:27:36 youka Exp $
- *
- * @version: 9.8.9
+ * @version: 9.8.11
  */
 
-define('KINOWIKI_VERSION', '2.1');
-define('KINOWIKI_REV_VERSION', '9.8.9');
+define('BITWIKI_VERSION', '9.8.11');

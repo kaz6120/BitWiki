@@ -1,0 +1,10 @@
+{if $backlink != null}
+	<p>{$pagename|escape} は次のページからリンクされています。</p>
+	<ul>
+		{foreach from=$backlink item=item}
+			<li>{$item.pagename|makelink}({$item.times})</li>
+		{/foreach}
+	</ul>
+{else}
+	<p>{$pagename|escape} は他のページからリンクされていません。</p>
+{/if}

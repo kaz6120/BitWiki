@@ -159,5 +159,3 @@ class Mail implements MyObserver
 		return getURL($page);
 	}
 }
-
-?>

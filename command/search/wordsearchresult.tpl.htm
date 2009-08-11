@@ -1,0 +1,7 @@
+<ul>
+{foreach from=$list item=item}
+	<li><a href="{$script}?cmd=show&amp;word={$word|escape:"url"}&amp;type={$type|escape:"url"}&amp;page={$item|escape:"url"}" title="{$item|escape}">{$item|escape}</a></li>
+{foreachelse}
+	<li>該当するページは１つもありません。</li>
+{/foreach}
+</ul>

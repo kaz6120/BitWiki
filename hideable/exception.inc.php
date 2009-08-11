@@ -1,6 +1,8 @@
 <?php
 /*
- * $id: $
+ * Exception Class
+ *
+ * @version 9.8.11
  */
 
 
@@ -64,5 +66,3 @@ function saveexceptiondump($exc)
 	fclose($fp);
 	return $ret !== false ? true : false;
 }
-
-?>

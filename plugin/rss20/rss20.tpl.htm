@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>{$sitename}</title>
+    <link>{$baseurl}</link>
+    <description>{$sitename} RecentChanges</description>
+    <language>ja</language>
+    <pubDate>{$list[0].timestamp|date_format:"%a, %d %b %Y %H:%M:%S %z"}</pubDate>
+    <lastBuildDate>{$list[0].timestamp|date_format:"%a, %d %b %Y %H:%M:%S %z"}</lastBuildDate>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+{foreach from=$list key=key item=item}
+    <item>
+      <title>{$list[$key].pagename}</title>
+      <link>{$list[$key].url}</link>
+      <description>{$list[$key].description}</description>
+      <pubDate>{$list[$key].timestamp|date_format:"%a, %d %b %Y %H:%M:%S %z"}</pubDate>
+      <guid>{$list[$key].url}</guid>
+    </item>
+{/foreach}
+  </channel>
+</rss>
