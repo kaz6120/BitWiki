@@ -2,21 +2,21 @@
 /* 
  * $Id: attach.inc.php,v 1.2 2005/06/27 18:24:27 youka Exp $
  *
- * @version 9.8.11
+ * @version 9.8.12
  */
 
 
 /**
- * 添付ファイルを管理するクラス。
+ * Attach
  * 
- * Pageごとにシングルトンのようにふるまう。
+ * Attachment file manager. Behave like singleton in each page.
  */
 class Attach
 {
     protected $page;
     protected static $notifier;
     
-    /** ページを取得する。 */
+    /** Get page */
     function getpage() { return $this->page; }
     
     static function attach($obj) { self::initNotifier(); self::$notifier->attach($obj); }
@@ -31,9 +31,9 @@ class Attach
     
     
     /**
-     * インスタンスを取得する。
+     * Get instance
      * 
-     * @param    Page    $page    添付されているページ。
+     * @param  $page
      */
     static function getInstance($page)
     {
@@ -43,7 +43,7 @@ class Attach
     
     
     /**
-     * コンストラクタ。
+     * Constructor
      */
     protected function __construct($page)
     {
@@ -52,9 +52,9 @@ class Attach
     
     
     /**
-     * ページに添付されているファイルを列挙する。
+     * Get file list
      * 
-     * @return    array(string)    ファイル名の配列。
+     * @return array(string)  file names array 
      */
     function getlist()
     {
@@ -73,11 +73,11 @@ class Attach
     
     
     /**
-     * 添付ファイルのファイル名を変更する。
+     * Rename attachiment file name
      * 
-     * @param    string    $old    元のファイル名
-     * @param    string    $new    新しいファイル名
-     * @return    bool    変更が成功すればtrue、失敗すればfalse。
+     * @param    string    $old   Old name
+     * @param    string    $new   New name
+     * @return   bool 
      */
     function rename($old, $new)
     {
@@ -92,18 +92,17 @@ class Attach
         if ($db->changes() != 0) {
             $this->notify(array('rename', $old, $new));
             return true;
-        }
-        else{
+        } else {
             return false;
         }
     }
     
     
     /**
-     * ファイルが存在するかどうかを確認する。
+     * Check if file is exist
      * 
-     * @param    string    $filename
-     * @return    bool
+     * @param    string  $filename
+     * @return   bool
      */
     function isexist($filename)
     {
@@ -119,9 +118,7 @@ class Attach
     
     
     /**
-     * ファイルを別ページに移動させる。
-     * 
-     * 移動先ページに同名のファイルが存在するときはDBExpectionを投げる。
+     * Move attachiment file to another page.
      * 
      * @param    Page    $newpage
      */
@@ -143,9 +140,9 @@ class Attach
 
 
 /**
- * 添付ファイルを表すクラス。
+ * Attached file class 
  * 
- * ファイルごとにシングルトンのようにふるまう。
+ * Each file behaves like singleton.
  */
 class AttachedFile
 {
@@ -169,7 +166,7 @@ class AttachedFile
     
     
     /**
-     * インスタンスを取得する。
+     * Get instance
      */
     static function getInstance($filename, $page)
     {
@@ -179,7 +176,7 @@ class AttachedFile
     
     
     /**
-     * コンストラクタ。
+     * Constructor
      */
     protected function __construct($filename, $page)
     {
@@ -193,11 +190,15 @@ class AttachedFile
     
     
     /**
-     * ファイルを保存する。
+     * Save atttachment file into database.
      * 
-     * @param    const string    $bin    ファイルの内容。
-     * @return    bool    成功すればtrue、すでにファイルがあればfalse。
+     * @param    const string $bin // Content of the file
+     * @return   bool
      */
+    // ****** NOTICE!!!! ****** 
+    // This function doesn't work properly, 
+    // fails to save binary files into SQLite database.
+    // Bug fix needed!
     function set($bin)
     {
         $db = DataBase::getInstance();
@@ -221,7 +222,7 @@ class AttachedFile
     
     
     /**
-     * ファイルを削除する。
+     * Delete attachment file
      */
     function delete()
     {
@@ -239,10 +240,10 @@ class AttachedFile
     
     
     /**
-     * ファイル内容を取得する。
+     * Get content of the file
      * 
-     * @param    bool    $count    取得時にカウンタを回すときはtrue
-     * @return    string    ファイルがないときはnull。
+     * @param    bool    $count
+     * @return   string    
      */
     function getdata($count = false)
     {
@@ -266,7 +267,7 @@ class AttachedFile
    
     
     /**
-     * ファイルサイズを取得する。
+     * Get size of the attachment file. 
      */
     function getsize()
     {
@@ -276,7 +277,7 @@ class AttachedFile
     
     
     /**
-     * タイムスタンプを取得する。
+     * Get timestamp of the attachment file
      */
     function gettimestamp()
     {
@@ -286,7 +287,7 @@ class AttachedFile
     
     
     /**
-     * ダウンロード数を取得する。
+     * Download count
      */
     function getcount()
     {
