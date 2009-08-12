@@ -21,6 +21,7 @@ function _sqlite_php_function()
 class DataBase
 {
     protected $link;             // Link to database
+    //public static $link;
     protected $transaction = 0;  // Number of transaction nest
     
     
@@ -43,7 +44,7 @@ class DataBase
     /**
      * Constructor
      */
-    protected function __construct()
+    public function __construct()
     {
         $file = WIKIID . '.db';
         try {
@@ -55,7 +56,7 @@ class DataBase
                 throw new FatalException('DATA_DIRへの書き込み権限がありません。', $error);
             } else if (is_writable(DATA_DIR . $file) == false) {
                 throw new FatalException('DBファイルへの書き込み権限がありません。', $error);
-            } else{
+            } else {
                 throw new FatalException('DBファイルを開けませんでした。', $error);
             }
         }
@@ -87,6 +88,7 @@ class DataBase
         $result = $this->link->query($query);
         if ($result === false) {
             throw new DBException('クエリを実行できませんでした。', $query, $this->link);
+            //throw new Exception();
         }
         return $result;
     }
@@ -121,6 +123,7 @@ class DataBase
         if ($str == '')
             return '';
         return substr($this->link->quote($str), 1, -1);
+        //return $this->link->quote($str);
     }
     
     
@@ -131,7 +134,8 @@ class DataBase
      */
     function changes()
     {
-        return sqlite_changes($this->link);
+        //return sqlite_changes($this->link);
+        return $this->link;
     }
     
     

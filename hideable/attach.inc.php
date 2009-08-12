@@ -17,14 +17,14 @@ class Attach
     protected static $notifier;
     
     /** ページを取得する。 */
-    function getpage(){ return $this->page; }
+    function getpage() { return $this->page; }
     
-    static function attach($obj){ self::initNotifier(); self::$notifier->attach($obj); }
-    static function detach($obj){ self::initNotifier(); self::$notifier->detach($obj); }
-    protected function notify($arg = null){ self::$notifier->notify($this, $arg); }
+    static function attach($obj) { self::initNotifier(); self::$notifier->attach($obj); }
+    static function detach($obj) { self::initNotifier(); self::$notifier->detach($obj); }
+    protected function notify($arg = null) { self::$notifier->notify($this, $arg); }
     protected static function initNotifier()
     {
-        if(empty(self::$notifier)){
+        if (empty(self::$notifier)) {
             self::$notifier = new NotifierImpl();
         }
     }
@@ -35,7 +35,7 @@ class Attach
      * 
      * @param    Page    $page    添付されているページ。
      */
-    static function getinstance($page)
+    static function getInstance($page)
     {
         self::initNotifier();
         return new self($page);
@@ -58,14 +58,14 @@ class Attach
      */
     function getlist()
     {
-        $db = DataBase::getinstance();
+        $db = DataBase::getInstance();
         
         $_pagename = $db->escape($this->page->getpagename());
         $query  = "SELECT filename FROM attach WHERE pagename = '$_pagename'";
         $query .= " ORDER BY filename ASC";
         $result = $db->query($query);
         $ret = array();
-        while($row = $db->fetch($result)){
+        while($row = $db->fetch($result)) {
             $ret[] = $row['filename'];
         }
         return $ret;
@@ -81,7 +81,7 @@ class Attach
      */
     function rename($old, $new)
     {
-        $db = DataBase::getinstance();
+        $db = DataBase::getInstance();
         
         $_pagename = $db->escape($this->page->getpagename());
         $_old = $db->escape($old);
@@ -89,7 +89,7 @@ class Attach
         $query  = "UPDATE OR IGNORE attach SET filename = '$_new'";
         $query .= " WHERE (pagename = '$_pagename' AND filename = '$_old')";
         $db->query($query);
-        if($db->changes() != 0){
+        if ($db->changes() != 0) {
             $this->notify(array('rename', $old, $new));
             return true;
         }
@@ -107,7 +107,7 @@ class Attach
      */
     function isexist($filename)
     {
-        $db = DataBase::getinstance();
+        $db = DataBase::getInstance();
         
         $_pagename = $db->escape($this->page->getpagename());
         $_filename = $db->escape($filename);
@@ -127,7 +127,7 @@ class Attach
      */
     function move($newpage)
     {
-        $db = DataBase::getinstance();
+        $db = DataBase::getInstance();
         
         $from = $this->page->getpagename();
         $to = $newpage->getpagename();
@@ -154,15 +154,15 @@ class AttachedFile
     protected static $notifier;
     
     
-    function getfilename(){ return $this->filename; }
-    function getpage(){ return $this->page; }
+    function getfilename() { return $this->filename; }
+    function getpage() { return $this->page; }
     
-    static function attach($obj){ self::initNotifier(); self::$notifier->attach($obj); }
-    static function detach($obj){ self::initNotifier(); self::$notifier->detach($obj); }
-    protected function notify($arg = null){ self::$notifier->notify($this, $arg); }
+    static function attach($obj) { self::initNotifier(); self::$notifier->attach($obj); }
+    static function detach($obj) { self::initNotifier(); self::$notifier->detach($obj); }
+    protected function notify($arg = null) { self::$notifier->notify($this, $arg); }
     protected static function initNotifier()
     {
-        if(empty(self::$notifier)){
+        if (empty(self::$notifier)) {
             self::$notifier = new NotifierImpl();
         }
     }
@@ -171,7 +171,7 @@ class AttachedFile
     /**
      * インスタンスを取得する。
      */
-    static function getinstance($filename, $page)
+    static function getInstance($filename, $page)
     {
         self::initNotifier();
         return new AttachedFile($filename, $page);
@@ -183,7 +183,7 @@ class AttachedFile
      */
     protected function __construct($filename, $page)
     {
-        if(empty(self::$notifier)){
+        if (empty(self::$notifier)) {
             self::$notifier = new NotifierImpl();
         }
         
@@ -200,8 +200,8 @@ class AttachedFile
      */
     function set($bin)
     {
-        $db = DataBase::getinstance();
-        
+        $db = DataBase::getInstance();
+
         $_filename = $db->escape($this->filename);
         $_pagename = $db->escape($this->page->getpagename());
         $_data = $db->escape($bin);
@@ -211,11 +211,10 @@ class AttachedFile
         $query .= " (pagename, filename, binary, size, timestamp, count)";
         $query .= " VALUES('$_pagename', '$_filename', '$_data', $_size, $_time, 0)";
         $db->query($query);
-        if($db->changes() != 0){
+        if ($db->changes() != 0) {
             $this->notify(array('attach'));
             return true;
-        }
-        else{
+        } else{
             return false;
         }
     }
@@ -226,7 +225,7 @@ class AttachedFile
      */
     function delete()
     {
-        $db = DataBase::getinstance();
+        $db = DataBase::getInstance();
         
         $count = $this->getcount();
         
@@ -247,7 +246,7 @@ class AttachedFile
      */
     function getdata($count = false)
     {
-        $db = DataBase::getinstance();
+        $db = DataBase::getInstance();
         $db->begin();
         
         $_filename = $db->escape($this->filename);
@@ -256,7 +255,7 @@ class AttachedFile
         $query  = "SELECT binary FROM attach";
         $query .= " WHERE (pagename = '$_pagename' AND filename = '$_filename')";
         $row = $db->fetch($db->query($query));
-        if($count){
+        if ($count) {
             $query  = "UPDATE attach SET count = count + 1";
             $query .= " WHERE (pagename = '$_pagename' AND filename = '$_filename')";
             $db->query($query);
@@ -264,7 +263,7 @@ class AttachedFile
         $db->commit();
         return $row != false ? $row['binary'] : null;
     }
-    
+   
     
     /**
      * ファイルサイズを取得する。
@@ -298,7 +297,7 @@ class AttachedFile
     
     protected function getcol($col)
     {
-        $db = DataBase::getinstance();
+        $db = DataBase::getInstance();
         
         $_filename = $db->escape($this->filename);
         $_pagename = $db->escape($this->page->getpagename());
