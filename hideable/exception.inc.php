@@ -2,7 +2,7 @@
 /*
  * Exception Class
  *
- * @version 9.8.11
+ * @version 9.8.12
  */
 
 
@@ -19,50 +19,50 @@ class MyException extends Exception
  */
 class FatalException extends Exception
 {
-	protected $hiddenmessage;	//外部に漏らすべきではない情報（文字列）を格納する。
-	
-	/** 
-	 * 外部に漏らしてはいけない情報を取得する。
-	 */
-	 function getHiddenMessage(){
-		 return $this->hiddenmessage;
-	 }
-	 
-	 
-	 /**
-	  * コンストラクタ
-	  * @param	string	$mes	エラーメッセージ。このメッセージは外部に表示される。
-	  * @param	string	$hiddenmes	外部に表示してはいけない情報。ログにのみ記録される。
-	  */
-	 function __construct($mes, $hiddenmes = ''){
-		 parent::__construct($mes);
-		 $this->hiddenmessage = $hiddenmes;
-	 }
+    protected $hiddenmessage;    //外部に漏らすべきではない情報（文字列）を格納する。
+    
+    /** 
+     * 外部に漏らしてはいけない情報を取得する。
+     */
+     function getHiddenMessage(){
+         return $this->hiddenmessage;
+     }
+     
+     
+     /**
+      * コンストラクタ
+      * @param    string    $mes    エラーメッセージ。このメッセージは外部に表示される。
+      * @param    string    $hiddenmes    外部に表示してはいけない情報。ログにのみ記録される。
+      */
+     function __construct($mes, $hiddenmes = ''){
+         parent::__construct($mes);
+         $this->hiddenmessage = $hiddenmes;
+     }
 }
 
 /**
  * Exceptionの内容をエラーログに保存する。
  *
- * @param Exception	$exc
- * @return boolean	成功すればtrueを返す。
+ * @param Exception    $exc
+ * @return boolean    成功すればtrueを返す。
  */
 function saveexceptiondump($exc)
 {
-	$fp = fopen(DATA_DIR . WIKIID . '.error.log', 'a');
-	if($fp == false){
-		return false;
-	}
-	
-	$str[] = date('Y-m-d H:i:s');
-	$str[] = 'Exception: ' . get_class($exc);
-	$str[] = $exc->getFile() . '(' . $exc->getLine() . ')';
-	$str[] = $exc->getMessage();
-	if(is_a($exc, 'FatalException')){
-		$str[] = $exc->getHiddenMessage();
-	}
-	$str[] = $exc->getTraceAsString();
-	$str[] = "\n\n";
-	$ret = fwrite($fp, join("\n", $str));
-	fclose($fp);
-	return $ret !== false ? true : false;
+    $fp = fopen(DATA_DIR . WIKIID . '.error.log', 'a');
+    if($fp == false){
+        return false;
+    }
+    
+    $str[] = date('Y-m-d H:i:s');
+    $str[] = 'Exception: ' . get_class($exc);
+    $str[] = $exc->getFile() . '(' . $exc->getLine() . ')';
+    $str[] = $exc->getMessage();
+    if(is_a($exc, 'FatalException')){
+        $str[] = $exc->getHiddenMessage();
+    }
+    $str[] = $exc->getTraceAsString();
+    $str[] = "\n\n";
+    $ret = fwrite($fp, join("\n", $str));
+    fclose($fp);
+    return $ret !== false ? true : false;
 }

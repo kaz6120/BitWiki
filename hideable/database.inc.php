@@ -4,7 +4,7 @@
  * 
  * based on database.inc.php,v 1.5 2005/12/06 09:18:22 youka
  *
- * @version 9.8.11
+ * @version 9.8.12
  */
 
 function _sqlite_php_function()
@@ -53,11 +53,11 @@ class DataBase
         } catch (PDOException $error) {
             clearstatcache();
             if (is_writable(DATA_DIR) == false) {
-                throw new FatalException('DATA_DIRへの書き込み権限がありません。', $error);
+                throw new FatalException('DATA_DIR is not writable.', $error);
             } else if (is_writable(DATA_DIR . $file) == false) {
-                throw new FatalException('DBファイルへの書き込み権限がありません。', $error);
+                throw new FatalException('DB file is not writable.', $error);
             } else {
-                throw new FatalException('DBファイルを開けませんでした。', $error);
+                throw new FatalException('Coud not open DB file.', $error);
             }
         }
     }
@@ -272,10 +272,11 @@ class DBException extends FatalException
     public function __construct($mes = '', $hiddenmes = '', $dblink)
     {
         clearstatcache();
+
         if (is_writable(DATA_DIR) == false) {
-            $mes = 'DATA_DIRへの書き込み権限がありません。' . $mes;
+            $mes = 'DATA_DIR is not writable. Please change DATA_DIR permission writable.' . $mes;
         } else if (is_writable(DATA_DIR . WIKIID . '.db') == false) {
-            $mes = 'DBファイルへの書き込み権限がありません。' . $mes;
+            $mes = 'Database file is not writable. Please change database permssion writable.' . $mes;
         }
         
         $error_infos = $dblink->errorInfo();
