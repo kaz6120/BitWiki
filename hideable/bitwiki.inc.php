@@ -155,7 +155,7 @@ class BitWiki
     /**
      * Constructor 
      */
-    function __construct()
+    public function __construct()
     {
         // settings of the page being excuted.
         if (empty(Vars::$get['plugin']) && (empty(Vars::$get['cmd']) || mb_strtolower(Vars::$get['cmd']) == 'show'))
@@ -190,7 +190,7 @@ class BitWiki
     /**
      * Run application 
      */
-    function run()
+    public function run()
     {
         try {
             // Pre settings before run controller

@@ -20,8 +20,8 @@ function _sqlite_php_function()
  */
 class DataBase
 {
-    protected $link;             // Link to database
-    //public static $link;
+    //protected $link;             // Link to database
+    public static $link;
     protected $transaction = 0;  // Number of transaction nest
     
     
@@ -66,7 +66,7 @@ class DataBase
     /**
      * Destructor
      */
-    function __destruct()
+    public function __destruct()
     {
         if ($this->transaction > 0) {
             $this->rollBack();
@@ -83,7 +83,7 @@ class DataBase
      * @param   string $query
      * @return  string $result
      */
-    function query($query)
+    public function query($query)
     {
         $result = $this->link->query($query);
         if ($result === false) {
@@ -100,7 +100,7 @@ class DataBase
      * @param   string $query  
      * @return  void
      */
-    function exec($query)
+    public function exec($query)
     {
         $result = $this->link->exec($query);
         if ($result === false) {
@@ -115,13 +115,14 @@ class DataBase
      * @param    string    $str    エスケープしたい文字列。
      * @return    string    エスケープした文字列。
      */
-    function escape($str)
+    public function escape($str)
     {
         //空文字列をsqlite_escape_string()に渡すと謎の3バイトが帰ってくる(PHP5.0.0RC2以下)。
         //    http://bugs.php.net/bug.php?id=29339
         //    http://bugs.php.net/bug.php?id=29395
-        if ($str == '')
+        if ($str == '') {
             return '';
+        }
         return substr($this->link->quote($str), 1, -1);
         //return $this->link->quote($str);
     }
@@ -132,7 +133,7 @@ class DataBase
      * 
      * @return    int
      */
-    function changes()
+    public function changes()
     {
         //return sqlite_changes($this->link);
         return $this->link;
@@ -142,7 +143,7 @@ class DataBase
     /**
      * "BEGIN TRANSACTION"を発行する。
      */
-    function begin()
+    public function begin()
     {
         if ($this->transaction == 0) {
             $this->link->beginTransaction();
@@ -154,7 +155,7 @@ class DataBase
     /**
      * "COMMIT"を発行する。
      */
-    function commit()
+    public function commit()
     {
         $this->transaction--;
         if ($this->transaction == 0) {
@@ -168,7 +169,7 @@ class DataBase
      * 
      * @param    string    $table    テーブル名
      */
-    function istable($table)
+    public function istable($table)
     {
         $_table = $this->escape($table);
         $query = 'SELECT '

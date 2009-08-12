@@ -7,13 +7,13 @@
 
 class Command_attach extends Command implements MyObserver
 {
-    function init()
+    public function init()
     {
         Command::getCommand('show')->attach($this);
     }
     
     
-    function do_url()
+    public function do_url()
     {
         if (isset(Vars::$get['param'])) {
             switch(Vars::$get['param']) {
@@ -34,8 +34,7 @@ class Command_attach extends Command implements MyObserver
             default:
                 throw new CommandException('パラメータがちがいます。', $this);
             }
-        }
-        else{
+        } else {
             return $this->showform();
         }
     }
@@ -274,7 +273,7 @@ class Command_attach extends Command implements MyObserver
     }
     
     
-    function update($show, $arg)
+    public function update($show, $arg)
     {
         if ($arg == 'done') {
             $page = $this->getcurrentPage();

@@ -1,13 +1,15 @@
 <?php
 /* 
- * $Id: attach.inc.php,v 1.2 2005/06/27 18:24:27 youka Exp $
+ * Attachment classes
+ * 
+ * based on attach.inc.php,v 1.2 2005/06/27 18:24:27 youka
  *
- * @version 9.8.12
+ * @version 9.8.13
  */
 
 
 /**
- * Attach
+ * Attach class
  * 
  * Attachment file manager. Behave like singleton in each page.
  */
@@ -195,29 +197,56 @@ class AttachedFile
      * @param    const string $bin // Content of the file
      * @return   bool
      */
-    // ****** NOTICE!!!! ****** 
-    // This function doesn't work properly, 
-    // fails to save binary files into SQLite database.
-    // Bug fix needed!
-    function set($bin)
+    public function set($bin)
     {
-        $db = DataBase::getInstance();
 
-        $_filename = $db->escape($this->filename);
-        $_pagename = $db->escape($this->page->getpagename());
-        $_data = $db->escape($bin);
-        $_size = strlen($bin);
-        $_time = time();
-        $query  = "INSERT OR IGNORE INTO attach";
-        $query .= " (pagename, filename, binary, size, timestamp, count)";
-        $query .= " VALUES('$_pagename', '$_filename', '$_data', $_size, $_time, 0)";
-        $db->query($query);
-        if ($db->changes() != 0) {
+        $db = new Database();
+
+        $query  = 'INSERT OR IGNORE INTO '
+                .     'attach '
+                .         '(pagename, filename, binary, size, timestamp, count) '
+                .     'VALUES '
+                .         '(:pagename, :filename, :data, :size, :timestamp, :count)';
+
+        $stmt = $db->link->prepare($query);
+        $res  = $stmt->execute(
+                    array(
+                        ':pagename'  => $this->page->getpagename(),
+                        ':filename'  => $this->filename,
+                        ':data'      => $bin,
+                        ':size'      => strlen($bin),
+                        ':timestamp' => time(),
+                        ':count'     => 0,
+                    )
+                );
+        if ($res == true) {
             $this->notify(array('attach'));
             return true;
         } else{
             return false;
         }
+        
+        /*
+         ****** OLD WAY ****** 
+         This doesn't work properly on PHP5.3 with magic_quotes_gpc = Off.
+         Using default prepare statement on quoting data is better way.
+         */
+        //$db = DataBase::getInstance();
+        //$_filename = $db->escape($this->filename);
+        //$_pagename = $db->escape($this->page->getpagename());
+        //$_data = $db->escape($bin);
+        //$_size = strlen($bin);
+        //$_time = time();
+        //$query  = "INSERT OR IGNORE INTO attach";
+        //$query .= " (pagename, filename, binary, size, timestamp, count)";
+        //$query .= " VALUES('$_pagename', '$_filename', '$_data', $_size, $_time, 0)";
+        //$db->query($query);
+        //if ($db->changes() != 0) {
+            //$this->notify(array('attach'));
+            //return true;
+        //} else{
+            //return false;
+        //}
     }
     
     
