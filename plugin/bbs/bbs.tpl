@@ -2,5 +2,4 @@
 
 {$text}
 
-----
 #bbsres

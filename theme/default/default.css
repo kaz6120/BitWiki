@@ -268,9 +268,9 @@ hr {
     clear: both;
     height: 1px;
     margin: 1em;
-    border: 0px;
-    background-color: #cccccc;
-    color: #cccccc;
+    border: 0;
+    background-color: #dddddd;
+    color: #dddddd;
 }
 
 /*
@@ -301,7 +301,7 @@ fieldset {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     width: 70%;
-    margin: 1em;
+    margin: 2em 1em;
     border: 1px solid #dddddd;
     padding: 0.5em 1em;
 } legend {

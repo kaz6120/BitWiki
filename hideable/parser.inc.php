@@ -218,7 +218,7 @@ class T_Body extends T_BlockElement
         
         $_source = $source;
         $elements = array();
-        while($source != '') {
+        while ($source != '') {
             foreach($classlist as $class) {
                 $ret = eval("return $class::parse(\$source, \$context);");
                 if ($ret != null) {
@@ -450,7 +450,7 @@ class T_List extends T_Block
         
         $_source = $source;
         $list = array();
-        while($source != '') {
+        while ($source != '') {
             foreach($classlist as $class) {
                 $ret = eval("return $class::parse(\$source, \$context);");
                 if ($ret != null) {
@@ -517,7 +517,7 @@ class T_DL extends T_Block
         
         $elem[] = T_DT::parse($source, $context);
         if ($elem[0] != null) {
-            while($source != '') {
+            while ($source != '') {
                 foreach($classlist as $class) {
                     $ret = eval("return $class::parse(\$source, \$context);");
                     if ($ret != null) {
@@ -631,7 +631,7 @@ class T_Table extends T_Block
         $_source = $source;
         $elem[] = T_TR::parse($source, $context);
         if ($elem[0] != null) {
-            while($source != '') {
+            while ($source != '') {
                 $e = T_TR::parse($source, $context);
                 if ($e == null) {
                     break;
@@ -673,7 +673,7 @@ class T_TR extends T_Table
     public static function parse(&$source, $context)
     {
         if (mb_ereg('^\|((?:[^\n]*?\|)+)([HhLlCcRr]*)[\t 　]*(?:\n|$)', $source, $m)) {
-            while($m[1] != '') {
+            while ($m[1] != '') {
                 $elem[] = T_TD::parse($m[1], $context, preg_split('//', $m[2], -1, PREG_SPLIT_NO_EMPTY));
             }
             $source = _substr($source, strlen($m[0]));
@@ -794,7 +794,7 @@ class T_BlockPlugin extends T_Block
             $param2 = '';
             if (mb_ereg('^{', $source)) {
                 $s = $_s = _substr($source, 1);
-                while($s != '') {
+                while ($s != '') {
                     static $classlist = array('T_Empty', 'T_Block');
                     foreach($classlist as $class) {
                         $ret = eval("return $class::parse(\$s, \$context);");
@@ -849,7 +849,7 @@ class T_BlockTag extends T_BlockPlugin
             $param2 = '';
             if ($m[3] != '/') {
                 $s = $_s = $source;
-                while($s != '') {
+                while ($s != '') {
                     static $classlist = array('T_Empty', 'T_Block');
                     foreach($classlist as $class) {
                         $ret = eval("return $class::parse(\$s, \$context);");
@@ -907,7 +907,7 @@ class T_Paragraph extends T_Block
         $_source = $source;
         
         $line = array();
-        while($source != '') {
+        while ($source != '') {
             foreach($classlist as $class) {
                 $ret = eval("return $class::parse(\$source, \$context);");
                 if ($ret != null) {
@@ -947,7 +947,7 @@ class T_Line extends T_InlineElement
         
         $backup = $str;
         $elements = array();
-        while($str != '') {
+        while ($str != '') {
             $len = strlen($str);
             foreach($classlist as $class) {
                 $ret = eval("return $class::getdistance(\$str, \$context);");
@@ -966,8 +966,7 @@ class T_Line extends T_InlineElement
                     $str = _substr($str, strlen($m[1]));
                     $elements[] = T_Text::parse($m[1], $context);
                     break;
-                }
-                else{
+                } else {
                     $str = _substr($str, $len);
                     $elements[] = T_Text::parse($text, $context);
                 }
@@ -1171,7 +1170,7 @@ class T_InlineTag extends T_InlinePlugin
     public static function getdistance(&$str, $context)
     {
         $src = $str;
-        while(mb_ereg('^(.*?)<[a-zA-Z0-9_]+(?:[\t 　]+.*?)?[\t 　]*?/?>', $src, $m)) {
+        while (mb_ereg('^(.*?)<[a-zA-Z0-9_]+(?:[\t 　]+.*?)?[\t 　]*?/?>', $src, $m)) {
             $src = _substr($src, strlen($m[1]));
             $ret = self::parse($src, $context);
             if ($ret != null) {
@@ -1222,7 +1221,7 @@ class T_Footnote extends T_InlineElement
     public static function getdistance(&$str, $context)
     {
         $src = $str;
-        while(mb_ereg('^(.*?)\(\(|（（', $src, $m)) {
+        while (mb_ereg('^(.*?)\(\(|（（', $src, $m)) {
             $src = _substr($src, strlen($m[1]));
             $ret = T_Footnote::parse($src, $context);
             if ($ret != null) {
@@ -1322,7 +1321,7 @@ class T_Text extends T_InlineElement
     {
         $src = $str;
         $elements = array();
-        while($str != '') {
+        while ($str != '') {
             $i = T_AutoLink::getdistance($str, $context);
             if ($i == 0) {
                 $elements[] = T_AutoLink::parse($str, $context);
