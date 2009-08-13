@@ -1,134 +1,102 @@
-/*見出し１のアンカー*/
-span.sanchor{
+span.sanchor {
 }
 
-/*見出し１*/
-h3{
+h3 {
 }
 
-/*見出し２*/
-h4{
+h4 {
 }
 
-/*見出し３*/
-h5{
+h5 {
 }
 
-/*見出し４*/
-h6{
+h6 {
 }
 
-/*水平線*/
-hr{
+hr {
 }
 
-/*整形済みテキスト*/
-pre{
+pre {
 }
 
-/*引用*/
-blockquote{
+blockquote {
 }
 
-/*番号なし箇条書き*/
-ul{
+ul {
 }
 
-/*番号つき箇条書き*/
-ol{
+ol {
 }
 
-/*定義リスト*/
-dl{
+dl {
 }
 
-/*定義内容*/
-dd{
+dd {
 }
 
-/*テーブル*/
-table{
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	border-collapse: collapse;
-	border-style: solid;
-	border-width: 1px;
+table {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 1px;
 }
 
-tr{
-	border-style: solid;
-	border-width: 1px;
+tr {
+    border-style: solid;
+    border-width: 1px;
 }
 
-td{
-	border-style: solid;
-	border-width: 1px;
-	padding: 0.2em;
+td {
+    border-style: solid;
+    border-width: 1px;
+    padding: 0.2em;
 }
 
-th{
-	border-style: solid;
-	border-width: 1px;
-	padding: 0.2em;
+th {
+    border-style: solid;
+    border-width: 1px;
+    padding: 0.2em;
 }
 
-/*意味段落*/
-div.paragraph{
-	margin: 1.4em 0px;
+
+a.externallink {
+    margin: 0 3px;
+    padding-left: 14px;
+    background: url("external.png") no-repeat 0 50%;
 }
 
-/*形式段落*/
-div.paragraph p{
-	margin: 0px;
+a.maillink {
+    padding-left: 12px;
+    background-image: url("mail.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
 }
 
-/*サイト外へのリンク*/
-a.externallink{
-	padding-left: 12px;
-	background-image: url("external.png");
-	background-repeat: no-repeat;
-	background-position: bottom left;
+a.interwiki {
 }
 
-/*メールアドレスへのリンク*/
-a.maillink{
-	padding-left: 12px;
-	background-image: url("mail.png");
-	background-repeat: no-repeat;
-	background-position: bottom left;
+span.nointerwikiname {
+    background-color: #FFFACC;
 }
 
-/*InterWikiのリンク*/
-a.interwiki{
+a.noexistpage {
+    background-color: #FFFACC;
 }
 
-/*存在しないInterWikiName*/
-span.nointerwikiname{
-	background-color: #FFFACC;
+em {
 }
 
-/*存在しないページへのリンク*/
-a.noexistpage{
-	background-color: #FFFACC;
+strong {
 }
 
-/*強調*/
-em{
+a.fuzzylink {
 }
 
-strong{
+a.footnote {
+    font-size: 50%;
+    vertical-align: text-top;
 }
 
-/*あいまいリンク*/
-a.fuzzylink{
-}
-
-/*脚注へのリンク*/
-a.footnote{
-	font-size: 50%;
-	vertical-align: text-top;
-}
-
-/*脚注のブロック*/
-div.footnote{
+div.footnote {
 }
