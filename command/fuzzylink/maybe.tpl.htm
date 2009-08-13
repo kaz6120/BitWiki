@@ -1,10 +1,10 @@
 {if isset($pagelist)}
 <div class="fuzzylink_maybe">
-	もしかして
-	<ul>
-		{foreach from=$pagelist item=pagename}
-			<li>{$pagename|makelink}</li>
-		{/foreach}
-	</ul>
+もしかして
+<ul>
+{foreach from=$pagelist item=pagename}
+<li>{$pagename|makelink}</li>
+{/foreach}
+</ul>
 </div>
 {/if}

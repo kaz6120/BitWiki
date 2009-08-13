@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 /**
- * Style Name : Elastic Tango (KinoWiki-Rev Default CSS)
- * Author     : KinoWiki-Rev project, kaz6120
- * Version    : 9.8.8
+ * Style Name : Elastic Tango (BitWiki Default CSS)
+ * Author     : BitWiki project, kaz6120
+ * Version    : 9.8.13
  */
 
 /* CSS DEBUGGER (Comment "IN" to use) */
@@ -193,11 +193,13 @@ body {
 
 div.floatbox
 {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
     float: right;
-    margin: 10px;
+    margin: 0 10px;
     padding: 8px;
-    border: 1px solid #808080;
-    background: #ffffff;
+    border: 1px solid #D66801;
+    background: #ffffee;
     font-size: 90%;
 }
 
