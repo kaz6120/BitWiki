@@ -2,7 +2,7 @@
 /*
  * $Id: htmlconverter.inc.php,v 1.6 2005/09/06 01:14:55 youka Exp $
  *
- * @version: 9.8.11
+ * @version: 9.8.13
  */
 
  
@@ -12,7 +12,7 @@
  */
 class HTMLConverter
 {
-    protected $root;    //最上位の要素
+    protected $root;    // Root element
     
     
     protected function __construct($root)
@@ -128,7 +128,7 @@ class HTMLConverter
     
     public function visitT_DD($e)
     {
-        return '<dd>' . $e->getelem()->accept($this) . '</dd>';
+        return '<dd>' . $this->setSmiley($e->getelem()->accept($this)) . '</dd>';
     }
     
     
