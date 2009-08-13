@@ -27,26 +27,28 @@ class HTMLConverter
     }
     
     
-    function visitT_Body($e)
+    public function visitT_Body($e)
     {
                 $ret = array();
-                foreach($e->getelements() as $elem){
+                foreach($e->getelements() as $elem) {
                         $ret[] = $elem->accept($this);
                 }
                 return str_replace("\n\n", "\n", join("\n", $ret));
+
     }
     
     
-    function visitT_Empty($e)
+    public function visitT_Empty($e)
     {
         return '';
     }
     
     
-    function visitT_Heading($e)
+    public function visitT_Heading($e)
     {
         static $list = array('',
-            '<h4 id=\"{$id}\"><a href=\"{$link}#{$id}\"><span class=\"sanchor\">■</span></a> {$str}</h4>',
+            '<h3 id=\"{$id}\"><a href=\"{$link}#{$id}\"><span class=\"sanchor\">■</span></a> {$str}</h3>',
+            '<h4 id=\"{$id}\">{$str}</h4>',
             '<h5 id=\"{$id}\">{$str}</h5>',
             '<h6 id=\"{$id}\">{$str}</h6>');
         
@@ -58,42 +60,42 @@ class HTMLConverter
     }
     
     
-    function visitT_Horizon($e)
+    public function visitT_Horizon($e)
     {
         return '<hr />';
     }
     
     
-    function visitT_Pre($e)
+    public function visitT_Pre($e)
     {
         return '<pre>' . htmlspecialchars($e->gettext()) . '</pre>';
     }
     
     
-    function visitT_BlockQuote($e)
+    public function visitT_BlockQuote($e)
     {
         return '<blockquote>' . $e->getelem()->accept($this) . '</blockquote>';
     }
     
     
-    function visitT_UL($e)
+    public function visitT_UL($e)
     {
         return "<ul>" . $e->getelem()->accept($this) . "</ul>";
     }
     
     
-    function visitT_OL($e)
+    public function visitT_OL($e)
     {
         return "<ol>" . $e->getelem()->accept($this) . "</ol>";
     }
     
     
-    function visitT_List($e)
+    public function visitT_List($e)
     {
         $ret[] = '<li>';
-        foreach($e->getelements() as $elem){
+        foreach($e->getelements() as $elem) {
             $ret[] = $elem->accept($this);
-            if(get_class($elem->getnext()) == 'T_LI'){
+            if (get_class($elem->getnext()) == 'T_LI') {
                 $ret[] = "</li>\n<li>";
             }
         }
@@ -102,58 +104,58 @@ class HTMLConverter
     }
     
     
-    function visitT_LI($e)
+    public function visitT_LI($e)
     {
         return $e->getelem()->accept($this);
     }
     
     
-    function visitT_DL($e)
+    public function visitT_DL($e)
     {
         $ret = array();
-        foreach($e->getelements() as $elem){
+        foreach($e->getelements() as $elem) {
             $ret[] = $elem->accept($this);
         }
         return "<dl>\n" . join("\n", $ret) . "\n</dl>";
     }
     
     
-    function visitT_DT($e)
+    public function visitT_DT($e)
     {
         return '<dt>' . $e->getelem()->accept($this) . '</dt>';
     }
     
     
-    function visitT_DD($e)
+    public function visitT_DD($e)
     {
         return '<dd>' . $e->getelem()->accept($this) . '</dd>';
     }
     
     
-    function visitT_Table($e)
+    public function visitT_Table($e)
     {
         $ret = array();
-        foreach($e->getelements() as $elem){
+        foreach($e->getelements() as $elem) {
             $ret[] = $elem->accept($this);
         }
         return "<table>\n" . join("\n", $ret) . "\n</table>";
     }
     
     
-    function visitT_TR($e)
+    public function visitT_TR($e)
     {
         $ret = array();
-        foreach($e->getelements() as $elem){
+        foreach($e->getelements() as $elem) {
             $ret[] = $elem->accept($this);
         }
         return "\t<tr>\n" . join("\n", $ret) . "\n\t</tr>";
     }
     
     
-    function visitT_TD($e)
+    public function visitT_TD($e)
     {
         $ret = array();
-        foreach($e->getelements() as $elem){
+        foreach($e->getelements() as $elem) {
             $ret[] = $elem->accept($this);
         }
         
@@ -166,70 +168,113 @@ class HTMLConverter
     }
     
     
-    function visitT_BlockPlugin($e)
+    public function visitT_BlockPlugin($e)
     {
-        try{
+        try {
             $plugin = Plugin::getPlugin($e->getpluginname());
             return $plugin->do_block(Page::getinstance($e->getcontext()->pagename), $e->getparam1(), $e->getparam2());
         }
-        catch(NoExistPluginException $exc){
+        catch(NoExistPluginException $exc) {
             return nl2br(htmlspecialchars($e->getsource()));
         }
-        catch(PluginException $exc){
+        catch(PluginException $exc) {
             return '<p class="warning">' . htmlspecialchars($exc->getMessage()) . '</p>';
         }
     }
     
     
-    function visitT_BlockTag($e)
+    public function visitT_BlockTag($e)
     {
-        try{
+        try {
             $plugin = Plugin::getPlugin($e->getpluginname());
             return $plugin->do_blocktag(Page::getinstance($e->getcontext()->pagename), $e->getparam1(), $e->getparam2());
         }
-        catch(NoExistPluginException $exc){
+        catch(NoExistPluginException $exc) {
             return nl2br(htmlspecialchars($e->getsource()));
         }
-        catch(PluginException $exc){
+        catch(PluginException $exc) {
             return '<p class="warning">' . htmlspecialchars($exc->getMessage()) . '</p>';
         }
     }
     
     
-    function visitT_Comment($e)
+    public function visitT_Comment($e)
     {
         return '';
     }
     
-    
-    function visitT_Paragraph($e)
+
+    public function setSmiley($str)
     {
-                $ret = array();
-        foreach($e->getelements() as $elem){
-            $ret[] = '<p>' . $elem->accept($this) . '</p>';
+        $smileyDir = SCRIPTURL . '/../theme/smiley/';
+        //$smileyDir = THEME_DIR . 'smiley/';
+        $smilies = array(
+                ':-)'  => 'smile.png',
+                ';-)'  => 'wink.png',
+                ':-D'  => 'laugh.png',
+                ':-!'  => 'foot_in_mouth.png',
+                ':-('  => 'frown.png',
+                '=-o'  => 'gasp.png',
+                '8-)'  => 'cool.png',
+                ':-P'  => 'tongue.png',
+                '}:-[' => 'angry.png',
+                ':-|'  => 'ambivalent.png',
+                ':-/'  => 'undecided.png',
+                ':-d'  => 'yum.png',
+                ':.('  => 'cry.png',
+                ':-X'  => 'sealed.png',
+                ':.)'  => 'touched.png',
+                '|-|'  => 'sleep.png',
+                '}}:'  => 'focus.png',
+                '}-)'  => 'strong.png',
+                ':-S'  => 'confused.png',
+                ':-}'  => 'embarassed.png',
+        );
+        $iconWidth  = 18;
+        $iconHeight = 18;
+        foreach ($smilies as $smileyText => $smileyImage) {
+                $str = str_replace(
+                        $smileyText, 
+                        '<img' . 
+                        ' src="'    . $smileyDir  . $smileyImage . '"' .
+                        ' width="'  . $iconWidth  . '"' .
+                        ' height="' . $iconHeight . '"' .
+                        ' alt="'    . $smileyText . '"' .
+                        ' />',
+                        $str
+                );
+        }
+        return $str;
+    }
+
+    public function visitT_Paragraph($e)
+    {
+        $ret = array();
+        foreach($e->getelements() as $elem) {
+            $ret[] = '<p>' . $this->setSmiley($elem->accept($this)) . '</p>';
         }
         return str_replace("\n", '', join("\n", $ret));
     }
     
     
-    function visitT_Line($e)
+    public function visitT_Line($e)
     {
         $ret = array();
-        foreach($e->getelements() as $elem){
+        foreach($e->getelements() as $elem) {
             $ret[] = $elem->accept($this);
         }
         return join('', $ret);
     }
     
     
-    function visitT_URL($e)
+    public function visitT_URL($e)
     {
         $url = htmlspecialchars($e->geturl());
         return "<a class=\"externallink\" href=\"$url\">$url</a>";
     }
     
     
-    function visitT_Mail($e)
+    public function visitT_Mail($e)
     {
         $address = protectmail_url($e->getaddress());
         $alias = protectmail_html($e->getaddress());
@@ -237,60 +282,53 @@ class HTMLConverter
     }
     
     
-    function visitT_BlacketName($e)
+    public function visitT_BlacketName($e)
     {
         $pagename = $e->getpagename();
         $alias = $e->getalias() != '' ? $e->getalias() : $e->getpagename();
-        if(mb_ereg('^' . EXP_URL . '$', $pagename)){
+        if (mb_ereg('^' . EXP_URL . '$', $pagename)) {
             $alias = htmlspecialchars($alias);
             return "<a class=\"externallink\" href=\"$pagename\">$alias</a>";
-        }
-        else if(mb_ereg('^' . EXP_MAIL . '$', $pagename)){
+        } else if (mb_ereg('^' . EXP_MAIL . '$', $pagename)) {
             $address = protectmail_url($pagename);
             $alias = protectmail_html($alias);
             return "<a class=\"maillink\" href=\"mailto:$address\">$alias</a>";
-        }
-        else if(mb_ereg('^(.+?):(.+)$', $pagename, $m) && !Page::getinstance($pagename)->isexist()){
+        } else if (mb_ereg('^(.+?):(.+)$', $pagename, $m) && !Page::getinstance($pagename)->isexist()) {
             return makeinterwikilink($m[1], $m[2], $alias);
-        }
-        else{
+        } else {
             $fullname = resolvepath($pagename, $e->getcontext()->pagename);
             return makelink(Page::getinstance($fullname), $alias);
         }
     }
     
     
-    function visitT_InlinePlugin($e)
+    public function visitT_InlinePlugin($e)
     {
-        try{
+        try {
             $plugin = Plugin::getPlugin($e->getpluginname());
             return $plugin->do_inline(Page::getinstance($e->getcontext()->pagename), $e->getparam1(), $e->getparam2());
-        }
-        catch(NoExistPluginException $exc){
+        } catch(NoExistPluginException $exc) {
             return nl2br(htmlspecialchars($e->getsource()));
-        }
-        catch(PluginException $exc){
+        } catch(PluginException $exc) {
             return '<span class="warning">' . htmlspecialchars($exc->getMessage()) . '</span>';
         }
     }
     
     
-    function visitT_InlineTag($e)
+    public function visitT_InlineTag($e)
     {
-        try{
+        try {
             $plugin = Plugin::getPlugin($e->getpluginname());
             return $plugin->do_inlinetag(Page::getinstance($e->getcontext()->pagename), $e->getparam1(), $e->getparam2());
-        }
-        catch(NoExistPluginException $exc){
+        } catch(NoExistPluginException $exc) {
             return nl2br(htmlspecialchars($e->getsource()));
-        }
-        catch(PluginException $exc){
+        } catch(PluginException $exc) {
             return '<span class="warning">' . htmlspecialchars($exc->getMessage()) . '</span>';
         }
     }
     
     
-    function visitT_Footnote($e)
+    public function visitT_Footnote($e)
     {
         $footnote = Footnote::getinstance();
         $num = $footnote->reserve();
@@ -298,7 +336,7 @@ class HTMLConverter
     }
     
     
-    function visitT_Strong($e)
+    public function visitT_Strong($e)
     {
         $str = $e->getelem()->accept($this);
         $level = $e->getlevel();
@@ -306,17 +344,17 @@ class HTMLConverter
     }
     
     
-    function visitT_Text($e)
+    public function visitT_Text($e)
     {
         $ret = array();
-        foreach($e->getelements() as $elem){
+        foreach($e->getelements() as $elem) {
             $ret[] = $elem->accept($this);
         }
         return join('', $ret);
     }
     
     
-    function visitT_String($e)
+    public function visitT_String($e)
     {
         $exp = '&amp;(#\d{2,4}|#x[0-9a-fA-F]{2,3}|' . CHARACTER_ENTITY_REFERENCES . ');';
         
@@ -325,15 +363,20 @@ class HTMLConverter
     }
     
     
-    function visitT_AutoLink($e)
+    public function visitT_AutoLink($e)
     {
         return makelink($e->getpagename(), $e->getalias());
     }
     
     
-    function visitT_FuzzyLink($e)
+    public function visitT_FuzzyLink($e)
     {
-        return '<a class="fuzzylink" href="' . SCRIPTURL . '?cmd=fuzzylink&amp;key=' . rawurldecode($e->getkey()) . '" title="あいまいリンク">' . htmlspecialchars($e->getkey()) . '</a>';
+        return '<a '
+               . 'class="fuzzylink" '
+               . 'href="' . SCRIPTURL . '?cmd=fuzzylink&amp;key=' . rawurldecode($e->getkey()) . '" '
+               . 'title="あいまいリンク"'
+               . '>' 
+               . htmlspecialchars($e->getkey()) . '</a>';
     }
 }
 
@@ -350,7 +393,7 @@ class Footnote
     public static function getinstance()
     {
         static $ins = null;
-        if($ins == null){
+        if ($ins == null) {
             $ins = new Footnote;
         }
         return $ins;
@@ -368,7 +411,7 @@ class Footnote
      * 
      * @return    int    番号
      * */
-    function reserve()
+    public function reserve()
     {
         $this->note[] = '';
         return count($this->note);
@@ -382,7 +425,7 @@ class Footnote
      * @param    int    $num    予約しておいた番号
      * @return    string    アンカー
      */
-    function setnote($html, $num)
+    public function setnote($html, $num)
     {
         $this->note[$num-1] = $html;
         $note = strip_tags($html);
@@ -398,13 +441,13 @@ class Footnote
      * 
      * @return    string    html形式の文字列。
      */
-    function getnote()
+    public function getnote()
     {
-        if($this->note == array()){
+        if ($this->note == array()) {
             return '';
         }
         
-        foreach($this->note as $i => $item){
+        foreach($this->note as $i => $item) {
             $i++;
             $str[] = "<a id=\"footnote_{$i}\" href=\"#footnote_{$i}_r\">*{$i}</a>: {$item}";
         }
