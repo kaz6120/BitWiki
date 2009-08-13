@@ -2,7 +2,7 @@
 /* 
  * $Id: diff.inc.php,v 1.3 2005/09/06 01:14:55 youka Exp $
  *
- * @version  9.8.11
+ * @version  9.8.14
  */
 require_once('Text/Diff.php');
 
@@ -18,10 +18,10 @@ require_once('Text/Diff.php');
  */
 function diff($old, $new, $diffonly = false)
 {
-    if(is_string($old)){
+    if (is_string($old)) {
         $old = explode("\n", $old);
     }
-    if(is_string($new)){
+    if (is_string($new)) {
         $new = explode("\n", $new);
     }
     
@@ -55,10 +55,10 @@ class DiffRenderer
     function render($diffonly = false)
     {
         $ret = array();
-        foreach($this->diff->getDiff() as $edit){
+        foreach($this->diff->getDiff() as $edit) {
             switch (get_class($edit)) {
                 case 'Text_Diff_Op_copy':
-                    if(!$diffonly){
+                    if (!$diffonly) {
                         $ret[] = $this->lines(' ', $edit->orig);
                     }
                     break;
@@ -92,7 +92,7 @@ class DiffRenderer
     protected function lines($prefix, $lines)
     {
         $ret = array();
-        foreach($lines as $l){
+        foreach($lines as $l) {
             $ret[] = $prefix . $l;
         }
         return join("\n", $ret);

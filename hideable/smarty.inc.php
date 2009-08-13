@@ -52,7 +52,7 @@ class MySmarty extends Smarty
     function decorate_diff($diff)
     {
         $line = explode("\n", $diff);
-        for($i = 0; $i < count($line); $i++){
+        for ($i = 0; $i < count($line); $i++) {
             $line[$i] = mb_ereg_replace('^\+(.+)$', '+<span class="diff_add">\1</span>', $line[$i]);
             $line[$i] = mb_ereg_replace('^-(.+)$', '-<span class="diff_del">\1</span>', $line[$i]);
         }
@@ -68,8 +68,8 @@ class MySmarty extends Smarty
         static $daytable = array('日', '月', '火', '水', '木', '金', '土');
         
         $date = date('Y-m-d', $timestamp);
-        $day = $daytable[date('w', $timestamp)];
-        $time =date('H:i:s', $timestamp);
+        $day  = $daytable[date('w', $timestamp)];
+        $time = date('H:i:s', $timestamp);
         return "$date ($day) $time";
     }
     
@@ -89,7 +89,7 @@ class MySmarty extends Smarty
     function tinyurl($pagename, $alias = '')
     {
         $url = gettinyURL($pagename);
-        if($num === false){
+        if ($num === false) {
             return '<span class="warning">ページがありません</span>';
         }
         $text = $alias == '' ? $url : $alias;
@@ -104,7 +104,7 @@ class MySmarty extends Smarty
     {
         $path = explode('/', $pagename);
         $list = array();
-        for($i = 0; $i < count($path); $i++){
+        for ($i = 0; $i < count($path); $i++) {
             $list[] = makelink(join('/', array_slice($path, 0, $i+1)), $path[$i]);
         }
         return join(' &gt; ', $list);
@@ -115,8 +115,8 @@ class MySmarty extends Smarty
      * 指定したページを挿入する。Smartyプラグイン用。
      * {includepage page="ページ名"}
      */
-    function includepage($param){
-        if(!isset($param['page'])){
+    function includepage($param) {
+        if (!isset($param['page'])) {
             return '';
         }
         return convert_Page(Page::getinstance($param['page']));

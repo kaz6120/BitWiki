@@ -207,7 +207,6 @@ class HTMLConverter
     public function setSmiley($str)
     {
         $smileyDir = SCRIPTURL . '/../theme/smiley/';
-        //$smileyDir = THEME_DIR . 'smiley/';
         $smilies = array(
                 ':-)'  => 'smile.png',
                 ';-)'  => 'wink.png',
@@ -383,7 +382,7 @@ class HTMLConverter
 
 
 /**
- * 脚注を管理する。シングルトン。
+ * Footnone manager
  */
 class Footnote
 {
