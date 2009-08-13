@@ -30,7 +30,7 @@ class Plugin_comment extends Plugin
         $smarty->assign('name', isset(Vars::$cookie['name']) ? Vars::$cookie['name'] : '');
         if ($input == 'textarea') {
             return $smarty->fetch('textarea.tpl.htm');
-        } else{
+        } else {
             return $smarty->fetch('line.tpl.htm');
         }
     }
