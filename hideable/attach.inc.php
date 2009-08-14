@@ -4,7 +4,7 @@
  * 
  * based on attach.inc.php,v 1.2 2005/06/27 18:24:27 youka
  *
- * @version 9.8.13
+ * @version 9.8.14
  */
 
 
@@ -83,20 +83,48 @@ class Attach
      */
     function rename($old, $new)
     {
-        $db = DataBase::getInstance();
-        
-        $_pagename = $db->escape($this->page->getpagename());
-        $_old = $db->escape($old);
-        $_new = $db->escape($new);
-        $query  = "UPDATE OR IGNORE attach SET filename = '$_new'";
-        $query .= " WHERE (pagename = '$_pagename' AND filename = '$_old')";
-        $db->query($query);
-        if ($db->changes() != 0) {
+        $db = new Database();
+
+        $_pagename = $this->page->getpagename();
+        $_old = $old;
+        $_new = $new;
+
+        $query  = 'UPDATE OR IGNORE '
+                .     'attach '
+                . 'SET '
+                .     'filename = :newfilename '
+                . 'WHERE '
+                .     '(pagename = :pagename AND filename = :oldfilename)';
+        $stmt = $db->link->prepare($query);
+        $res = $stmt->execute(
+                   array(
+                       ':newfilename' => $_new,
+                       ':pagename'    => $_pagename,
+                       ':oldfilename' => $_old
+                   )
+               );
+        if ($res == true) {
             $this->notify(array('rename', $old, $new));
             return true;
-        } else {
+        } else{
             return false;
         }
+
+        // ***** OLD WAY ******
+        //$db = DataBase::getInstance();
+        
+        //$_pagename = $db->escape($this->page->getpagename());
+        //$_old = $db->escape($old);
+        //$_new = $db->escape($new);
+        //$query  = "UPDATE OR IGNORE attach SET filename = '$_new'";
+        //$query .= " WHERE (pagename = '$_pagename' AND filename = '$_old')";
+        //$db->query($query);
+        //if ($db->changes() != 0) {
+            //$this->notify(array('rename', $old, $new));
+            //return true;
+        //} else {
+            //return false;
+        //}
     }
     
     

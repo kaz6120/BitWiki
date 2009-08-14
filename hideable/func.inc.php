@@ -4,7 +4,7 @@
  *
  * based on func.inc.php,v 1.8 2005/09/04 18:11:29 youka 
  *
- * @version 9.8.11
+ * @version 9.8.14
  */
 
 /** URLの正規表現 */
@@ -36,13 +36,13 @@ function getdirname($pagename)
 function getold($timestamp)
 {
     $life = time() - $timestamp;
-    if($life < 60){
+    if ($life < 60) {
         return $life . 's';
     }
-    if($life < 60*60){
+    if ($life < 60*60) {
         return ((int)floor($life/60)) . 'm';
     }
-    if($life < 60*60*24){
+    if ($life < 60*60*24) {
         return ((int)floor($life/(60*60))) . 'h';
     }
     return ((int)floor($life/(60*60*24))) . 'd';
@@ -57,11 +57,11 @@ function getold($timestamp)
  */
 function gettinyURL($page)
 {
-    if(is_string($page)){
+    if (is_string($page)) {
         $page = Page::getinstance($page);
     }
     $num = $page->getnum();
-    if($num === null){
+    if ($num === null) {
         return false;
     }
     return SCRIPTURL . "?n=$num";
@@ -76,7 +76,7 @@ function gettinyURL($page)
  */
 function getURL($page)
 {
-    if(is_string($page)){
+    if (is_string($page)) {
         $page = Page::getinstance($page);
     }
     $encoded = preg_replace('/%2F/', '/', rawurlencode($page->getpagename()));
@@ -112,8 +112,8 @@ function keys_exists(/* $array, $key, .... */)
     $array = array_shift($arg);
     $keys = $arg;
     
-    foreach($keys as $k){
-        if(!isset($array[$k])){
+    foreach($keys as $k) {
+        if (!isset($array[$k])) {
             return false;
         }
     }
@@ -130,10 +130,10 @@ function keys_exists(/* $array, $key, .... */)
 function linetrim($str)
 {
     $text = explode("\n", $str);
-    while($text != array() && trim($text[0]) == ''){
+    while($text != array() && trim($text[0]) == '') {
         array_shift($text);
     }
-    while($text != array() && trim($text[count($text)-1]) == ''){
+    while($text != array() && trim($text[count($text)-1]) == '') {
         array_pop($text);
     }
     return join("\n", $text);
@@ -152,14 +152,14 @@ function makeinterwikilink($interwikiname, $str, $alias = '')
 {
     $alias = htmlspecialchars($alias == '' ? "$interwikiname:$str" : $alias);
     
-    foreach(explode("\n", Page::getinstance('InterWikiName')->getsource()) as $s){
-        if(mb_ereg("^-\[{$interwikiname}[\t 　]+(.+?)(?:[\t 　]+(\S+))?\]", $s, $m)){
-            if($m[2] != ''){
+    foreach(explode("\n", Page::getinstance('InterWikiName')->getsource()) as $s) {
+        if (mb_ereg("^-\[{$interwikiname}[\t 　]+(.+?)(?:[\t 　]+(\S+))?\]", $s, $m)) {
+            if ($m[2] != '') {
                 $str = mb_convert_encoding($str, $m[2], 'UTF-8');
             }
             $encoded = rawurlencode($str);
             $url = htmlspecialchars(mb_ereg_replace('\$1', $encoded, $m[1]));
-            if($url{0} == '?'){
+            if ($url{0} == '?') {
                 $url = SCRIPTURL . $url;
             }
             return "<a class=\"interwiki\" href=\"$url\">$alias</a>";
@@ -182,16 +182,17 @@ function makeinterwikilink($interwikiname, $str, $alias = '')
  */
 function makelink($page, $alias = '')
 {
-    if(is_string($page)){
+    if (is_string($page)) {
         $page = Page::getinstance($page);
     }
+    
     $url = getURL($page);
     $str = htmlspecialchars($alias == '' ? $page->getpagename() : $alias);
-    if($page->isexist()){
+
+    if ($page->isexist()) {
         $title = htmlspecialchars($page->getpagename());
         return "<a href=\"$url\" title=\"$title\">$str</a>";
-    }
-    else{
+    } else {
         $title = '存在しないページ';
         return "<a class=\"noexistpage\" href=\"$url\" title=\"$title\">${str}</a>";
     }
@@ -206,31 +207,29 @@ function makelink($page, $alias = '')
  */
 function makelinkexp(&$pagelist)
 {
-    if(count($pagelist) <= 1){
+    if (count($pagelist) <= 1) {
         return count($pagelist) == 0 ? '' : mb_ereg_quote($pagelist[0]);
     }
     
     $emptyflag = false;
     $bin = array();
-    while($pagelist != array()){
+    while($pagelist != array()) {
         $pagename = array_pop($pagelist);
-        if($pagename != ''){
+        if ($pagename != '') {
             $bin[mb_substr($pagename, 0, 1)][] = mb_substr($pagename, 1);
-        }
-        else{
+        } else {
             $emptyflag = true;
         }
     }
     
     $key = array_keys($bin);
-    foreach($key as $k){
+    foreach($key as $k) {
         $ret[] = mb_ereg_quote($k) . makelinkexp($bin[$k]);
     }
     
-    if(count($ret) == 1){
+    if (count($ret) == 1) {
         return $emptyflag ? '(?:'.$ret[0].')?' : $ret[0];
-    }
-    else{
+    } else {
         return '(?:' . join('|', $ret) . ')' . ($emptyflag ? '?' : '');
     }
 }
@@ -245,14 +244,13 @@ function makelinkexp(&$pagelist)
  */
 function map($func, $var)
  {
-    if(is_array($var)){
+    if (is_array($var)) {
         $ret = array();
-        foreach($var as $k => $v){
+        foreach($var as $k => $v) {
             $ret[$k] = map($func, $v);
         }
         return $ret;
-    }
-    else{
+    } else {
         return $func($var);
     }
 }
@@ -266,7 +264,7 @@ function map($func, $var)
  */
 function mb_ereg_quote($str)
 {
-    return mb_ereg_replace('([.\\\\+*?\[^\]\$(){}=!<>|:])', '\\\1', $str);
+    return mb_ereg_replace('([.\\\\+*?\[^\]\$() {}=!<>|:])', '\\\1', $str);
 }
 
 
@@ -286,14 +284,13 @@ function mb_natcasesort(&$array)
  */
 function _mb_substr($string, $start, $length = null)
 {
-    if($start >= mb_strlen($string)){
+    if ($start >= mb_strlen($string)) {
         return '';
     }
     
-    if($length === null){
+    if ($length === null) {
         return mb_substr($string, $start);
-    }
-    else{
+    } else {
         return mb_substr($string, $start, $length);
     }
 }
@@ -307,16 +304,16 @@ function mb_strnatcasecmp($a, $b)
     $a = mb_convert_kana($a, 'KVCas');
     $b = mb_convert_kana($b, 'KVCas');
     
-    while(mb_strlen($a) > 0 && mb_strlen($b) > 0){
+    while(mb_strlen($a) > 0 && mb_strlen($b) > 0) {
         $digit_a = mb_ereg('^(.*?)(\d+(?:\.\d+)?)(.*)$', $a, $ma);
         $digit_b = mb_ereg('^(.*?)(\d+(?:\.\d+)?)(.*)$', $b, $mb);
-        if($digit_a && $digit_b){
+        if ($digit_a && $digit_b) {
             $ret = strcasecmp($ma[1] . '0', $mb[1] . '0');    //記号を数字より優先させるために0を付加
-            if($ret == 0){
+            if ($ret == 0) {
                 $ret = strnatcmp($ma[2], $mb[2]);
-                if($ret == 0){
+                if ($ret == 0) {
                     $ret = strcmp($ma[1], $mb[1]);
-                    if($ret == 0){
+                    if ($ret == 0) {
                         $a = $ma[3];
                         $b = $mb[3];
                         continue;
@@ -384,23 +381,21 @@ function redirect($page)
 function resolvepath($pagename, $basepath = '')
 {
     $pagename = trim($pagename);
-    if(mb_ereg('^\.\.?/', $pagename)){
+    if (mb_ereg('^\.\.?/', $pagename)) {
         $path = trim($basepath) . '/./' . $pagename;
-    }
-    else{
+    } else{
         $path = $pagename;
     }
     
     $path = mb_split('/', $path);
     $ret = array();
-    foreach($path as $p){
-        if($p == '' || $p == '.'){
+    foreach($path as $p) {
+        if ($p == '' || $p == '.') {
             continue;
         }
-        if($p == '..'){
+        if ($p == '..') {
             array_pop($ret);
-        }
-        else{
+        } else {
             array_push($ret, $p);
         }
     }
@@ -416,7 +411,7 @@ function resolvepath($pagename, $basepath = '')
  */
 function sendmail($subject, $text)
 {
-    if(!MAIL_USE){
+    if (!MAIL_USE) {
         return;
     }
     
@@ -441,14 +436,13 @@ function sendmail($subject, $text)
  */
 function _substr($string, $start, $length = null)
 {
-    if($start >= strlen($string)){
+    if ($start >= strlen($string)) {
         return '';
     }
     
-    if($length === null){
+    if ($length === null) {
         return substr($string, $start);
-    }
-    else{
+    } else {
         return substr($string, $start, $length);
     }
 }
@@ -463,7 +457,7 @@ function _substr($string, $start, $length = null)
 function tagparam2array($param)
 {
     $ret = array();
-    while($param != '' && mb_ereg('^.*?([^\t 　]+?)=(?:(\'|")(.*?)\2|([^\t 　\'"][^\t 　]*))', $param, $m)){
+    while($param != '' && mb_ereg('^.*?([^\t 　]+?)=(?:(\'|")(.*?)\2|([^\t 　\'"][^\t 　]*))', $param, $m)) {
         $ret[$m[1]] = $m[3] . $m[4];    //$m[3]と$m[4]のどちらかは空文字列なので、これでヒットしたほうを取得できる
         $param = _substr($param, strlen($m[0]));
     }

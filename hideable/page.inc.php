@@ -60,13 +60,16 @@ class Page
         $db = DataBase::getinstance();
         
         $_num = (int)$num;
-        $query  = "SELECT pagename FROM purepage";
-        $query .= " WHERE num = '$_num'";
+        $query  = 'SELECT '
+                .     'pagename '
+                . 'FROM '
+                .     'purepage'
+                . 'WHERE '
+                .     "num = '" . $_num . "'";
         $row = $db->fetch($db->query($query));
         if ($row !== false) {
             return self::getinstance($row[0]);
-        }
-        else{
+        } else {
             throw new FatalException("番号 $_num のページはありません。");
         }
     }
@@ -93,8 +96,12 @@ class Page
         $db = DataBase::getinstance();
         
         $_pagename = $db->escape($this->pagename);
-        $query  = "SELECT num FROM purepage";
-        $query .= " WHERE pagename = '$_pagename'";
+        $query  = 'SELECT '
+                .     'num '
+                . 'FROM '
+                .    'purepage '
+                . 'WHERE '
+                .     "pagename = '" . $_pagename . "'";
         $row = $db->fetch($db->query($query));
         return $row !== false ? $row[0] : null;
     }
@@ -181,8 +188,7 @@ class Page
             $query .= "  realtimestamp = $_time";
             $query .= " WHERE pagename = '$_pagename'";
             $db->query($query);
-        }
-        else{
+        } else {
             $query  = 'INSERT INTO purepage';
             $query .= ' (pagename, num, source, timestamp, realtimestamp)';
             $query .= " VALUES('$_pagename', NULL, '$_source', $_time, $_time)";
@@ -260,8 +266,7 @@ class Page
         if ($num == 0) {
             $query  = "SELECT $result FROM allpage";
             $query .= " WHERE pagename = '$_pagename'";
-        }
-        else{
+        } else {
             $_num = $num - 1;
             $query  = "SELECT $result FROM pagebackup";
             $query .= " WHERE pagename = '$_pagename'";

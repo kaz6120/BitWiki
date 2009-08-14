@@ -95,7 +95,7 @@ class Renderer
     function render($value)
     {
         $command = array();
-        foreach(Command::getCommands() as $c) {
+        foreach (Command::getCommands() as $c) {
             $html = $c->getbody();
             if ($html != '') {
                 $command[substr(get_class($c), 8)] = $html;
@@ -103,7 +103,7 @@ class Renderer
         }
         
         $plugin = array();
-        foreach(Plugin::getPlugins() as $c) {
+        foreach (Plugin::getPlugins() as $c) {
             $html = $c->getbody();
             if ($html != '') {
                 $plugin[substr(get_class($c), 7)] = $html;

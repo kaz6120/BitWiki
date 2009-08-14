@@ -18,7 +18,7 @@ class Search
     {
         static $ins;
         
-        if(empty($ins)){
+        if (empty($ins)) {
             $ins = new self;
         }
         return $ins;
@@ -45,7 +45,7 @@ class Search
     {
         $db = DataBase::getinstance();
         
-        for($i = 0; $i < count($word); $i++){
+        for ($i = 0; $i < count($word); $i++) {
             $_word[] = $db->escape($word[$i]);
         }
         
@@ -70,7 +70,7 @@ class Search
     function fuzzysearch($word, $andsearch = true)
     {
         $exp = array();
-        foreach($word as $w){
+        foreach ($word as $w) {
             $exp[] = FuzzyFunc::makefuzzyexp($w);
         }
         return $this->eregsearch($exp, $andsearch);
@@ -88,7 +88,7 @@ class Search
     {
         $db = DataBase::getinstance();
         
-        for($i = 0; $i < count($word); $i++){
+        for ($i = 0; $i < count($word); $i++) {
             $_word[] = $db->escape($word[$i]);
         }
         
@@ -129,7 +129,7 @@ class Search
         $db = DataBase::getinstance();
         $result = $db->query($query);
         $ret = array();
-        while($row = $db->fetch($result)){
+        while($row = $db->fetch($result)) {
             $ret[] = $row['pagename'];
         }
         return $ret;
@@ -145,7 +145,7 @@ class Search
      */
     function mark($text, $word, $type)
     {
-        switch($type){
+        switch($type) {
             case 'fuzzy':
                 $call = '_markword_fuzzy';
                 break;
@@ -158,7 +158,7 @@ class Search
         }
         
         $count = 1;
-        foreach($word as $w){
+        foreach ($word as $w) {
             $s = $this->$call($w);
             $pattern = "((?:\G|>)[^<]*?)($s)";
             $replace = "\\1<span class=\"search word$count\">\\2</span>";
