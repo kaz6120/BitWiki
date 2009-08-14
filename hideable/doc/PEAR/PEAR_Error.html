@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<title>Docs For Class PEAR_Error</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+<link rel="start" href="./index.html" title="API Documentation" />
+<link rev="made" href="mailto:webmaster@anti-spam.example.com" />
+</head>
+<body>
+
+<!-- Begin #header -->
+<div id="header">
+<h1 id="top">PEAR</h1>
+<div id="header-menu">
+<a href="../classtrees_PEAR.html" class="menu">class tree: PEAR</a> 
+<a href="../elementindex_PEAR.html" class="menu">index: PEAR</a> 
+<a href="../elementindex.html" class="menu">all elements</a>
+</div>
+</div>
+
+<!-- Begin #menu -->
+<div id="menu">
+<h2>Packages:</h2>
+<ul>
+<li><a href="../li_default.html">default</a></li>
+<li><a href="../li_Cache_Lite.html">Cache_Lite</a></li>
+<li><a href="../li_HTTP_Request.html">HTTP_Request</a></li>
+<li><a href="../li_Net_CheckIP.html">Net_CheckIP</a></li>
+<li><a href="../li_Net_DNSBL.html">Net_DNSBL</a></li>
+<li><a href="../li_PEAR.html">PEAR</a></li>
+<li><a href="../li_Smarty.html">Smarty</a></li>
+<li><a href="../li_Text_Diff.html">Text_Diff</a></li>
+<li><a href="../li_Text_Highlighter.html">Text_Highlighter</a></li>
+<li><a href="../li_Trackback.html">Trackback</a></li>
+</ul>
+<h2>Files:</h2>
+<div class="package">
+<ul>
+<li><a href="../PEAR/_library---pear---PEAR.php.html">PEAR.php</a></li></ul>
+</div>
+<h2>Classes:</h2>
+<div class="package">
+<ul>
+<li><a href="../PEAR/Net_Socket.html">Net_Socket</a></li><li><a href="../PEAR/PEAR.html">PEAR</a></li><li><a href="../PEAR/PEAR_Error.html">PEAR_Error</a></li></ul>
+</div>
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+<div id="content-title">
+<h2>Class: PEAR_Error</h2>
+<p>Source Location: /library/pear/PEAR.php</p>
+</div>
+
+
+<div id="overview">
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre>
+<div class="description">Standard PEAR error class for PHP 4</div><h4>Author(s):</h4>
+<ul>
+<li>Stig Bakken &lt;<a href="mailto:ssb@php.net">ssb@php.net</a>&gt;</li>
+<li>Tomas V.V. Cox &lt;<a href="mailto:cox@idecnet.com">cox@idecnet.com</a>&gt;</li>
+<li>Gregory Beaver &lt;<a href="mailto:cellog@php.net">cellog@php.net</a>&gt;</li>
+</ul>
+
+
+
+
+                
+          
+                  
+<h4>Version:</h4>
+<ul>
+  <li>Release: 1.4.0a12</li>
+</ul>
+
+<h4>Copyright:</h4>
+<ul>
+  <li>1997-2005 The PHP Group</li>
+</ul>
+</div><!-- End #overview -->
+
+<div id="variables">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../PEAR/PEAR_Error.html#var$backtrace">$backtrace</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#var$code">$code</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#var$error_message_prefix">$error_message_prefix</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#var$level">$level</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#var$message">$message</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#var$mode">$mode</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#var$userinfo">$userinfo</a></li>
+  </ul>
+</div>
+
+
+<div id="methods">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../PEAR/PEAR_Error.html#methodPEAR_Error">PEAR_Error</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#methodaddUserInfo">addUserInfo</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#methodgetBacktrace">getBacktrace</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#methodgetCallback">getCallback</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#methodgetCode">getCode</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#methodgetDebugInfo">getDebugInfo</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#methodgetMessage">getMessage</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#methodgetMode">getMode</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#methodgetType">getType</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#methodgetUserInfo">getUserInfo</a></li>
+    <li><a href="../PEAR/PEAR_Error.html#methodtoString">toString</a></li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+<div id="class_details">
+<h3>Class Details</h3>
+<div class="tags">
+[line 803]<br />
+<p>Standard PEAR error class for PHP 4</p>This class is supserseded by PEAR_Exception in PHP 5<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>author:</strong></td><td>Stig Bakken &lt;<a href="mailto:ssb@php.net">ssb@php.net</a>&gt;</td>
+</tr>
+<tr>
+<td><strong>author:</strong></td><td>Tomas V.V. Cox &lt;<a href="mailto:cox@idecnet.com">cox@idecnet.com</a>&gt;</td>
+</tr>
+<tr>
+<td><strong>author:</strong></td><td>Gregory Beaver &lt;<a href="mailto:cellog@php.net">cellog@php.net</a>&gt;</td>
+</tr>
+<tr>
+<td><strong>version:</strong></td><td>Release: 1.4.0a12</td>
+</tr>
+<tr>
+<td><strong>copyright:</strong></td><td>1997-2005 The PHP Group</td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../PEAR/PEAR.html#methodraiseError">PEAR::raiseError()</a>, <a href="../PEAR/PEAR.html#methodthrowError">PEAR::throwError()</a></td>
+</tr>
+<tr>
+<td><strong>link:</strong></td><td><a href="http://pear.php.net/manual/en/core.pear.pear-error.php">http://pear.php.net/manual/en/core.pear.pear-error.php</a></td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>Class available since PHP 4.0.2</td>
+</tr>
+<tr>
+<td><strong>license:</strong></td><td><a href="http://www.php.net/license/3_0.txt">PHP License 3.0</a></td>
+</tr>
+</table>
+</div>
+</div>
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div>
+
+<div id="class_vars">
+<h3>Class Variables</h3>
+<div class="tags">
+<h4 id="var$backtrace">$backtrace = <span class="value">null</span></h4>
+<p>[line 813]</p>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$code">$code = <span class="value">-1</span></h4>
+<p>[line 810]</p>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$error_message_prefix">$error_message_prefix = <span class="value">''</span></h4>
+<p>[line 807]</p>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$level">$level = <span class="value">E_USER_NOTICE</span></h4>
+<p>[line 809]</p>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$message">$message = <span class="value">''</span></h4>
+<p>[line 811]</p>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$mode">$mode = <span class="value">PEAR_ERROR_RETURN</span></h4>
+<p>[line 808]</p>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$userinfo">$userinfo = <span class="value">''</span></h4>
+<p>[line 812]</p>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+</div>
+
+<div id="class_methods">
+<h3>Class Methods</h3>
+<div class="tags">
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodPEAR_Error">constructor PEAR_Error <span class="smalllinenumber">[line 838]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>PEAR_Error PEAR_Error(
+[string
+$message = 'unknown error'], [int
+$code = null], [int
+$mode = null], [mixed
+$options = null], [string
+$userinfo = null])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>PEAR_Error constructor</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$message</var></strong></td>
+<td>message</td>
+</tr>
+<tr>
+<td class="type">int</td>
+<td><strong><var>$code</var></strong></td>
+<td>(optional) error code</td>
+</tr>
+<tr>
+<td class="type">int</td>
+<td><strong><var>$mode</var></strong></td>
+<td>(optional) error mode, one of: PEAR_ERROR_RETURN,  PEAR_ERROR_PRINT, PEAR_ERROR_DIE, PEAR_ERROR_TRIGGER,  PEAR_ERROR_CALLBACK or PEAR_ERROR_EXCEPTION</td>
+</tr>
+<tr>
+<td class="type">mixed</td>
+<td><strong><var>$options</var></strong></td>
+<td>(optional) error level, _OR_ in the case of  PEAR_ERROR_CALLBACK, the callback function or object/method  tuple.</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$userinfo</var></strong></td>
+<td>(optional) additional user/debug info</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodaddUserInfo">method addUserInfo <span class="smalllinenumber">[line 1018]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void addUserInfo(
+
+$info)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$info</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetBacktrace">method getBacktrace <span class="smalllinenumber">[line 1004]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>array getBacktrace(
+[int
+$frame = null])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Get the call backtrace from where the error was generated.</p>Supported with PHP 4.3.0 or newer.<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>Backtrace, or NULL if not available.</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">int</td>
+<td><strong><var>$frame</var></strong></td>
+<td>(optional) what frame to fetch</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetCallback">method getCallback <span class="smalllinenumber">[line 917]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed getCallback(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Get the callback function/method from an error object.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>callback function or object/method array</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetCode">method getCode <span class="smalllinenumber">[line 946]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>int getCode(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Get error code from an error object</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>error code</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetDebugInfo">method getDebugInfo <span class="smalllinenumber">[line 988]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string getDebugInfo(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Get additional debug information supplied by the application.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>debug information</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetMessage">method getMessage <span class="smalllinenumber">[line 931]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string getMessage(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Get the error message from an error object.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>full error message</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetMode">method getMode <span class="smalllinenumber">[line 904]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>int getMode(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Get the error mode from an error object.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>error mode</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetType">method getType <span class="smalllinenumber">[line 960]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string getType(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Get the name of this error/exception.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>error/exception name (type)</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetUserInfo">method getUserInfo <span class="smalllinenumber">[line 974]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string getUserInfo(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Get additional user-supplied information.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>user-supplied information</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodtoString">method toString <span class="smalllinenumber">[line 1036]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string toString(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Make a string representation of this object.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>a string with an object summary</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+</div>
+</div>
+
+
+</div><!-- End #content -->
+
+<div class="credit">
+<p>Documentation generated on Fri, 14 Aug 2009 22:09:58 +0900 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a></p>
+<p><a href="http://validator.w3.org/check/referer">
+XHTML 1.0</a></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<title>Docs For Class Config_File</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+<link rel="start" href="./index.html" title="API Documentation" />
+<link rev="made" href="mailto:webmaster@anti-spam.example.com" />
+</head>
+<body>
+
+<!-- Begin #header -->
+<div id="header">
+<h1 id="top">Smarty</h1>
+<div id="header-menu">
+<a href="../classtrees_Smarty.html" class="menu">class tree: Smarty</a> 
+<a href="../elementindex_Smarty.html" class="menu">index: Smarty</a> 
+<a href="../elementindex.html" class="menu">all elements</a>
+</div>
+</div>
+
+<!-- Begin #menu -->
+<div id="menu">
+<h2>Packages:</h2>
+<ul>
+<li><a href="../li_default.html">default</a></li>
+<li><a href="../li_Cache_Lite.html">Cache_Lite</a></li>
+<li><a href="../li_HTTP_Request.html">HTTP_Request</a></li>
+<li><a href="../li_Net_CheckIP.html">Net_CheckIP</a></li>
+<li><a href="../li_Net_DNSBL.html">Net_DNSBL</a></li>
+<li><a href="../li_PEAR.html">PEAR</a></li>
+<li><a href="../li_Smarty.html">Smarty</a></li>
+<li><a href="../li_Text_Diff.html">Text_Diff</a></li>
+<li><a href="../li_Text_Highlighter.html">Text_Highlighter</a></li>
+<li><a href="../li_Trackback.html">Trackback</a></li>
+</ul>
+<h2>Files:</h2>
+<div class="package">
+<ul>
+<li><a href="../Smarty/_library---smarty---Config_File.class.php.html">Config_File.class.php</a></li><li><a href="../Smarty/_library---smarty---Smarty.class.php.html">Smarty.class.php</a></li><li><a href="../Smarty/_library---smarty---Smarty_Compiler.class.php.html">Smarty_Compiler.class.php</a></li></ul>
+</div>
+subpackage <b>plugins</b><div class="package">
+<ul>
+<li><a href="../Smarty/plugins/_library---smarty---plugins---block.textformat.php.html">block.textformat.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---compiler.assign.php.html">compiler.assign.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.assemble_plugin_filepath.php.html">core.assemble_plugin_filepath.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.assign_smarty_interface.php.html">core.assign_smarty_interface.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.create_dir_structure.php.html">core.create_dir_structure.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.display_debug_console.php.html">core.display_debug_console.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.get_include_path.php.html">core.get_include_path.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.get_microtime.php.html">core.get_microtime.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.get_php_resource.php.html">core.get_php_resource.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.is_secure.php.html">core.is_secure.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.is_trusted.php.html">core.is_trusted.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.load_plugins.php.html">core.load_plugins.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.load_resource_plugin.php.html">core.load_resource_plugin.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.process_cached_inserts.php.html">core.process_cached_inserts.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.process_compiled_include.php.html">core.process_compiled_include.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.read_cache_file.php.html">core.read_cache_file.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.rmdir.php.html">core.rmdir.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.rm_auto.php.html">core.rm_auto.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.run_insert_handler.php.html">core.run_insert_handler.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.smarty_include_php.php.html">core.smarty_include_php.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.write_cache_file.php.html">core.write_cache_file.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.write_compiled_include.php.html">core.write_compiled_include.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.write_compiled_resource.php.html">core.write_compiled_resource.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.write_file.php.html">core.write_file.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.assign_debug_info.php.html">function.assign_debug_info.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.config_load.php.html">function.config_load.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.counter.php.html">function.counter.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.cycle.php.html">function.cycle.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.debug.php.html">function.debug.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.eval.php.html">function.eval.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.fetch.php.html">function.fetch.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_checkboxes.php.html">function.html_checkboxes.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_image.php.html">function.html_image.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_options.php.html">function.html_options.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_radios.php.html">function.html_radios.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_select_date.php.html">function.html_select_date.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_select_time.php.html">function.html_select_time.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_table.php.html">function.html_table.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.mailto.php.html">function.mailto.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.math.php.html">function.math.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.popup.php.html">function.popup.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.popup_init.php.html">function.popup_init.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.capitalize.php.html">modifier.capitalize.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.cat.php.html">modifier.cat.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.count_characters.php.html">modifier.count_characters.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.count_paragraphs.php.html">modifier.count_paragraphs.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.count_sentences.php.html">modifier.count_sentences.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.count_words.php.html">modifier.count_words.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.date_format.php.html">modifier.date_format.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.debug_print_var.php.html">modifier.debug_print_var.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.default.php.html">modifier.default.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.escape.php.html">modifier.escape.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.indent.php.html">modifier.indent.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.lower.php.html">modifier.lower.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.nl2br.php.html">modifier.nl2br.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.regex_replace.php.html">modifier.regex_replace.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.replace.php.html">modifier.replace.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.spacify.php.html">modifier.spacify.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.string_format.php.html">modifier.string_format.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.strip.php.html">modifier.strip.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.strip_tags.php.html">modifier.strip_tags.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.truncate.php.html">modifier.truncate.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.upper.php.html">modifier.upper.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.wordwrap.php.html">modifier.wordwrap.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---outputfilter.trimwhitespace.php.html">outputfilter.trimwhitespace.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---shared.escape_special_chars.php.html">shared.escape_special_chars.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---shared.make_timestamp.php.html">shared.make_timestamp.php</a></li></ul>
+</div>
+<h2>Classes:</h2>
+<div class="package">
+<ul>
+<li><a href="../Smarty/Config_File.html">Config_File</a></li><li><a href="../Smarty/MySmarty.html">MySmarty</a></li><li><a href="../Smarty/Smarty.html">Smarty</a></li><li><a href="../Smarty/Smarty_Compiler.html">Smarty_Compiler</a></li></ul>
+</div>
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+<div id="content-title">
+<h2>Class: Config_File</h2>
+<p>Source Location: /library/smarty/Config_File.class.php</p>
+</div>
+
+
+<div id="overview">
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre>
+<div class="description">Config file reading class</div>
+
+
+
+
+
+</div><!-- End #overview -->
+
+<div id="variables">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Smarty/Config_File.html#var$booleanize">$booleanize</a></li>
+    <li><a href="../Smarty/Config_File.html#var$fix_newlines">$fix_newlines</a></li>
+    <li><a href="../Smarty/Config_File.html#var$overwrite">$overwrite</a></li>
+    <li><a href="../Smarty/Config_File.html#var$read_hidden">$read_hidden</a></li>
+    <li><a href="../Smarty/Config_File.html#var$_config_data">$_config_data</a></li>
+    <li><a href="../Smarty/Config_File.html#var$_config_path">$_config_path</a></li>
+  </ul>
+</div>
+
+
+<div id="methods">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Smarty/Config_File.html#methodConfig_File">Config_File</a></li>
+    <li><a href="../Smarty/Config_File.html#methodclear">clear</a></li>
+    <li><a href="../Smarty/Config_File.html#methodget">get</a></li>
+    <li><a href="../Smarty/Config_File.html#methodget_file_names">get_file_names</a></li>
+    <li><a href="../Smarty/Config_File.html#methodget_key">get_key</a></li>
+    <li><a href="../Smarty/Config_File.html#methodget_section_names">get_section_names</a></li>
+    <li><a href="../Smarty/Config_File.html#methodget_var_names">get_var_names</a></li>
+    <li><a href="../Smarty/Config_File.html#methodload_file">load_file</a></li>
+    <li><a href="../Smarty/Config_File.html#methodparse_contents">parse_contents</a></li>
+    <li><a href="../Smarty/Config_File.html#methodset_file_contents">set_file_contents</a></li>
+    <li><a href="../Smarty/Config_File.html#methodset_path">set_path</a></li>
+    <li><a href="../Smarty/Config_File.html#method_set_config_var">_set_config_var</a></li>
+    <li><a href="../Smarty/Config_File.html#method_trigger_error_msg">_trigger_error_msg</a></li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+<div id="class_details">
+<h3>Class Details</h3>
+<div class="tags">
+[line 34]<br />
+<p>Config file reading class</p></div>
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div>
+
+<div id="class_vars">
+<h3>Class Variables</h3>
+<div class="tags">
+<h4 id="var$booleanize">$booleanize = <span class="value">true</span></h4>
+<p>[line 48]</p>
+<p>Controls whether config values of on/true/yes and off/false/no get  converted to boolean values automatically.</p>Options<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>boolean</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$fix_newlines">$fix_newlines = <span class="value">true</span></h4>
+<p>[line 59]</p>
+<p>Controls whether or not to fix mac or dos formatted newlines.</p>Options  If set to true, \r or \r\n will be changed to \n.<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>boolean</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$overwrite">$overwrite = <span class="value">true</span></h4>
+<p>[line 42]</p>
+<p>Controls whether variables with the same name overwrite each other.</p>Options<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>boolean</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$read_hidden">$read_hidden = <span class="value">true</span></h4>
+<p>[line 53]</p>
+<p>Controls whether hidden config sections/vars are read from the file.</p>Options<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>boolean</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_config_data">$_config_data = <span class="value">array()</span></h4>
+<p>[line 64]</p>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_config_path">$_config_path = <span class="value">&quot;&quot;</span></h4>
+<p>[line 63]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+</div>
+
+<div id="class_methods">
+<h3>Class Methods</h3>
+<div class="tags">
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodConfig_File">constructor Config_File <span class="smalllinenumber">[line 72]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>Config_File Config_File(
+[string
+$config_path = NULL])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Constructs a new config file class.</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$config_path</var></strong></td>
+<td>(optional) path to the config files</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodclear">method clear <span class="smalllinenumber">[line 213]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void clear(
+[string
+$file_name = NULL])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Clear loaded config data for a certain file or all files.</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$file_name</var></strong></td>
+<td>file to clear config data for</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodget">method get <span class="smalllinenumber">[line 108]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string|array &amp;get(
+string
+$file_name, [string
+$section_name = NULL], [string
+$var_name = NULL])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Retrieves config info based on the file, section, and variable name.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>a value or array of values</td>
+</tr>
+<tr>
+<td><strong>usedby:</strong></td><td><a href="../Smarty/Config_File.html#methodget_key">Config_File::get_key()</a> - retrieves information from config file and returns it</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$file_name</var></strong></td>
+<td>config file to get info for</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$section_name</var></strong></td>
+<td>(optional) section to get info for</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$var_name</var></strong></td>
+<td>(optional) variable to get info for</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodget_file_names">method get_file_names <span class="smalllinenumber">[line 160]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>array get_file_names(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Get all loaded config file names.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>an array of loaded config file names</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodget_key">method get_key <span class="smalllinenumber">[line 148]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string|array &amp;get_key(
+$file_name
+$config_key)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Retrieves config info based on the key.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>same as get()</td>
+</tr>
+<tr>
+<td><strong>uses:</strong></td><td><a href="../Smarty/Config_File.html#methodget">Config_File::get()</a> - retrieves information from config file and returns it</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">$file_name</td>
+<td><strong><var>$config_key</var></strong></td>
+<td>string config key (filename/section/var)</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodget_section_names">method get_section_names <span class="smalllinenumber">[line 172]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>array get_section_names(
+string
+$file_name)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Get all section names from a loaded file.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>an array of section names from the specified file</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$file_name</var></strong></td>
+<td>config file to get section names from</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodget_var_names">method get_var_names <span class="smalllinenumber">[line 191]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>array get_var_names(
+string
+$file_name, [
+$section = NULL], string
+$section_name)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Get all global or section variable names.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>an array of variables names from the specified file/section</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$file_name</var></strong></td>
+<td>config file to get info for</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$section_name</var></strong></td>
+<td>(optional) section to get info for</td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$section</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodload_file">method load_file <span class="smalllinenumber">[line 229]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void load_file(
+string
+$file_name, [boolean
+$prepend_path = true])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Load a configuration file manually.</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$file_name</var></strong></td>
+<td>file name to load</td>
+</tr>
+<tr>
+<td class="type">boolean</td>
+<td><strong><var>$prepend_path</var></strong></td>
+<td>whether current config path should be                               prepended to the filename</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodparse_contents">method parse_contents <span class="smalllinenumber">[line 267]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void parse_contents(
+string
+$contents)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>parse the source of a configuration file manually.</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$contents</var></strong></td>
+<td>the file-contents to parse</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodset_file_contents">method set_file_contents <span class="smalllinenumber">[line 256]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void set_file_contents(
+string
+$config_file, string
+$contents)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Store the contents of a file manually.</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$config_file</var></strong></td>
+<td>file name of the related contents</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$contents</var></strong></td>
+<td>the file-contents to parse</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodset_path">method set_path <span class="smalllinenumber">[line 84]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void set_path(
+string
+$config_path)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Set the path where configuration files can be found.</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$config_path</var></strong></td>
+<td>path to the config files</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_set_config_var">method _set_config_var <span class="smalllinenumber">[line 348]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _set_config_var(
+array
+&$container, string
+$var_name, mixed
+$var_value, boolean
+$booleanize)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">array</td>
+<td><strong><var>&$container</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$var_name</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">mixed</td>
+<td><strong><var>$var_value</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">boolean</td>
+<td><strong><var>$booleanize</var></strong></td>
+<td>determines whether $var_value is converted to                             to true/false</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_trigger_error_msg">method _trigger_error_msg <span class="smalllinenumber">[line 382]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _trigger_error_msg(
+string
+$error_msg, [integer
+$error_type = E_USER_WARNING])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+<tr>
+<td><strong>uses:</strong></td><td><a href="http://www.php.net/trigger_error">trigger_error()</a> - creates a PHP warning/error</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$error_msg</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">integer</td>
+<td><strong><var>$error_type</var></strong></td>
+<td>one of</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+</div>
+</div>
+
+
+</div><!-- End #content -->
+
+<div class="credit">
+<p>Documentation generated on Fri, 14 Aug 2009 22:09:43 +0900 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a></p>
+<p><a href="http://validator.w3.org/check/referer">
+XHTML 1.0</a></p>
+</div>
+
+</body>
+</html>
