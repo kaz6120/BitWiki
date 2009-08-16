@@ -2,7 +2,7 @@
 /*
  * $Id: htmlconverter.inc.php,v 1.6 2005/09/06 01:14:55 youka Exp $
  *
- * @version: 9.8.13
+ * @version: 9.8.16
  */
 
  
@@ -424,12 +424,11 @@ class Footnote
     {
         $this->note[$num-1] = $html;
         $note = strip_tags($html);
-        $str  = '<sup class="footnote" id="footnote_' . $num . '">'
-              .  '<a href="#footnote_' . $num . '" title="' . $note . '">'
-              .  '[*' . $num . ']'
-              .  '</a>'
-              . '</sup>';
-        return $str;
+        return '<sup class="footnote" id="footnote_' . $num . '">'
+             .  '<a href="#footnote_' . $num . '" title="' . $note . '">'
+             .  '[*' . $num . ']'
+             .  '</a>'
+             . '</sup>';
     }
     
     
@@ -446,8 +445,12 @@ class Footnote
         
         foreach($this->note as $i => $item) {
             $i++;
-            $str[] = "<a id=\"footnote_{$i}\" href=\"#footnote_{$i}_r\">*{$i}</a>: {$item}";
+            $str[] = '  <li><a id="footnote_' . $i . '" href="#footnote_' . $i . '_r">*' . $i . '</a>: ' . $item . '</li>';
         }
-        return '<div class="footnote">' . join("<br />\n", $str) . '</div>';
+        return "\n" . '<div class="footnote">' . "\n"
+             . ' <ul>' . "\n"
+             . join($str) . "\n"
+             . ' </ul>' . "\n"
+             . '</div>' . "\n";
     }
 }
