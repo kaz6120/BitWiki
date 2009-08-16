@@ -1001,7 +1001,7 @@ class T_URL extends T_InlineElement
         if (mb_ereg('^(.*?)' . EXP_URL, $str, $m)) {
             return strlen($m[1]);
         }
-        else{
+        else {
             return strlen($str);
         }
     }
@@ -1032,7 +1032,7 @@ class T_Mail extends T_InlineElement
         if (mb_ereg('^(.*?)' . EXP_MAIL, $str, $m)) {
             return strlen($m[1]);
         }
-        else{
+        else {
             return strlen($str);
         }
     }
@@ -1066,8 +1066,7 @@ class T_BlacketName extends T_InlineElement
     {
         if (mb_ereg('^(.*?)\[\[.+?\]\]', $str, $m)) {
             return strlen($m[1]);
-        }
-        else{
+        } else {
             return strlen($str);
         }
     }
@@ -1080,7 +1079,7 @@ class T_BlacketName extends T_InlineElement
             if (mb_ereg('(.+?)>(.+)', $m[1], $match)) {
                 return new T_BlacketName($m[0], $context, $match[2], $match[1]);
             }
-            else{
+            else {
                 return new T_BlacketName($m[0], $context, $m[1], '');
             }
         }
@@ -1118,7 +1117,7 @@ class T_InlinePlugin extends T_InlineElement
         if (mb_ereg('^(.*?)&[a-zA-Z0-9_]+[\t ]*\(.*?\)', $str, $m)) {
             return strlen($m[1]);
         }
-        else{
+        else {
             return strlen($str);
         }
     }
@@ -1278,8 +1277,7 @@ class T_Strong extends T_InlineElement
     {
         if (mb_ereg('^(.*?)[\t 　]?(\*\*?)[^\t 　]+?\2(?:[\t 　]|$|(?=\n))', $str, $m)) {
             return strlen($m[1]);
-        }
-        else{
+        } else {
             return strlen($str);
         }
     }

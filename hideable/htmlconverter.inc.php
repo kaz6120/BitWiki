@@ -80,23 +80,23 @@ class HTMLConverter
     
     public function visitT_UL($e)
     {
-        return "<ul>" . $e->getelem()->accept($this) . "</ul>";
+        return '<ul>' . "\n" . $e->getelem()->accept($this) . "\n" . '</ul>';
     }
     
     
     public function visitT_OL($e)
     {
-        return "<ol>" . $e->getelem()->accept($this) . "</ol>";
+        return '<ol>' . "\n" . $e->getelem()->accept($this) . "\n" . '</ol>';
     }
     
     
     public function visitT_List($e)
     {
-        $ret[] = '<li>';
+        $ret[] = ' <li>';
         foreach($e->getelements() as $elem) {
             $ret[] = $elem->accept($this);
             if (get_class($elem->getnext()) == 'T_LI') {
-                $ret[] = "</li>\n<li>";
+                $ret[] = '</li>' . "\n" . ' <li>';
             }
         }
         $ret[] = '</li>';
@@ -106,7 +106,7 @@ class HTMLConverter
     
     public function visitT_LI($e)
     {
-        return $e->getelem()->accept($this);
+        return $this->setSmiley($e->getelem()->accept($this));
     }
     
     
@@ -116,7 +116,7 @@ class HTMLConverter
         foreach($e->getelements() as $elem) {
             $ret[] = $elem->accept($this);
         }
-        return "<dl>\n" . join("\n", $ret) . "\n</dl>";
+        return '<dl>' . "\n" . join("\n", $ret) . "\n" . '</dl>';
     }
     
     
@@ -138,7 +138,7 @@ class HTMLConverter
         foreach($e->getelements() as $elem) {
             $ret[] = $elem->accept($this);
         }
-        return "<table>\n" . join("\n", $ret) . "\n</table>";
+        return '<table>' . "\n" . join("\n", $ret) . "\n" . '</table>';
     }
     
     
@@ -148,7 +148,7 @@ class HTMLConverter
         foreach($e->getelements() as $elem) {
             $ret[] = $elem->accept($this);
         }
-        return "\t<tr>\n" . join("\n", $ret) . "\n\t</tr>";
+        return ' <tr>' . "\n" . join("\n", $ret) . "\n" . ' </tr>';
     }
     
     
@@ -164,7 +164,7 @@ class HTMLConverter
         $bgcolor = $e->getbgcolor() != null ? ' background-color: ' . $e->getbgcolor() . ';' : '';
         $style = ($align . $bgcolor) != '' ? ' style="' . $align . $bgcolor . '"' : '';
         
-        return "\t\t<{$tag}{$style}>" . join("\n", $ret) . "</{$tag}>";
+        return "  <{$tag}{$style}>" . join("\n", $ret) . "</{$tag}>";
     }
     
     
@@ -173,11 +173,9 @@ class HTMLConverter
         try {
             $plugin = Plugin::getPlugin($e->getpluginname());
             return $plugin->do_block(Page::getinstance($e->getcontext()->pagename), $e->getparam1(), $e->getparam2());
-        }
-        catch(NoExistPluginException $exc) {
+        } catch(NoExistPluginException $exc) {
             return nl2br(htmlspecialchars($e->getsource()));
-        }
-        catch(PluginException $exc) {
+        } catch(PluginException $exc) {
             return '<p class="warning">' . htmlspecialchars($exc->getMessage()) . '</p>';
         }
     }
@@ -188,11 +186,9 @@ class HTMLConverter
         try {
             $plugin = Plugin::getPlugin($e->getpluginname());
             return $plugin->do_blocktag(Page::getinstance($e->getcontext()->pagename), $e->getparam1(), $e->getparam2());
-        }
-        catch(NoExistPluginException $exc) {
+        } catch(NoExistPluginException $exc) {
             return nl2br(htmlspecialchars($e->getsource()));
-        }
-        catch(PluginException $exc) {
+        } catch(PluginException $exc) {
             return '<p class="warning">' . htmlspecialchars($exc->getMessage()) . '</p>';
         }
     }
@@ -420,17 +416,19 @@ class Footnote
     /**
      * 脚注を設定する。
      * 
-     * @param    string    $html    追加するhtml形式文字列。
-     * @param    int    $num    予約しておいた番号
-     * @return    string    アンカー
+     * @param   string  $html
+     * @param   int     $num 
+     * @return  string  $str
      */
     public function setnote($html, $num)
     {
         $this->note[$num-1] = $html;
         $note = strip_tags($html);
-        $str  = '<span class="hidden">(</span>';
-        $str .= "<a class=\"footnote\" href=\"#footnote_{$num}\" id=\"footnote_{$num}_r\" title=\"{$note}\">*$num</a>";
-        $str .= '<span class="hidden">)</span>';
+        $str  = '<sup class="footnote" id="footnote_' . $num . '">'
+              .  '<a href="#footnote_' . $num . '" title="' . $note . '">'
+              .  '[*' . $num . ']'
+              .  '</a>'
+              . '</sup>';
         return $str;
     }
     

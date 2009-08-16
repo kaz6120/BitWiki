@@ -93,9 +93,10 @@ strong {
 a.fuzzylink {
 }
 
-a.footnote {
+sup.footnote {
     font-size: 50%;
-    vertical-align: text-top;
+    /*vertical-align: text-top;*/
+    margin: 0 2px 3px 2px;
 }
 
 div.footnote {

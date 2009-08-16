@@ -188,6 +188,8 @@ body {
     margin: 1em;
     padding: 0 0 0 2em;
     line-height: 1.8em;
+} #content table {
+    margin: 1em;
 }
 
 
