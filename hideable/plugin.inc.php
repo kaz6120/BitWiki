@@ -1,20 +1,22 @@
 <?php
-/* 
- * $Id: plugin.inc.php,v 1.6 2005/09/06 01:14:55 youka Exp $
+/**
+ * Plugin
  *
- * @version 9.8.11
+ * based on plugin.inc.php,v 1.6 2005/09/06 01:14:55 youka
+ *
+ * @version 9.8.17 
  */
 
 
 /**
- * プラグインはこのクラスから派生させる。
- * 派生させたプラグインはシングルトンにする。
+ * All plugins must extend this class.
  */
 class Plugin extends Controller 
 {
     /**
-     * すべてのプラグインを保持する。
-     * @var    array(Plugin)
+     * Retain all plugins
+     *
+     * @var array(Plugin)
      */
     private static $plugins = array();
     
@@ -26,7 +28,7 @@ class Plugin extends Controller
     
     
     /**
-     * すべてのプラグインを初期化する。
+     * Initialize all plugins 
      */
     protected static final function initPlugins()
     {
@@ -50,10 +52,10 @@ class Plugin extends Controller
     
     
     /**
-     * プラグインのインスタンスを取得する。
+     * Get instances of plugins.
      * 
-     * @param    string    $pluginname    プラグインの名前
-     * @return    Plugin    プラグインのインスタンス。プラグインがない場合はPluginExceptionを投げる。
+     * @param    string    $pluginname
+     * @return   Plugin  
      */
     static final function getPlugin($pluginname)
     {
@@ -70,9 +72,9 @@ class Plugin extends Controller
     
     
     /**
-     * プラグインのインスタンスをすべて取得する。
+     * Get all plugin instances.
      * 
-     * @return    array(Plugin)    プラグインのインスタンス。
+     * @return    array(Plugin)
      */
     static final function getPlugins()
     {
@@ -82,8 +84,8 @@ class Plugin extends Controller
     
     
     /**
-     * プラグイン用のSmartyインスタンスを取得する。
-     * @return    MySmarty    Smartyのインスタンス。
+     * Get smarty instance
+     * @return    MySmarty 
      */
     protected function getSmarty()
     {
@@ -94,12 +96,12 @@ class Plugin extends Controller
     
     
     /**
-     * ブロックプラグインとして動作させる。
+     * Execute as a block plugin
      * 
-     * @param    Page    $page    プラグインが実行されているページ。
-     * @param    string    $param1    ソースで()に囲まれた文字列。
-     * @param    string    $param2    ソースで{}に囲まれた文字列。
-     * @return    string    html形式。プラグインが無い場合はPluginExceptionを投げる。
+     * @param    Page    $page     Page which plugin is executed.
+     * @param    string  $param1   Strings in ().
+     * @param    string  $param2   Strings in {}.
+     * @return   string  html
      */
     function do_block($page, $param1, $param2)
     {
@@ -108,12 +110,12 @@ class Plugin extends Controller
     
     
     /**
-     * インラインプラグインとして動作させる。
+     * Execute as an inline plugin
      * 
-     * @param    Page    $page    プラグインが実行されているページ。
-     * @param    string    $param1    ソースで()に囲まれた文字列。
-     * @param    string    $param2    ソースで{}に囲まれた文字列。
-     * @return    string    html形式。プラグインが無い場合はPluginExceptionを投げる。
+     * @param    Page    $page     Page which plugin is executed.
+     * @param    string  $param1   Strings in ().
+     * @param    string  $param2   Strings in {}. 
+     * @return   string  html
      */
     function do_inline($page, $param1, $param2)
     {
@@ -122,12 +124,12 @@ class Plugin extends Controller
     
     
     /**
-     * タグ型ブロックプラグインとして動作させる。
+     * Execute as a tag plugin 
      * 
-     * @param    Page    $page    プラグインが実行されているページ。
-     * @param    string    $param1    タグの引数文字列。
-     * @param    string    $param2    タグに囲まれた文字列。
-     * @return    string    html形式。プラグインが無い場合はPluginExceptionを投げる。
+     * @param    Page    $page     Page which plugin is executed.
+     * @param    string  $param1   Strings in ().
+     * @param    string  $param2   Strings in {}. 
+     * @return   string  html
      */
     function do_blocktag($page, $param1, $param2)
     {
@@ -136,12 +138,12 @@ class Plugin extends Controller
     
     
     /**
-     * タグ型インラインプラグインとして動作させる。
-     * 
-     * @param    Page    $page    プラグインが実行されているページ。
-     * @param    string    $param1    タグの引数文字列。
-     * @param    string    $param2    タグに囲まれた文字列。
-     * @return    string    html形式。プラグインが無い場合はPluginExceptionを投げる。
+     * Execute as a tag-style inline plugin    
+     *
+     * @param    Page    $page     Page which plugin is executed.  
+     * @param    string  $param1   Strings in ().
+     * @param    string  $param2   Strings in {}. 
+     * @return   string  html
      */
     function do_inlinetag($page, $param1, $param2)
     {
@@ -152,15 +154,15 @@ class Plugin extends Controller
 
 
 /**
- * プラグイン関連の例外クラス。
+ * Plugin Exception class 
  */
 class PluginException extends MyException 
 {
     /**
-     * コンストラクタ。
+     * Constructor 
      *
-     * @param string    $mes    エラーメッセージ
-     * @param mixed        $pluginname    プラグイン名またはPlugin
+     * @param string    $mes
+     * @param mixed     $pluginname
      */
     public function __construct($mes = '', $plugin)
     {
@@ -172,14 +174,14 @@ class PluginException extends MyException
 
 
 /**
- * 存在しないプラグインを取得しようとした場合の例外クラス。
+ * Exception when try to fetch plugin which is not exist.
  */
 class NoExistPluginException extends MyException 
 {
     /**
-     * コンストラクタ。
+     * Constructor 
      *
-     * @param string    $plugin    プラグイン名
+     * @param string    $plugin
      */
     public function __construct($plugin)
     {
