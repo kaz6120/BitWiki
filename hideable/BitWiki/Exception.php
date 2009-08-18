@@ -6,7 +6,7 @@
  * @author  youka
  * @author  kaz <kaz6120@gmail.com>
  * @since   5.6.29
- * @version 9.8.12
+ * @version 9.8.18
  */
 
 
@@ -28,7 +28,7 @@ class FatalException extends Exception
     /** 
      * 外部に漏らしてはいけない情報を取得する。
      */
-     function getHiddenMessage(){
+     public function getHiddenMessage(){
          return $this->hiddenmessage;
      }
      
@@ -38,7 +38,7 @@ class FatalException extends Exception
       * @param    string    $mes    エラーメッセージ。このメッセージは外部に表示される。
       * @param    string    $hiddenmes    外部に表示してはいけない情報。ログにのみ記録される。
       */
-     function __construct($mes, $hiddenmes = ''){
+     public function __construct($mes, $hiddenmes = ''){
          parent::__construct($mes);
          $this->hiddenmessage = $hiddenmes;
      }
