@@ -1,11 +1,11 @@
 <ul>
-	<li>添付日時：{$timestamp|date}</li>
-	<li>サイズ：{math equation="round(size / 1000)" size=$size}KB ({$size}byte)</li>
-	<li>ダウンロード件数：{$count}</li>
-	<li>MD5：{$md5}</li>
+ <li>添付日時：{$timestamp|date}</li>
+ <li>サイズ：{math equation="round(size / 1000)" size=$size}KB ({$size}byte)</li>
+ <li>ダウンロード件数：{$count}</li>
+ <li>MD5：{$md5}</li>
 </ul>
 <ul>
-	<li><a href="{$script}?cmd=attach&amp;param=download&amp;page={$pagename|escape:"url"}&amp;file={$filename|escape:"url"}">ダウンロード</a></li>
-	<li><a href="{$script}?cmd=attach&amp;param=rename&amp;page={$pagename|escape:"url"}&amp;file={$filename|escape:"url"}">ファイル名変更</a></li>
-	<li><a href="{$script}?cmd=attach&amp;param=delete&amp;page={$pagename|escape:"url"}&amp;file={$filename|escape:"url"}">削除</a></li>
+ <li><a href="{$script}?cmd=attach&amp;param=download&amp;page={$pagename|escape:"url"}&amp;file={$filename|escape:"url"}">ダウンロード</a></li>
+ <li><a href="{$script}?cmd=attach&amp;param=rename&amp;page={$pagename|escape:"url"}&amp;file={$filename|escape:"url"}">ファイル名変更</a></li>
+ <li><a href="{$script}?cmd=attach&amp;param=delete&amp;page={$pagename|escape:"url"}&amp;file={$filename|escape:"url"}">削除</a></li>
 </ul>
