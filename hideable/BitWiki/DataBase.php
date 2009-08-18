@@ -8,7 +8,7 @@
  * @author  youka
  * @author  kaz <kaz6120@gmail.com>
  * @since   5.12.6
- * @version 9.8.12
+ * @version 9.8.18
  */
 
 function _sqlite_php_function()
@@ -191,12 +191,11 @@ class DataBase
     /**
      * ユーザ関数を登録する（sqlite_create_function()ラッパー）。
      */
-    function create_function($function_name, $callback, $num_args = null)
+    public function create_function($function_name, $callback, $num_args = null)
     {
         if ($num_args === null) {
             return $this->link->sqliteCreateFunction($function_name, $callback);
-        }
-        else{
+        } else {
             return $this->link->sqliteCreateFunction($function_name, $callback, $num_args);
         }
     }
@@ -205,12 +204,11 @@ class DataBase
     /**
      * 集約UDFを登録する（sqlite_create_aggregate()ラッパー）。
      */
-    function create_aggregate($function_name, $step_func, $finalize_func, $num_args = null)
+    public function create_aggregate($function_name, $step_func, $finalize_func, $num_args = null)
     {
         if ($num_args === null) {
             return $this->link->sqliteCreateAggregate($function_name, $step_func, $finalize_func);
-        }
-        else{
+        } else {
             return $this->link->sqliteCreateAggregate($function_name, $step_func, $finalize_func, $num_args);
         }
     }
@@ -222,7 +220,7 @@ class DataBase
      * @param Resource    $result    クエリの結果セット。
      * @return    mixed    レコードデータを含む連想配列を返す。レコードが無い場合はfalseを返す。
      */
-    function fetch($result)
+    public function fetch($result)
     {
         $ret = $result->fetch();
         if (get_magic_quotes_runtime()) {
@@ -238,7 +236,7 @@ class DataBase
      * @param Resource    $result    クエリの結果セット。
      * @return    array(array(mixed))
      */
-    function fetchall($result)
+    public function fetchall($result)
     {
         $ret = $result->fetchAll();
         if (get_magic_quotes_runtime()) {
@@ -254,7 +252,7 @@ class DataBase
      * @param Resource    $result    クエリの結果セット。
      * @return    array(mixed)
      */
-    function fetchsinglearray($result)
+    public function fetchsinglearray($result)
     {
         $ret = array();
         while(($str = $result->fetchColumn()) !== false) {
