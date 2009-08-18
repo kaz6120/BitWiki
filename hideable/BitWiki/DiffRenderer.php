@@ -8,7 +8,7 @@
  * @author  youka
  * @author  kaz <kaz6120@gmail.com>
  * @since   5.9.6
- * @version 9.8.14
+ * @version 9.8.18
  */
 require_once('Text/Diff.php');
 
@@ -47,7 +47,7 @@ class DiffRenderer
     /**
      * @param    Text_Diff    $diff    加工対象のDiff
      */
-    function __construct($diff)
+    public function __construct($diff)
     {
         $this->diff = $diff;
     }
@@ -58,7 +58,7 @@ class DiffRenderer
      * 
      * @param    bool    $diffonly    trueのときは差分のみを返す。
      */
-    function render($diffonly = false)
+    public function render($diffonly = false)
     {
         $ret = array();
         foreach($this->diff->getDiff() as $edit) {
