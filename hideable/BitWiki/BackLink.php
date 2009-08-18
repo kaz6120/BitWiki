@@ -1,7 +1,13 @@
 <?php
 /* 
- * $Id: backlink.inc.php,v 1.4 2005/07/14 08:32:22 youka Exp $
+ * BackLink
  *
+ * based on backlink.inc.php,v 1.4 2005/07/14 08:32:22 
+ *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.7.14
  * @version 9.8.11
  */
 

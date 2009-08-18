@@ -1,7 +1,13 @@
 <?php
 /* 
- * $Id: command.inc.php,v 1.3 2005/09/06 01:14:55 youka Exp $
+ * Command
  *
+ * based on command.inc.php,v 1.3 2005/09/06 01:14:55 
+ *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.9.6
  * @version 9.8.11
  */
 

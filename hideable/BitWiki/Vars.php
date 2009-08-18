@@ -1,12 +1,20 @@
 <?php
-/* 
- * $Id: vars.inc.php,v 1.2 2005/09/13 16:51:12 youka Exp $
+/*
+ * Vars
+ *
+ * based on vars.inc.php,v 1.2 2005/09/13 16:51:12 
+ *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.9.13
+ * @version 9.8.18
  */
 
 
 
 /**
- * 外部から来る変数を管理するクラス。
+ * Manage variables coming from outside
  */
 class Vars
 {
@@ -16,11 +24,11 @@ class Vars
     
     
     /**
-     * 本体実行前にクラスを初期化する。
+     * Initialize 
      */
     static function init()
     {
-        //GET、POST、COOKIEの初期化
+        // init GET、POST、COOKIE
         self::$post = $_POST;
         self::$get = $_GET;
         self::$cookie = $_COOKIE;

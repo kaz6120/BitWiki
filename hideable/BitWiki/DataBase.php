@@ -2,8 +2,12 @@
 /*
  * DataBase class
  * 
- * based on database.inc.php,v 1.5 2005/12/06 09:18:22 youka
+ * based on database.inc.php,v 1.5 2005/12/06 09:18:22 
  *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.12.6
  * @version 9.8.12
  */
 

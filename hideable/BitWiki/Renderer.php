@@ -1,12 +1,20 @@
 <?php
 /* 
- * $Id: renderer.inc.php,v 1.3 2005/07/13 09:48:51 youka Exp $
+ * Renderer
+ *
+ * based on renderer.inc.php,v 1.3 2005/07/13 09:48:51 
+ *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.7.13
+ * @version 9.8.18
  */
 
 
 
 /**
- * ページ表示用クラス。シングルトン。
+ * Page renderer class
  */
 class Renderer
 {
@@ -16,7 +24,7 @@ class Renderer
     protected $smarty;
 
     /**
-     * 使用するテーマ
+     * @ver theme
      */
     protected $theme = THEME;
 
@@ -32,43 +40,43 @@ class Renderer
 
     
     /**
-     * 使用するテーマを取得する。
+     * Retrieve theme to use
      */
-    function gettheme()
+    public function gettheme()
     {
         return $this->theme;
     }
     
     
     /**
-     * 使用するテーマを設定する。
+     * Set theme to use 
      */
-    function settheme($theme)
+    public function settheme($theme)
     {
         $this->theme = $theme;
     }
     
     
     /**
-     * オプション出力を設定する。
+     * Set optional output
      */
-    function setoption($name, $html)
+    public function setoption($name, $html)
     {
         $this->option[$name] = $html;
     }
     
     
     /**
-     * ヘッダーのオプション出力を設定する。
+     * Set optional header output
      */
-    function setheaderoption($name, $html)
+    public function setheaderoption($name, $html)
     {
         $this->headeroption[$name] = $html;
     }
     
     
     /**
-     * インスタンスを取得する。
+     * Get instance
      */
     static function getinstance()
     {
@@ -88,11 +96,11 @@ class Renderer
     
     
     /**
-     * ページを表示する。
+     * Display page
      *
-     * @param    array(string => string)    $value    スキンに渡す値。bodyとtitleは必須。
+     * @param    array(string => string)    $value
      */
-    function render($value)
+    public function render($value)
     {
         $command = array();
         foreach (Command::getCommands() as $c) {

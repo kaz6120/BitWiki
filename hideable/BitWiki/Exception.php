@@ -2,6 +2,10 @@
 /*
  * Exception Class
  *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.6.29
  * @version 9.8.12
  */
 

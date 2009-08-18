@@ -1,8 +1,14 @@
 <?php
 /* 
- * $Id: page.inc.php,v 1.6 2005/12/01 06:47:15 youka Exp $
+ * Page
  *
- * @version: 9.8.6
+ * based on page.inc.php,v 1.6 2005/12/01 06:47:15
+ *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.12.1
+ * @version 9.8.18 
  */
 
 
@@ -31,9 +37,9 @@ class Page
     
     
     /** ページ名を取得する。@return string */
-    function getpagename() { return $this->pagename; }
+    public function getpagename() { return $this->pagename; }
     /** 存在するページならtrueを返す。@return bool */
-    function isnull() { return $this->pagename == ''; }
+    public function isnull() { return $this->pagename == ''; }
     
     
     /**
@@ -91,7 +97,7 @@ class Page
      * 
      * @return    int    ページ番号。ない場合はnullを返す。
      */
-    function getnum()
+    public function getnum()
     {
         $db = DataBase::getinstance();
         
@@ -113,7 +119,7 @@ class Page
      * @param    int    $num    0の時は現在のソースを、１以上の場合はバックアップを取得する。
      * @return    string    ソース。無い場合は空文字列。
      */
-    function getsource($num = 0)
+    public function getsource($num = 0)
     {
         $ret = $this->getresult('source', $num);
         return $ret !== null ? $ret : '';
@@ -126,7 +132,7 @@ class Page
      * @param    int    $num    0の時は現在のものを、1以上の時はバックアップのものを取得する。
      * @return    int    タイムスタンプ。無い場合は0を返す。
      */
-    function gettimestamp($num = 0)
+    public function gettimestamp($num = 0)
     {
         $ret = $this->getresult('timestamp', $num);
         return $ret !== null ? $ret : 0;
@@ -139,7 +145,7 @@ class Page
      * @param    int    $num    0の時は現在のものを、1以上の時はバックアップのものを取得する。
      * @return    int    タイムスタンプ。無い場合は0を返す。
      */
-    function getrealtimestamp($num = 0)
+    public function getrealtimestamp($num = 0)
     {
         $ret = $this->getresult('realtimestamp', $num);
         return $ret !== null ? $ret : 0;
@@ -152,7 +158,7 @@ class Page
      * @param    int    $num    0の時は現在のものを、1以上の時はバックアップのものを取得する。
      * @return    bool    存在する場合はtrue、しない場合はfalse。
      */
-    function isexist($num = 0)
+    public function isexist($num = 0)
     {
         return $this->getsource($num) != '' ? true : false;
     }
@@ -164,7 +170,7 @@ class Page
      * @param    string    $source    空文字列を渡した場合は削除になる。
      * @param    bool    $notimestamp    trueの時、タイムスタンプを更新しない。
      */
-    function write($source, $notimestamp = false)
+    public function write($source, $notimestamp = false)
     {
         $db = DataBase::getinstance();
         $db->begin();
@@ -203,7 +209,7 @@ class Page
     /**
      * バックアップを削除する。
      */
-    function deletebackup()
+    public function deletebackup()
     {
         $db = DataBase::getinstance();
         
@@ -220,7 +226,7 @@ class Page
      * 
      * @return    int
      */
-    function getbackupamount()
+    public function getbackupamount()
     {
         $db = DataBase::getinstance();
         
@@ -238,7 +244,7 @@ class Page
      * 
      * @return    array(mixed)    realtimestampの新しい順にソート済み。
      */
-    function getbackup()
+    public function getbackup()
     {
         $db = DataBase::getinstance();
         
@@ -283,7 +289,7 @@ class Page
      * @param Page    比較対象のPage
      * @return    bool    同じページの場合Trueを返す。
      */
-    function equals($page)
+    public function equals($page)
     {
         return $this->getpagename() == $page->getpagename();
     }
@@ -294,7 +300,7 @@ class Page
      * 
      * @return    bool    隠しページの場合はtrue
      */
-    function ishidden()
+    public function ishidden()
     {
         return mb_substr($this->pagename, 0, 1) == ':' || mb_strpos($this->pagename, '/:') !== false;
     }

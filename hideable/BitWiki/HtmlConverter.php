@@ -1,8 +1,14 @@
 <?php
 /*
- * $Id: htmlconverter.inc.php,v 1.6 2005/09/06 01:14:55 youka Exp $
+ * HTMLConverter
  *
- * @version: 9.8.16
+ * based on htmlconverter.inc.php,v 1.6 2005/09/06 01:14:55 
+ *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.9.6
+ * @version 9.8.16
  */
 
  

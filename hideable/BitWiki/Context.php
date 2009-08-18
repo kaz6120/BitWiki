@@ -2,8 +2,12 @@
 /**
  * Parser
  *
- * based on parser.inc.php,v 1.11 2005/11/29 08:41:31 youka 
+ * based on parser.inc.php,v 1.11 2005/11/29 08:41:31 
  *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.11.29
  * @version 9.8.11
  */
 

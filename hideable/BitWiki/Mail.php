@@ -1,6 +1,14 @@
 <?php
 /*
- * $Id: mail.inc.php,v 1.6 2005/12/01 06:48:14 youka Exp $
+ * Mail
+ *
+ * mail.inc.php,v 1.6 2005/12/01 06:48:14 
+ *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.12.1
+ * @version 9.8.11
  */
 
 

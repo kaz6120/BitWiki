@@ -1,6 +1,14 @@
 <?php
 /* 
- * $Id: controller.inc.php,v 1.4 2005/09/05 22:17:49 youka Exp $
+ * Controller
+ *
+ * controller.inc.php,v 1.4 2005/09/05 22:17:49 
+ *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.9.5
+ * @version 9.8.18
  */
 
 

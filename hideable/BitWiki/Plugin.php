@@ -2,9 +2,13 @@
 /**
  * Plugin
  *
- * based on plugin.inc.php,v 1.6 2005/09/06 01:14:55 youka
+ * based on plugin.inc.php,v 1.6 2005/09/06 01:14:55 
  *
- * @version 9.8.17 
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.9.6
+ * @version 9.8.18
  */
 
 
@@ -103,7 +107,7 @@ class Plugin extends Controller
      * @param    string  $param2   Strings in {}.
      * @return   string  html
      */
-    function do_block($page, $param1, $param2)
+    public function do_block($page, $param1, $param2)
     {
         throw new PluginException('このプラグインはブロック型ではありません。', $this);
     }
@@ -117,7 +121,7 @@ class Plugin extends Controller
      * @param    string  $param2   Strings in {}. 
      * @return   string  html
      */
-    function do_inline($page, $param1, $param2)
+    public function do_inline($page, $param1, $param2)
     {
         throw new PluginException('このプラグインはインライン型ではありません。', $this);
     }
@@ -131,7 +135,7 @@ class Plugin extends Controller
      * @param    string  $param2   Strings in {}. 
      * @return   string  html
      */
-    function do_blocktag($page, $param1, $param2)
+    public function do_blocktag($page, $param1, $param2)
     {
         return $this->do_block($page, $param1, $param2);
     }
@@ -145,7 +149,7 @@ class Plugin extends Controller
      * @param    string  $param2   Strings in {}. 
      * @return   string  html
      */
-    function do_inlinetag($page, $param1, $param2)
+    public function do_inlinetag($page, $param1, $param2)
     {
         return $this->do_inline($page, $param1, $param2);
     }

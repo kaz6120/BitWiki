@@ -1,7 +1,13 @@
 <?php
 /*
- * $Id: autolink.inc.php,v 1.2 2005/06/27 18:08:07 youka Exp $
+ * AutoLink
  *
+ * based on autolink.inc.php,v 1.2 2005/06/27 18:08:07 
+ *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.6.27
  * @version 9.8.11
  */
 

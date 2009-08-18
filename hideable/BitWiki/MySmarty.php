@@ -2,9 +2,13 @@
 /* 
  * MySmarty
  *
- * based on smarty.inc.php,v 1.6 2005/07/10 12:09:13 youka
+ * based on smarty.inc.php,v 1.6 2005/07/10 12:09:13 
  *
- * @version: 9.8.11
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.7.10
+ * @version 9.8.11
  */
 require_once('smarty/Smarty.class.php');
 

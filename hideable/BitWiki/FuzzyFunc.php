@@ -1,6 +1,14 @@
 <?php
 /* 
- * $Id: fuzzyfunc.inc.php,v 1.2 2005/06/29 10:54:02 youka Exp $
+ * FuzzyFunc
+ *
+ * based onfuzzyfunc.inc.php,v 1.2 2005/06/29 10:54:02 
+ *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.6.29
+ * @version 9.8.18
  */
 
 

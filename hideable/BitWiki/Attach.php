@@ -2,8 +2,12 @@
 /* 
  * Attachment classes
  * 
- * based on attach.inc.php,v 1.2 2005/06/27 18:24:27 youka
+ * based on attach.inc.php,v 1.2 2005/06/27 18:24:27 
  *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.6.27
  * @version 9.8.14
  */
 

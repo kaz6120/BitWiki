@@ -1,8 +1,14 @@
 <?php
-/*
- * $Id: notifier.inc.php,v 1.2 2005/06/27 18:08:07 youka Exp $
+/**
+ * Notifier
  *
- * @version 9.8.13
+ * based on notifier.inc.php,v 1.2 2005/06/27 18:08:07
+ *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.12.1
+ * @version 9.8.13 
  */
 
 

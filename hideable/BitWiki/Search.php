@@ -1,6 +1,14 @@
 <?php
-/* 
- * $Id: search.inc.php,v 1.1.1.1 2005/06/12 15:38:36 youka Exp $
+/*
+ * Search
+ *
+ * based on search.inc.php,v 1.1.1.1 2005/06/12 15:38:36 
+ *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.6.12
+ * @version 9.8.18
  */
 
 
@@ -41,7 +49,7 @@ class Search
      * @param    bool    $andsearch    trueの場合はAND検索、falseの場合はOR検索。
      * @return    array(string)    ページ名。アルファベット順にソート済み。
      */
-    function normalsearch($word, $andsearch = true)
+    public function normalsearch($word, $andsearch = true)
     {
         $db = DataBase::getinstance();
         
@@ -67,7 +75,7 @@ class Search
      * @param    bool    $andsearch    trueの場合はAND検索、falseの場合はOR検索。
      * @return    array(string)    ページ名。アルファベット順にソート済み。
      */
-    function fuzzysearch($word, $andsearch = true)
+    public function fuzzysearch($word, $andsearch = true)
     {
         $exp = array();
         foreach ($word as $w) {
@@ -84,7 +92,7 @@ class Search
      * @param    bool    $andsearch    trueの場合はAND検索、falseの場合はOR検索。
      * @return    array(string)    ページ名。アルファベット順にソート済み。
      */
-    function eregsearch($word, $andsearch = true)
+    public function eregsearch($word, $andsearch = true)
     {
         $db = DataBase::getinstance();
         
@@ -110,7 +118,7 @@ class Search
      * @param    int    $to    終了日時のタイムスタンプ
      * @return    array(string)    ページ名。新しい順にソート済み。
      */
-    function timesearch($from, $to)
+    public function timesearch($from, $to)
     {
         $query  = "SELECT pagename FROM page";
         $query .= " WHERE ($from <= timestamp AND timestamp <= $to)";
@@ -143,7 +151,7 @@ class Search
      * @param    array(string)    $word    検索語
      * @param    string    $type    検索の種類
      */
-    function mark($text, $word, $type)
+    public function mark($text, $word, $type)
     {
         switch($type) {
             case 'fuzzy':

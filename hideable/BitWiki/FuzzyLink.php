@@ -1,6 +1,14 @@
 <?php
 /*
- * $Id: fuzzylink.inc.php,v 1.10 2005/12/25 17:54:21 youka Exp $
+ * FuzzyLink
+ *
+ * based on fuzzylink.inc.php,v 1.10 2005/12/25 17:54:21 
+ *
+ * @package BitWiki
+ * @author  youka
+ * @author  kaz <kaz6120@gmail.com>
+ * @since   5.12.25
+ * @version 9.8.16
  */
 
 
