@@ -8,7 +8,7 @@
  * @author  youka
  * @author  kaz <kaz6120@gmail.com>
  * @since   5.12.25
- * @version 9.8.16
+ * @version 9.8.18
  */
 
 
@@ -90,7 +90,7 @@ class FuzzyLink
      * 
      * @return    string    正規表現。
      */
-    function getexpression()
+    public function getexpression()
     {
         if(empty($this->expression)){
             $db = DataBase::getinstance();
@@ -155,7 +155,7 @@ class FuzzyLink
      * @param    string    $word    キーワード
      * @return    array(Page)
      */
-    function getpagelist($word)
+    public function getpagelist($word)
     {
         $db = DataBase::getinstance();
         $list = array();
@@ -177,7 +177,7 @@ class FuzzyLink
     /**
      * ページ更新と同時にあいまいリンク用正規表現を更新する。
      */
-    function update($page, $arg)
+    public function update($page, $arg)
     {
         if($page->getpagename() == self::ignorelistpage || $page->getpagename() == AutoLink::ignorelistpage){
             $this->makeignorelist();
@@ -208,7 +208,7 @@ class FuzzyLink
     /**
      * あいまいリンク用ページリストを作り直す。
      */
-    function restruct()
+    public function restruct()
     {
         $db = DataBase::getinstance();
         $db->begin();
