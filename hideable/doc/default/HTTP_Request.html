@@ -1,0 +1,1605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<title>Docs For Class HTTP_Request</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+<link rel="start" href="./index.html" title="API Documentation" />
+<link rev="made" href="mailto:webmaster@anti-spam.example.com" />
+</head>
+<body>
+
+<!-- Begin #header -->
+<div id="header">
+<h1 id="top">default</h1>
+<div id="header-menu">
+<a href="../classtrees_default.html" class="menu">class tree: default</a> 
+<a href="../elementindex_default.html" class="menu">index: default</a> 
+<a href="../elementindex.html" class="menu">all elements</a>
+</div>
+</div>
+
+<!-- Begin #menu -->
+<div id="menu">
+<h2>Packages:</h2>
+<ul>
+<li><a href="../li_default.html">default</a></li>
+<li><a href="../li_BitWiki.html">BitWiki</a></li>
+<li><a href="../li_Cache_Lite.html">Cache_Lite</a></li>
+<li><a href="../li_HTTP_Request.html">HTTP_Request</a></li>
+<li><a href="../li_Net_CheckIP.html">Net_CheckIP</a></li>
+<li><a href="../li_Net_DNSBL.html">Net_DNSBL</a></li>
+<li><a href="../li_PEAR.html">PEAR</a></li>
+<li><a href="../li_Smarty.html">Smarty</a></li>
+<li><a href="../li_Text_Diff.html">Text_Diff</a></li>
+<li><a href="../li_Text_Highlighter.html">Text_Highlighter</a></li>
+<li><a href="../li_Trackback.html">Trackback</a></li>
+</ul>
+<h2>Files:</h2>
+<div class="package">
+<ul>
+<li><a href="../default/_plugin---a---a.inc.php.html">a.inc.php</a></li><li><a href="../default/_plugin---anchor---anchor.inc.php.html">anchor.inc.php</a></li><li><a href="../default/_command---attach---attach.inc.php.html">attach.inc.php</a></li><li><a href="../default/_hideable---BitWiki---Attach.php.html">Attach.php</a></li><li><a href="../default/_hideable---BitWiki---AutoLink.php.html">AutoLink.php</a></li><li><a href="../default/_plugin---autols---autols.inc.php.html">autols.inc.php</a></li><li><a href="../default/_command---backlink---backlink.inc.php.html">backlink.inc.php</a></li><li><a href="../default/_hideable---BitWiki---BackLink.php.html">BackLink.php</a></li><li><a href="../default/_command---backup---backup.inc.php.html">backup.inc.php</a></li><li><a href="../default/_plugin---bbs---bbs.inc.php.html">bbs.inc.php</a></li><li><a href="../default/_plugin---bbsres---bbsres.inc.php.html">bbsres.inc.php</a></li><li><a href="../default/_plugin---bbsviewer---bbsviewer.inc.php.html">bbsviewer.inc.php</a></li><li><a href="../default/_hideable---BitWiki.php.html">BitWiki.php</a></li><li><a href="../default/_plugin---block---block.inc.php.html">block.inc.php</a></li><li><a href="../default/_plugin---blockquote---blockquote.inc.php.html">blockquote.inc.php</a></li><li><a href="../default/_plugin---blockspam---blockspam.inc.php.html">blockspam.inc.php</a></li><li><a href="../default/_plugin---blog---blog.inc.php.html">blog.inc.php</a></li><li><a href="../default/_plugin---blogcalendar---blogcalendar.inc.php.html">blogcalendar.inc.php</a></li><li><a href="../default/_plugin---bloginclude---bloginclude.inc.php.html">bloginclude.inc.php</a></li><li><a href="../default/_plugin---blognavi---blognavi.inc.php.html">blognavi.inc.php</a></li><li><a href="../default/_plugin---blogrss10---blogrss10.inc.php.html">blogrss10.inc.php</a></li><li><a href="../default/_plugin---blogviewer---blogviewer.inc.php.html">blogviewer.inc.php</a></li><li><a href="../default/_plugin---cat---cat.inc.php.html">cat.inc.php</a></li><li><a href="../default/_plugin---center---center.inc.php.html">center.inc.php</a></li><li><a href="../default/_plugin---clip---clip.inc.php.html">clip.inc.php</a></li><li><a href="../default/_plugin---code---code.inc.php.html">code.inc.php</a></li><li><a href="../default/_plugin---color---color.inc.php.html">color.inc.php</a></li><li><a href="../default/_hideable---BitWiki---Command.php.html">Command.php</a></li><li><a href="../default/_plugin---comment---comment.inc.php.html">comment.inc.php</a></li><li><a href="../default/_hideable---BitWiki---Controller.php.html">Controller.php</a></li><li><a href="../default/_plugin---counter---counter.inc.php.html">counter.inc.php</a></li><li><a href="../default/_command---csscollector---csscollector.inc.php.html">csscollector.inc.php</a></li><li><a href="../default/_hideable---BitWiki---DataBase.php.html">DataBase.php</a></li><li><a href="../default/_plugin---del---del.inc.php.html">del.inc.php</a></li><li><a href="../default/_command---diff---diff.inc.php.html">diff.inc.php</a></li><li><a href="../default/_hideable---BitWiki---DiffRenderer.php.html">DiffRenderer.php</a></li><li><a href="../default/_plugin---download---download.inc.php.html">download.inc.php</a></li><li><a href="../default/_command---edit---edit.inc.php.html">edit.inc.php</a></li><li><a href="../default/_hideable---BitWiki---entityReferences.php.html">entityReferences.php</a></li><li><a href="../default/_hideable---BitWiki---Exception.php.html">Exception.php</a></li><li><a href="../default/_command---footnote---footnote.inc.php.html">footnote.inc.php</a></li><li><a href="../default/_hideable---BitWiki---functions.php.html">functions.php</a></li><li><a href="../default/_hideable---BitWiki---FuzzyFunc.php.html">FuzzyFunc.php</a></li><li><a href="../default/_command---fuzzylink---fuzzylink.inc.php.html">fuzzylink.inc.php</a></li><li><a href="../default/_hideable---BitWiki---FuzzyLink.php.html">FuzzyLink.php</a></li><li><a href="../default/_plugin---hiddenpagelist---hiddenpagelist.inc.php.html">hiddenpagelist.inc.php</a></li><li><a href="../default/_hideable---BitWiki---HtmlConverter.php.html">HtmlConverter.php</a></li><li><a href="../default/_plugin---image---image.inc.php.html">image.inc.php</a></li><li><a href="../default/_plugin---include---include.inc.php.html">include.inc.php</a></li><li><a href="../default/_index.php.html">index.php</a></li><li><a href="../default/_hideable---BitWiki---itaimoji.php.html">itaimoji.php</a></li><li><a href="../default/_plugin---kino1tokino2---kino1tokino2.inc.php.html">kino1tokino2.inc.php</a></li><li><a href="../default/_plugin---left---left.inc.php.html">left.inc.php</a></li><li><a href="../default/_command---list---list.inc.php.html">list.inc.php</a></li><li><a href="../default/_plugin---ls---ls.inc.php.html">ls.inc.php</a></li><li><a href="../default/_hideable---BitWiki---Mail.php.html">Mail.php</a></li><li><a href="../default/_hideable---BitWiki---MySmarty.php.html">MySmarty.php</a></li><li><a href="../default/_plugin---navi---navi.inc.php.html">navi.inc.php</a></li><li><a href="../default/_command---new---new.inc.php.html">new.inc.php</a></li><li><a href="../default/_plugin---newpage---newpage.inc.php.html">newpage.inc.php</a></li><li><a href="../default/_command---noindex---noindex.inc.php.html">noindex.inc.php</a></li><li><a href="../default/_plugin---null---null.inc.php.html">null.inc.php</a></li><li><a href="../default/_plugin---outline---outline.inc.php.html">outline.inc.php</a></li><li><a href="../default/_hideable---BitWiki---Page.php.html">Page.php</a></li><li><a href="../default/_plugin---pre---pre.inc.php.html">pre.inc.php</a></li><li><a href="../default/_plugin---puki2kino---puki2kino.inc.php.html">puki2kino.inc.php</a></li><li><a href="../default/_plugin---recent---recent.inc.php.html">recent.inc.php</a></li><li><a href="../default/_plugin---recentdeleted---recentdeleted.inc.php.html">recentdeleted.inc.php</a></li><li><a href="../default/_plugin---refcount---refcount.inc.php.html">refcount.inc.php</a></li><li><a href="../default/_plugin---referrer---referrer.inc.php.html">referrer.inc.php</a></li><li><a href="../default/_command---rename---rename.inc.php.html">rename.inc.php</a></li><li><a href="../default/_hideable---BitWiki---Renderer.php.html">Renderer.php</a></li><li><a href="../default/_library---pear---HTTP---Request.php.html">Request.php</a></li><li><a href="../default/_plugin---right---right.inc.php.html">right.inc.php</a></li><li><a href="../default/_plugin---rss---rss.inc.php.html">rss.inc.php</a></li><li><a href="../default/_plugin---rss10---rss10.inc.php.html">rss10.inc.php</a></li><li><a href="../default/_plugin---rss20---rss20.inc.php.html">rss20.inc.php</a></li><li><a href="../default/_command---search---search.inc.php.html">search.inc.php</a></li><li><a href="../default/_hideable---BitWiki---Search.php.html">Search.php</a></li><li><a href="../default/_command---show---show.inc.php.html">show.inc.php</a></li><li><a href="../default/_command---sidebar---sidebar.inc.php.html">sidebar.inc.php</a></li><li><a href="../default/_plugin---size---size.inc.php.html">size.inc.php</a></li><li><a href="../default/_library---pear---Net---Socket.php.html">Socket.php</a></li><li><a href="../default/_plugin---theme---theme.inc.php.html">theme.inc.php</a></li><li><a href="../default/_plugin---trackback---trackback.inc.php.html">trackback.inc.php</a></li><li><a href="../default/_plugin---tracker---tracker.inc.php.html">tracker.inc.php</a></li><li><a href="../default/_plugin---trackerlist---trackerlist.inc.php.html">trackerlist.inc.php</a></li><li><a href="../default/_library---pear---Net---URL.php.html">URL.php</a></li><li><a href="../default/_plugin---urlcall---urlcall.inc.php.html">urlcall.inc.php</a></li><li><a href="../default/_hideable---BitWiki---Vars.php.html">Vars.php</a></li><li><a href="../default/_hideable---BitWiki---version.php.html">version.php</a></li></ul>
+</div>
+<h2>Classes:</h2>
+<div class="package">
+<ul>
+<li><a href="../default/Attach.html">Attach</a></li><li><a href="../default/AttachedFile.html">AttachedFile</a></li><li><a href="../default/AutoLink.html">AutoLink</a></li><li><a href="../default/BackLink.html">BackLink</a></li><li><a href="../default/BitWiki.html">BitWiki</a></li><li><a href="../default/Command.html">Command</a></li><li><a href="../default/CommandException.html">CommandException</a></li><li><a href="../default/Command_attach.html">Command_attach</a></li><li><a href="../default/Command_backlink.html">Command_backlink</a></li><li><a href="../default/Command_backup.html">Command_backup</a></li><li><a href="../default/Command_csscollector.html">Command_csscollector</a></li><li><a href="../default/Command_diff.html">Command_diff</a></li><li><a href="../default/Command_edit.html">Command_edit</a></li><li><a href="../default/Command_footnote.html">Command_footnote</a></li><li><a href="../default/Command_fuzzylink.html">Command_fuzzylink</a></li><li><a href="../default/Command_list.html">Command_list</a></li><li><a href="../default/Command_new.html">Command_new</a></li><li><a href="../default/Command_noindex.html">Command_noindex</a></li><li><a href="../default/Command_rename.html">Command_rename</a></li><li><a href="../default/Command_search.html">Command_search</a></li><li><a href="../default/Command_show.html">Command_show</a></li><li><a href="../default/Command_sidebar.html">Command_sidebar</a></li><li><a href="../default/Controller.html">Controller</a></li><li><a href="../default/DataBase.html">DataBase</a></li><li><a href="../default/DBException.html">DBException</a></li><li><a href="../default/DiffRenderer.html">DiffRenderer</a></li><li><a href="../default/FatalException.html">FatalException</a></li><li><a href="../default/Footnote.html">Footnote</a></li><li><a href="../default/FuzzyFunc.html">FuzzyFunc</a></li><li><a href="../default/FuzzyLink.html">FuzzyLink</a></li><li><a href="../default/HTMLConverter.html">HTMLConverter</a></li><li><a href="../default/HTTP_Request.html">HTTP_Request</a></li><li><a href="../default/HTTP_Response.html">HTTP_Response</a></li><li><a href="../default/LinkSeeker.html">LinkSeeker</a></li><li><a href="../default/Mail.html">Mail</a></li><li><a href="../default/MyException.html">MyException</a></li><li><a href="../default/Net_URL.html">Net_URL</a></li><li><a href="../default/NoExistCommandException.html">NoExistCommandException</a></li><li><a href="../default/Page.html">Page</a></li><li><a href="../default/PageException.html">PageException</a></li><li><a href="../default/Plugin_blognavi_ColumnList.html">Plugin_blognavi_ColumnList</a></li><li><a href="../default/Plugin_blognavi_DateList.html">Plugin_blognavi_DateList</a></li><li><a href="../default/Plugin_tracker_field.html">Plugin_tracker_field</a></li><li><a href="../default/Plugin_tracker_field_select.html">Plugin_tracker_field_select</a></li><li><a href="../default/Plugin_tracker_field_text.html">Plugin_tracker_field_text</a></li><li><a href="../default/Plugin_tracker_field_textarea.html">Plugin_tracker_field_textarea</a></li><li><a href="../default/Renderer.html">Renderer</a></li><li><a href="../default/Search.html">Search</a></li><li><a href="../default/Vars.html">Vars</a></li></ul>
+</div>
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+<div id="content-title">
+<h2>Class: HTTP_Request</h2>
+<p>Source Location: /library/pear/HTTP/Request.php</p>
+</div>
+
+
+<div id="overview">
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre>
+
+
+
+
+
+
+</div><!-- End #overview -->
+
+<div id="variables">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../default/HTTP_Request.html#var$_allowRedirects">$_allowRedirects</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_body">$_body</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_bodyDisallowed">$_bodyDisallowed</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_http">$_http</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_listeners">$_listeners</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_maxRedirects">$_maxRedirects</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_method">$_method</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_pass">$_pass</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_postData">$_postData</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_postFiles">$_postFiles</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_proxy_host">$_proxy_host</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_proxy_pass">$_proxy_pass</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_proxy_port">$_proxy_port</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_proxy_user">$_proxy_user</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_readTimeout">$_readTimeout</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_redirects">$_redirects</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_requestHeaders">$_requestHeaders</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_response">$_response</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_saveBody">$_saveBody</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_sock">$_sock</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_socketOptions">$_socketOptions</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_timeout">$_timeout</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_url">$_url</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_useBrackets">$_useBrackets</a></li>
+    <li><a href="../default/HTTP_Request.html#var$_user">$_user</a></li>
+  </ul>
+</div>
+
+
+<div id="methods">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../default/HTTP_Request.html#methodHTTP_Request">HTTP_Request</a></li>
+    <li><a href="../default/HTTP_Request.html#methodaddCookie">addCookie</a></li>
+    <li><a href="../default/HTTP_Request.html#methodaddFile">addFile</a></li>
+    <li><a href="../default/HTTP_Request.html#methodaddHeader">addHeader</a></li>
+    <li><a href="../default/HTTP_Request.html#methodaddPostData">addPostData</a></li>
+    <li><a href="../default/HTTP_Request.html#methodaddQueryString">addQueryString</a></li>
+    <li><a href="../default/HTTP_Request.html#methodaddRawPostData">addRawPostData</a></li>
+    <li><a href="../default/HTTP_Request.html#methodaddRawQueryString">addRawQueryString</a></li>
+    <li><a href="../default/HTTP_Request.html#methodattach">attach</a></li>
+    <li><a href="../default/HTTP_Request.html#methodclearCookies">clearCookies</a></li>
+    <li><a href="../default/HTTP_Request.html#methodclearPostData">clearPostData</a></li>
+    <li><a href="../default/HTTP_Request.html#methoddetach">detach</a></li>
+    <li><a href="../default/HTTP_Request.html#methodgetResponseBody">getResponseBody</a></li>
+    <li><a href="../default/HTTP_Request.html#methodgetResponseCode">getResponseCode</a></li>
+    <li><a href="../default/HTTP_Request.html#methodgetResponseCookies">getResponseCookies</a></li>
+    <li><a href="../default/HTTP_Request.html#methodgetResponseHeader">getResponseHeader</a></li>
+    <li><a href="../default/HTTP_Request.html#methodremoveHeader">removeHeader</a></li>
+    <li><a href="../default/HTTP_Request.html#methodreset">reset</a></li>
+    <li><a href="../default/HTTP_Request.html#methodsendRequest">sendRequest</a></li>
+    <li><a href="../default/HTTP_Request.html#methodsetBasicAuth">setBasicAuth</a></li>
+    <li><a href="../default/HTTP_Request.html#methodsetBody">setBody</a></li>
+    <li><a href="../default/HTTP_Request.html#methodsetHttpVer">setHttpVer</a></li>
+    <li><a href="../default/HTTP_Request.html#methodsetMethod">setMethod</a></li>
+    <li><a href="../default/HTTP_Request.html#methodsetProxy">setProxy</a></li>
+    <li><a href="../default/HTTP_Request.html#methodsetURL">setURL</a></li>
+    <li><a href="../default/HTTP_Request.html#method_arrayMapRecursive">_arrayMapRecursive</a></li>
+    <li><a href="../default/HTTP_Request.html#method_buildRequest">_buildRequest</a></li>
+    <li><a href="../default/HTTP_Request.html#method_flattenArray">_flattenArray</a></li>
+    <li><a href="../default/HTTP_Request.html#method_generateHostHeader">_generateHostHeader</a></li>
+    <li><a href="../default/HTTP_Request.html#method_notify">_notify</a></li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+<div id="class_details">
+<h3>Class Details</h3>
+<div class="tags">
+[line 61]<br />
+</div>
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div>
+
+<div id="class_vars">
+<h3>Class Variables</h3>
+<div class="tags">
+<h4 id="var$_allowRedirects">$_allowRedirects = <span class="value"></span></h4>
+<p>[line 169]</p>
+<p>Whether to allow redirects</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>boolean</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_body">$_body = <span class="value"></span></h4>
+<p>[line 139]</p>
+<p>Request body</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>string</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_bodyDisallowed">$_bodyDisallowed = <span class="value">array('TRACE')</span></h4>
+<p>[line 145]</p>
+<p>A list of methods that MUST NOT have a request body, per RFC 2616</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>array</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_http">$_http = <span class="value"></span></h4>
+<p>[line 79]</p>
+<p>HTTP Version</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>string</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_listeners">$_listeners = <span class="value">array()</span></h4>
+<p>[line 193]</p>
+<p>Attached listeners</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>array</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_maxRedirects">$_maxRedirects = <span class="value"></span></h4>
+<p>[line 175]</p>
+<p>Maximum redirects allowed</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>integer</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_method">$_method = <span class="value"></span></h4>
+<p>[line 73]</p>
+<p>Type of request</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>string</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_pass">$_pass = <span class="value"></span></h4>
+<p>[line 97]</p>
+<p>Basic Auth Password</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>string</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_postData">$_postData = <span class="value"></span></h4>
+<p>[line 133]</p>
+<p>Post data</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>array</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_postFiles">$_postFiles = <span class="value">array()</span></h4>
+<p>[line 151]</p>
+<p>Files to post</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>array</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_proxy_host">$_proxy_host = <span class="value"></span></h4>
+<p>[line 109]</p>
+<p>Proxy server</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>string</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_proxy_pass">$_proxy_pass = <span class="value"></span></h4>
+<p>[line 127]</p>
+<p>Proxy password</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>string</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_proxy_port">$_proxy_port = <span class="value"></span></h4>
+<p>[line 115]</p>
+<p>Proxy port</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>integer</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_proxy_user">$_proxy_user = <span class="value"></span></h4>
+<p>[line 121]</p>
+<p>Proxy username</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>string</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_readTimeout">$_readTimeout = <span class="value">null</span></h4>
+<p>[line 205]</p>
+<p>Timeout for reading from socket (array(seconds, microseconds))</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>array</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_redirects">$_redirects = <span class="value"></span></h4>
+<p>[line 181]</p>
+<p>Current number of redirects</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>integer</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_requestHeaders">$_requestHeaders = <span class="value"></span></h4>
+<p>[line 85]</p>
+<p>Request headers</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>array</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_response">$_response = <span class="value"></span></h4>
+<p>[line 163]</p>
+<p>HTTP_Response object</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td><a href="../default/HTTP_Response.html">object HTTP_Response</a></td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_saveBody">$_saveBody = <span class="value">true</span></h4>
+<p>[line 199]</p>
+<p>Whether to save response body in response object property</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>bool</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_sock">$_sock = <span class="value"></span></h4>
+<p>[line 103]</p>
+<p>Socket object</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>object Net_Socket</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_socketOptions">$_socketOptions = <span class="value">null</span></h4>
+<p>[line 211]</p>
+<p>Options to pass to Net_Socket::connect. See stream_context_create</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>array</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_timeout">$_timeout = <span class="value"></span></h4>
+<p>[line 157]</p>
+<p>Connection timeout.</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>float</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_url">$_url = <span class="value"></span></h4>
+<p>[line 67]</p>
+<p>Instance of Net_URL</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td><a href="../default/Net_URL.html">object Net_URL</a></td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_useBrackets">$_useBrackets = <span class="value">true</span></h4>
+<p>[line 187]</p>
+<p>Whether to append brackets [] to array variables</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>bool</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_user">$_user = <span class="value"></span></h4>
+<p>[line 91]</p>
+<p>Basic Auth Username</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>string</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+</div>
+
+<div id="class_methods">
+<h3>Class Methods</h3>
+<div class="tags">
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodHTTP_Request">constructor HTTP_Request <span class="smalllinenumber">[line 238]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>HTTP_Request HTTP_Request(
+[string
+$url = ''], [array
+$params = array()])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Constructor</p>Sets up the object<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$url</var></strong></td>
+<td>The url to fetch/access</td>
+</tr>
+<tr>
+<td class="type">array</td>
+<td><strong><var>$params</var></strong></td>
+<td>Associative array of parameters which can have the following keys:  method         - Method to use, GET, POST etc (string)http           - HTTP Version to use, 1.0 or 1.1 (string)user           - Basic Auth username (string)pass           - Basic Auth password (string)proxy_host     - Proxy server host (string)proxy_port     - Proxy server port (integer)proxy_user     - Proxy auth username (string)proxy_pass     - Proxy auth password (string)timeout        - Connection timeout in seconds (float)allowRedirects - Whether to follow redirects or not (bool)maxRedirects   - Max number of redirects to follow (integer)useBrackets    - Whether to append [] to array variable names (bool)saveBody       - Whether to save response body in response object property (bool)readTimeout    - Timeout for reading / writing data over the socket (array (seconds, microseconds))socketOptions  - Options to pass to Net_Socket object (array)</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodaddCookie">method addCookie <span class="smalllinenumber">[line 568]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void addCookie(
+string
+$name, string
+$value)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Appends a cookie to &quot;Cookie:&quot; header</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$name</var></strong></td>
+<td>cookie name</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$value</var></strong></td>
+<td>cookie value</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodaddFile">method addFile <span class="smalllinenumber">[line 505]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>bool addFile(
+string
+$inputName, mixed
+$fileName, [mixed
+$contentType = 'application/octet-stream'])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Adds a file to upload</p>This also changes content-type to 'multipart/form-data' for proper upload<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>true on success</td>
+</tr>
+<tr>
+<td><strong>throws:</strong></td><td>PEAR_Error</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$inputName</var></strong></td>
+<td>name of file-upload field</td>
+</tr>
+<tr>
+<td class="type">mixed</td>
+<td><strong><var>$fileName</var></strong></td>
+<td>file name(s)</td>
+</tr>
+<tr>
+<td class="type">mixed</td>
+<td><strong><var>$contentType</var></strong></td>
+<td>content-type(s) of file(s) being uploaded</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodaddHeader">method addHeader <span class="smalllinenumber">[line 412]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void addHeader(
+string
+$name, string
+$value)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Adds a request header</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$name</var></strong></td>
+<td>Header name</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$value</var></strong></td>
+<td>Header value</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodaddPostData">method addPostData <span class="smalllinenumber">[line 463]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void addPostData(
+string
+$name, string
+$value, [bool
+$preencoded = false])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Adds postdata items</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$name</var></strong></td>
+<td>Post data name</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$value</var></strong></td>
+<td>Post data value</td>
+</tr>
+<tr>
+<td class="type">bool</td>
+<td><strong><var>$preencoded</var></strong></td>
+<td>Whether data is already urlencoded or not, default = not</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodaddQueryString">method addQueryString <span class="smalllinenumber">[line 438]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void addQueryString(
+string
+$name, string
+$value, [bool
+$preencoded = false])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Adds a querystring parameter</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$name</var></strong></td>
+<td>Querystring parameter name</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$value</var></strong></td>
+<td>Querystring parameter value</td>
+</tr>
+<tr>
+<td class="type">bool</td>
+<td><strong><var>$preencoded</var></strong></td>
+<td>Whether the value is already urlencoded or not, default = not</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodaddRawPostData">method addRawPostData <span class="smalllinenumber">[line 532]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void addRawPostData(
+string
+$postdata, [bool
+$preencoded = true])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Adds raw postdata (DEPRECATED)</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>deprecated:</strong></td><td>deprecated since 1.3.0, method addBody() should be used instead</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$postdata</var></strong></td>
+<td>The data</td>
+</tr>
+<tr>
+<td class="type">bool</td>
+<td><strong><var>$preencoded</var></strong></td>
+<td>Whether data is preencoded or not, default = already encoded</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodaddRawQueryString">method addRawQueryString <span class="smalllinenumber">[line 450]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void addRawQueryString(
+string
+$querystring, [bool
+$preencoded = true])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Sets the querystring to literally what you supply</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$querystring</var></strong></td>
+<td>The querystring data. Should be of the format foo=bar&amp;x=y etc</td>
+</tr>
+<tr>
+<td class="type">bool</td>
+<td><strong><var>$preencoded</var></strong></td>
+<td>Whether data is already urlencoded or not, default = already encoded</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodattach">method attach <span class="smalllinenumber">[line 886]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>boolean attach(
+object HTTP_Request_Listener
+&$listener)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Adds a Listener to the list of listeners that are notified of  the object's events</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>whether the listener was successfully attached</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">object HTTP_Request_Listener</td>
+<td><strong><var>&$listener</var></strong></td>
+<td>instance to attach</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodclearCookies">method clearCookies <span class="smalllinenumber">[line 582]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void clearCookies(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Clears any cookies that have been added (DEPRECATED).</p>Useful for multiple request scenarios<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>deprecated:</strong></td><td>deprecated since 1.2</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodclearPostData">method clearPostData <span class="smalllinenumber">[line 556]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void clearPostData(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Clears any postdata that has been added (DEPRECATED).</p>Useful for multiple request scenarios.<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>deprecated:</strong></td><td>deprecated since 1.2</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methoddetach">method detach <span class="smalllinenumber">[line 903]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>boolean detach(
+object HTTP_Request_Listener
+&$listener)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Removes a Listener from the list of listeners</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>whether the listener was successfully detached</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">object HTTP_Request_Listener</td>
+<td><strong><var>&$listener</var></strong></td>
+<td>instance to detach</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetResponseBody">method getResponseBody <span class="smalllinenumber">[line 727]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed getResponseBody(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Returns the body of the response</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>response body, false if not set</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetResponseCode">method getResponseCode <span class="smalllinenumber">[line 698]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed getResponseCode(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Returns the response code</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>Response code, false if not set</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetResponseCookies">method getResponseCookies <span class="smalllinenumber">[line 738]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed getResponseCookies(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Returns cookies set in response</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>array of response cookies, false if none are present</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetResponseHeader">method getResponseHeader <span class="smalllinenumber">[line 711]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed getResponseHeader(
+[string
+$headername = null])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Returns either the named header or all if no name given</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>either the value of $headername (false if header is not present)                    or an array of all headers</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$headername</var></strong></td>
+<td>The header name to return, do not set to get all headers</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodremoveHeader">method removeHeader <span class="smalllinenumber">[line 423]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void removeHeader(
+string
+$name)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Removes a request header</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$name</var></strong></td>
+<td>Header name to remove</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodreset">method reset <span class="smalllinenumber">[line 324]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void reset(
+string
+$url, [array
+$params = array()])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Resets the object to its initial state (DEPRECATED).</p>Takes the same parameters as the constructor.<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>deprecated:</strong></td><td>deprecated since 1.2, call the constructor if this is necessary</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$url</var></strong></td>
+<td>The url to be requested</td>
+</tr>
+<tr>
+<td class="type">array</td>
+<td><strong><var>$params</var></strong></td>
+<td>Associative array of parameters                         (see constructor for details)</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodsendRequest">method sendRequest <span class="smalllinenumber">[line 595]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed sendRequest(
+[bool
+$saveBody = true])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Sends the request</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>PEAR error on error, true otherwise</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">bool</td>
+<td><strong><var>$saveBody</var></strong></td>
+<td>Whether to store response body in Response object property,                 set this to false if downloading a LARGE file and using a Listener</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodsetBasicAuth">method setBasicAuth <span class="smalllinenumber">[line 375]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void setBasicAuth(
+string
+$user, string
+$pass)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Sets basic authentication parameters</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$user</var></strong></td>
+<td>Username</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$pass</var></strong></td>
+<td>Password</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodsetBody">method setBody <span class="smalllinenumber">[line 543]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void setBody(
+string
+$body)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Sets the request body (for POST, PUT and similar requests)</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$body</var></strong></td>
+<td>Request body</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodsetHttpVer">method setHttpVer <span class="smalllinenumber">[line 400]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void setHttpVer(
+string
+$http)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Sets the HTTP version to use, 1.0 or 1.1</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$http</var></strong></td>
+<td>Version to use. Use the defined constants for this</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodsetMethod">method setMethod <span class="smalllinenumber">[line 389]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void setMethod(
+string
+$method)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Sets the method to be used, GET, POST etc.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$method</var></strong></td>
+<td>Method to use. Use the defined constants for this</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodsetProxy">method setProxy <span class="smalllinenumber">[line 357]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void setProxy(
+string
+$host, [int
+$port = 8080], [string
+$user = null], [string
+$pass = null])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Sets a proxy to be used</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$host</var></strong></td>
+<td>Proxy host</td>
+</tr>
+<tr>
+<td class="type">int</td>
+<td><strong><var>$port</var></strong></td>
+<td>Proxy port</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$user</var></strong></td>
+<td>Proxy username</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$pass</var></strong></td>
+<td>Proxy password</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodsetURL">method setURL <span class="smalllinenumber">[line 335]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void setURL(
+string
+$url)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Sets the URL to be requested</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$url</var></strong></td>
+<td>The url to be requested</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_arrayMapRecursive">method _arrayMapRecursive <span class="smalllinenumber">[line 480]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed _arrayMapRecursive(
+mixed
+$callback, mixed
+$value)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Recursively applies the callback function to the value</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>Processed value</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">mixed</td>
+<td><strong><var>$callback</var></strong></td>
+<td>Callback function</td>
+</tr>
+<tr>
+<td class="type">mixed</td>
+<td><strong><var>$value</var></strong></td>
+<td>Value to process</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_buildRequest">method _buildRequest <span class="smalllinenumber">[line 749]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _buildRequest(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Builds the request string</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>The request string</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_flattenArray">method _flattenArray <span class="smalllinenumber">[line 857]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>array _flattenArray(
+string
+$name, mixed
+$values)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Helper function to change the (probably multidimensional) associative array  into the simple one.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>array with the following items: array('item name', 'item value');</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$name</var></strong></td>
+<td>name for item</td>
+</tr>
+<tr>
+<td class="type">mixed</td>
+<td><strong><var>$values</var></strong></td>
+<td>item's values</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_generateHostHeader">method _generateHostHeader <span class="smalllinenumber">[line 296]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _generateHostHeader(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Generates a Host header for HTTP/1.1 requests</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_notify">method _notify <span class="smalllinenumber">[line 929]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _notify(
+string
+$event, [mixed
+$data = null])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Notifies all registered listeners of an event.</p>Events sent by HTTP_Request object  'sentRequest': after the request was sent  Events sent by HTTP_Response object  'gotHeaders': after receiving response headers (headers are passed in $data)  'tick': on receiving a part of response body (the part is passed in $data)  'gzTick': on receiving a gzip-encoded part of response body (ditto)  'gotBody': after receiving the response body (passes the decoded body in $data if it was gzipped)<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$event</var></strong></td>
+<td>Event name</td>
+</tr>
+<tr>
+<td class="type">mixed</td>
+<td><strong><var>$data</var></strong></td>
+<td>Additional data</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+</div>
+</div>
+
+
+</div><!-- End #content -->
+
+<div class="credit">
+<p>Documentation generated on Tue, 18 Aug 2009 22:35:09 +0900 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a></p>
+<p><a href="http://validator.w3.org/check/referer">
+XHTML 1.0</a></p>
+</div>
+
+</body>
+</html>

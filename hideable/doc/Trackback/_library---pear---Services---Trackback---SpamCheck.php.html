@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<title>Docs for page SpamCheck.php</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+<link rel="start" href="./index.html" title="API Documentation" />
+<link rev="made" href="mailto:webmaster@anti-spam.example.com" />
+</head>
+<body>
+
+<!-- Begin #header -->
+<div id="header">
+<h1 id="top">Trackback</h1>
+<div id="header-menu">
+<a href="../classtrees_Trackback.html" class="menu">class tree: Trackback</a> 
+<a href="../elementindex_Trackback.html" class="menu">index: Trackback</a> 
+<a href="../elementindex.html" class="menu">all elements</a>
+</div>
+</div>
+
+<!-- Begin #menu -->
+<div id="menu">
+<h2>Packages:</h2>
+<ul>
+<li><a href="../li_default.html">default</a></li>
+<li><a href="../li_BitWiki.html">BitWiki</a></li>
+<li><a href="../li_Cache_Lite.html">Cache_Lite</a></li>
+<li><a href="../li_HTTP_Request.html">HTTP_Request</a></li>
+<li><a href="../li_Net_CheckIP.html">Net_CheckIP</a></li>
+<li><a href="../li_Net_DNSBL.html">Net_DNSBL</a></li>
+<li><a href="../li_PEAR.html">PEAR</a></li>
+<li><a href="../li_Smarty.html">Smarty</a></li>
+<li><a href="../li_Text_Diff.html">Text_Diff</a></li>
+<li><a href="../li_Text_Highlighter.html">Text_Highlighter</a></li>
+<li><a href="../li_Trackback.html">Trackback</a></li>
+</ul>
+<h2>Files:</h2>
+<div class="package">
+<ul>
+<li><a href="../Trackback/_library---pear---Services---Trackback---SpamCheck---DNSBL.php.html">DNSBL.php</a></li><li><a href="../Trackback/_library---pear---Services---Trackback---SpamCheck---Regex.php.html">Regex.php</a></li><li><a href="../Trackback/_library---pear---Services---Trackback---SpamCheck.php.html">SpamCheck.php</a></li><li><a href="../Trackback/_library---pear---Services---Trackback---SpamCheck---SURBL.php.html">SURBL.php</a></li><li><a href="../Trackback/_library---pear---Services---Trackback.php.html">Trackback.php</a></li><li><a href="../Trackback/_library---pear---Services---Trackback---SpamCheck---Wordlist.php.html">Wordlist.php</a></li></ul>
+</div>
+<h2>Classes:</h2>
+<div class="package">
+<ul>
+<li><a href="../Trackback/Services_Trackback.html">Services_Trackback</a></li><li><a href="../Trackback/Services_Trackback_SpamCheck.html">Services_Trackback_SpamCheck</a></li><li><a href="../Trackback/Services_Trackback_SpamCheck_DNSBL.html">Services_Trackback_SpamCheck_DNSBL</a></li><li><a href="../Trackback/Services_Trackback_SpamCheck_Regex.html">Services_Trackback_SpamCheck_Regex</a></li><li><a href="../Trackback/Services_Trackback_SpamCheck_SURBL.html">Services_Trackback_SpamCheck_SURBL</a></li><li><a href="../Trackback/Services_Trackback_SpamCheck_Wordlist.html">Services_Trackback_SpamCheck_Wordlist</a></li></ul>
+</div>
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+<div id="content-title">
+<h2>Procedural File: SpamCheck.php</h2>
+<p>Source Location: /library/pear/Services/Trackback/SpamCheck.php</p>
+</div>
+<div class="contents">
+<h3>Classes:</h3>
+<dl>
+<dt><a href="../Trackback/Services_Trackback_SpamCheck.html">Services_Trackback_SpamCheck</a></dt>
+<dd>SpamCheck  Base class for Services_Trackback spam protection modules.</dd></dl>
+</div>
+
+<h3>Page Details:</h3>
+<p>Services_Trackback_SpamCheck.</p>This is the base class for Services_Trackback spamchecks. Since PHP4  lacks abstract class support, this class acts like a virtual abstract class.  Each SpamCheck implementation has to extend this class and implement all of it's  abstract methods.PHP versions 4 and 5LICENSE: This source file is subject to version 3.0 of the PHP license  that is available through the world-wide-web at the following URI:  http://www.php.net/license/3_0.txt.  If you did not receive a copy of  the PHP License and are unable to obtain it through the web, please  send a note to license@php.net so we can mail you a copy immediately.<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>author:</strong></td><td>Tobias Schlitt &lt;<a href="mailto:toby@php.net">toby@php.net</a>&gt;</td>
+</tr>
+<tr>
+<td><strong>version:</strong></td><td>CVS: $Id: SpamCheck.php,v 1.1 2005/12/24 00:13:27 youka Exp $</td>
+</tr>
+<tr>
+<td><strong>copyright:</strong></td><td>1997-2005 The PHP Group</td>
+</tr>
+<tr>
+<td><strong>link:</strong></td><td><a href="http://pear.php.net/package/Services_Trackback">http://pear.php.net/package/Services_Trackback</a></td>
+</tr>
+<tr>
+<td><strong>abstract:</strong></td><td></td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>File available since Release 0.5.0</td>
+</tr>
+<tr>
+<td><strong>license:</strong></td><td><a href="http://www.php.net/license/3_0.txt">PHP License 3.0</a></td>
+</tr>
+</table>
+</div>
+<h4>Includes:</h4>
+<div class="tags">
+require_once(<a href="../PEAR/_library---pear---PEAR.php.html">PEAR.php</a>) [line 38]<br />
+<p>Load PEAR error handling</p></div>
+
+</div><!-- End #content -->
+
+<div class="credit">
+<p>Documentation generated on Tue, 18 Aug 2009 22:35:12 +0900 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a></p>
+<p><a href="http://validator.w3.org/check/referer">
+XHTML 1.0</a></p>
+</div>
+
+</body>
+</html>

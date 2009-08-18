@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<title>Docs For Class Services_Trackback</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+<link rel="start" href="./index.html" title="API Documentation" />
+<link rev="made" href="mailto:webmaster@anti-spam.example.com" />
+</head>
+<body>
+
+<!-- Begin #header -->
+<div id="header">
+<h1 id="top">Trackback</h1>
+<div id="header-menu">
+<a href="../classtrees_Trackback.html" class="menu">class tree: Trackback</a> 
+<a href="../elementindex_Trackback.html" class="menu">index: Trackback</a> 
+<a href="../elementindex.html" class="menu">all elements</a>
+</div>
+</div>
+
+<!-- Begin #menu -->
+<div id="menu">
+<h2>Packages:</h2>
+<ul>
+<li><a href="../li_default.html">default</a></li>
+<li><a href="../li_BitWiki.html">BitWiki</a></li>
+<li><a href="../li_Cache_Lite.html">Cache_Lite</a></li>
+<li><a href="../li_HTTP_Request.html">HTTP_Request</a></li>
+<li><a href="../li_Net_CheckIP.html">Net_CheckIP</a></li>
+<li><a href="../li_Net_DNSBL.html">Net_DNSBL</a></li>
+<li><a href="../li_PEAR.html">PEAR</a></li>
+<li><a href="../li_Smarty.html">Smarty</a></li>
+<li><a href="../li_Text_Diff.html">Text_Diff</a></li>
+<li><a href="../li_Text_Highlighter.html">Text_Highlighter</a></li>
+<li><a href="../li_Trackback.html">Trackback</a></li>
+</ul>
+<h2>Files:</h2>
+<div class="package">
+<ul>
+<li><a href="../Trackback/_library---pear---Services---Trackback---SpamCheck---DNSBL.php.html">DNSBL.php</a></li><li><a href="../Trackback/_library---pear---Services---Trackback---SpamCheck---Regex.php.html">Regex.php</a></li><li><a href="../Trackback/_library---pear---Services---Trackback---SpamCheck.php.html">SpamCheck.php</a></li><li><a href="../Trackback/_library---pear---Services---Trackback---SpamCheck---SURBL.php.html">SURBL.php</a></li><li><a href="../Trackback/_library---pear---Services---Trackback.php.html">Trackback.php</a></li><li><a href="../Trackback/_library---pear---Services---Trackback---SpamCheck---Wordlist.php.html">Wordlist.php</a></li></ul>
+</div>
+<h2>Classes:</h2>
+<div class="package">
+<ul>
+<li><a href="../Trackback/Services_Trackback.html">Services_Trackback</a></li><li><a href="../Trackback/Services_Trackback_SpamCheck.html">Services_Trackback_SpamCheck</a></li><li><a href="../Trackback/Services_Trackback_SpamCheck_DNSBL.html">Services_Trackback_SpamCheck_DNSBL</a></li><li><a href="../Trackback/Services_Trackback_SpamCheck_Regex.html">Services_Trackback_SpamCheck_Regex</a></li><li><a href="../Trackback/Services_Trackback_SpamCheck_SURBL.html">Services_Trackback_SpamCheck_SURBL</a></li><li><a href="../Trackback/Services_Trackback_SpamCheck_Wordlist.html">Services_Trackback_SpamCheck_Wordlist</a></li></ul>
+</div>
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+<div id="content-title">
+<h2>Class: Services_Trackback</h2>
+<p>Source Location: /library/pear/Services/Trackback.php</p>
+</div>
+
+
+<div id="overview">
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre>
+<div class="description">Trackback  A generic class to send/receive trackbacks.</div><h4>Author(s):</h4>
+<ul>
+<li>Tobias Schlitt &lt;<a href="mailto:toby@php.net">toby@php.net</a>&gt;</li>
+</ul>
+
+
+
+
+        
+          
+                  
+<h4>Version:</h4>
+<ul>
+  <li>Release: 0.5.0</li>
+</ul>
+
+<h4>Copyright:</h4>
+<ul>
+  <li>1997-2005 The PHP Group</li>
+</ul>
+</div><!-- End #overview -->
+
+<div id="variables">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Trackback/Services_Trackback.html#var$_data">$_data</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#var$_options">$_options</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#var$_spamChecks">$_spamChecks</a></li>
+  </ul>
+</div>
+
+
+<div id="methods">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Trackback/Services_Trackback.html#methodServices_Trackback">Services_Trackback</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodaddSpamCheck">addSpamCheck</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodautodiscover">autodiscover</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodcheckSpam">checkSpam</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodcreate">create</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodcreateSpamCheck">createSpamCheck</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodget">get</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodgetAutodiscoveryCode">getAutodiscoveryCode</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodgetOptions">getOptions</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodgetResponseError">getResponseError</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodgetResponseSuccess">getResponseSuccess</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodreceive">receive</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodremoveSpamCheck">removeSpamCheck</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodsend">send</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodset">set</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#methodsetOptions">setOptions</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#method_checkData">_checkData</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#method_checkURLs">_checkURLs</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#method_fromArray">_fromArray</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#method_getContent">_getContent</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#method_getDecodedData">_getDecodedData</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#method_getEncodedData">_getEncodedData</a></li>
+    <li><a href="../Trackback/Services_Trackback.html#method_interpretTrackbackResponse">_interpretTrackbackResponse</a></li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+<div id="class_details">
+<h3>Class Details</h3>
+<div class="tags">
+[line 82]<br />
+<p>Trackback  A generic class to send/receive trackbacks.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>author:</strong></td><td>Tobias Schlitt &lt;<a href="mailto:toby@php.net">toby@php.net</a>&gt;</td>
+</tr>
+<tr>
+<td><strong>version:</strong></td><td>Release: 0.5.0</td>
+</tr>
+<tr>
+<td><strong>copyright:</strong></td><td>1997-2005 The PHP Group</td>
+</tr>
+<tr>
+<td><strong>link:</strong></td><td><a href="http://pear.php.net/package/Services_Trackback">http://pear.php.net/package/Services_Trackback</a></td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+<tr>
+<td><strong>license:</strong></td><td><a href="http://www.php.net/license/3_0.txt">PHP License 3.0</a></td>
+</tr>
+</table>
+</div>
+</div>
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div>
+
+<div id="class_vars">
+<h3>Class Variables</h3>
+<div class="tags">
+<h4 id="var$_data">$_data = <span class="value">array(<br/>
+'id'=&gt;'',<br/>
+'title'=&gt;'',<br/>
+'excerpt'=&gt;'',<br/>
+'blog_name'=&gt;'',<br/>
+'url'=&gt;'',<br/>
+'trackback_url'=&gt;'',<br/>
+'host'=&gt;'',<br/>
+)</span></h4>
+<p>[line 93]</p>
+<p>The necessary trackback data.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>since:</strong></td><td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>protected</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>array</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_options">$_options = <span class="value">array(<br/>
+//OptionsforServices_Trackbackdirectly<br/>
+'strictness'=&gt;SERVICES_TRACKBACK_STRICTNESS_LOW,<br/>
+'timeout'=&gt;30,//seconds<br/>
+'fetchlines'=&gt;30,<br/>
+//OptionsforHTTP_Requestclass<br/>
+'httpRequest'=&gt;array(<br/>
+'allowRedirects'=&gt;true,<br/>
+'maxRedirects'=&gt;2,<br/>
+'useragent'=&gt;'PEAR::Services_Trackbackv0.5.0'<br/>
+),)</span></h4>
+<p>[line 115]</p>
+<p>Options to influence Services_Trackback.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodcreate">Services_Trackback::create()</a></td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.4.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>protected</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>array</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_spamChecks">$_spamChecks = <span class="value">array()</span></h4>
+<p>[line 131]</p>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+</div>
+
+<div id="class_methods">
+<h3>Class Methods</h3>
+<div class="tags">
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodServices_Trackback">constructor Services_Trackback <span class="smalllinenumber">[line 144]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void Services_Trackback(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Constructor  Creates a new Trackback object. Private because of factory use.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>since:</strong></td><td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>protected</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodaddSpamCheck">method addSpamCheck <span class="smalllinenumber">[line 539]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed &amp;addSpamCheck(
+
+&$spamCheck, [int
+$priority = 0], object(Services_Trackback_SpamCheck)
+$spamCheck)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>addSpamCheck  Add a spam check module to the trackback.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>Added SpamCheck module instance on success, otherwise PEAR_Error.</td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodcheckSpam">Services_Trackback::checkSpam()</a></td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodremoveSpamCheck">Services_Trackback::removeSpamCheck()</a></td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.5.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">object(Services_Trackback_SpamCheck)</td>
+<td><strong><var>$spamCheck</var></strong></td>
+<td>The spam check module to add.</td>
+</tr>
+<tr>
+<td class="type">int</td>
+<td><strong><var>$priority</var></strong></td>
+<td>A priority value for the spam check. Lower priority indices are processed earlier.                       If no priority level is set, 0 is assumed.</td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>&$spamCheck</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodautodiscover">method autodiscover <span class="smalllinenumber">[line 273]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>bool autodiscover(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>autodiscover  Checks a given URL for trackback autodiscovery code.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>True on success, otherwise PEAR_Error.</td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.2.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodcheckSpam">method checkSpam <span class="smalllinenumber">[line 631]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>bool checkSpam(
+[
+$continouse = false], bool
+$continouseCheck)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>checkSpam  Checks the given trackback against several spam protection sources  such as DNSBL, SURBL, Word BL,... The sources to check are defined using  Services_Trackback_SpamCheck modules.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>True, if one of the sources</td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodremoveSpamCheck">Services_Trackback::removeSpamCheck()</a></td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodaddSpamCheck">Services_Trackback::addSpamCheck()</a></td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.5.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">bool</td>
+<td><strong><var>$continouseCheck</var></strong></td>
+<td>Wether to check all spam protection modules or                               quit checking if one modules returns a positive result.</td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$continouse</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodcreate">method create <span class="smalllinenumber">[line 187]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>object(Services_Trackback) &amp;create(
+array
+$data, [array
+$options = null])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Factory</p>This static method is used to create a trackback object. (Services_Trackback::create($data))  The factory requires a data array as described below for creation. The 'id' key is  obligatory for this method. Every other data is not quite necessary for the creation, but  might be necessary for calling other methods afterwards. See the specific methods for  further info on which data is required.<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>The newly created Trackback.</td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td>HTTP_Request::HTTP_Request() for more detailed documentation.
+                                  Some options for HTTP_Request are overwritten through the global settings of
+                                  Services_Trackback (such as timeout).
+          'timeout':          float   THE TIMEOUT SETTING IS OVERWRITTEN BY THE GLOBAL Services_Trackback SETTING.
+          'allowRedirects':   bool    Wether to follow HTTP redirects or not.
+          'maxRedirects':     int     Maximum number of redirects.
+          'useragent':        string  The user agent to use for HTTP requests.</td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.2.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">array</td>
+<td><strong><var>$data</var></strong></td>
+<td>Data for the trackback, which is obligatory:       'id'                The ID of the trackback target.   Data which is optional (for construction, not for specific methods):       'title'             string  Title of the trackback sending/receiving blog entry.       'excerpt'           string  Abstract of the trackback sending/receiving blog entry.       'blog_name'         string  Name of the trackback sending/receiving weblog.       'url'               string  URL of the trackback sending/receiving blog entry.       'trackback_url'     string  URL to send trackbacks to.</td>
+</tr>
+<tr>
+<td class="type">array</td>
+<td><strong><var>$options</var></strong></td>
+<td>Options to set for this trackback. Valid options:       'strictness':       int     The default strictness to use in @see Services_Trackback::autodiscover().       'timeout':          int     The default timeout for network operations in seconds.       'fetchlines':       int     The max number of lines to fetch over the network.       'httpRequest'       array   The options utilized by HTTP_Request are stored here.                                   The following options are the most commonly used for HTTP_Request in                                   Services_Trackback. All other options are supported too,</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodcreateSpamCheck">method createSpamCheck <span class="smalllinenumber">[line 566]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed &amp;createSpamCheck(
+string
+$spamCheckType, [array
+$options = array()], [int
+$priority = 0])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>createSpamCheck  Create and add a spam check module to the trackback.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>Instance of the created SpamCheck module or PEAR_Error.</td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodcheckSpam">Services_Trackback::checkSpam()</a></td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodremoveSpamCheck">Services_Trackback::removeSpamCheck()</a></td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodaddSpamCheck">Services_Trackback::addSpamCheck()</a></td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.5.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$spamCheckType</var></strong></td>
+<td>Name of the spamcheck module to create and add.</td>
+</tr>
+<tr>
+<td class="type">array</td>
+<td><strong><var>$options</var></strong></td>
+<td>Options for the spamcheckmodule.</td>
+</tr>
+<tr>
+<td class="type">int</td>
+<td><strong><var>$priority</var></strong></td>
+<td>A priority value for the spam check. Lower priority indices are processed earlier.                       If no priority level is set, 0 is assumed.</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodget">method get <span class="smalllinenumber">[line 662]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed get(
+string
+$key)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>get  Get data from the trackback. Returns the value of a given  key or PEAR_Error.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>A string value or a PEAR_Error on failure.</td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.2.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$key</var></strong></td>
+<td>The key to fetch a value for.</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetAutodiscoveryCode">method getAutodiscoveryCode <span class="smalllinenumber">[line 417]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string getAutodiscoveryCode(
+[bool
+$comments = true])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>getAutodiscoverCode  Returns the RDF Code for a given website to let weblogs autodiscover  the possibility of tracking it back.</p>The following data has to be set to call this method:               'id'               'title'               'url'               'trackback_url'<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>RDF code</td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">bool</td>
+<td><strong><var>$comments</var></strong></td>
+<td>Whether to include HTML comments around the RDF using &lt;!-- --&gt;</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetOptions">method getOptions <span class="smalllinenumber">[line 257]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>array getOptions(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>getOptions  Get the currently set option set.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>The currently active options.</td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodcreate">Services_Trackback::create()</a></td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodsetOptions">Services_Trackback::setOptions()</a></td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.4.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetResponseError">method getResponseError <span class="smalllinenumber">[line 511]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void getResponseError(
+string
+$message, int
+$code)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>getResponseError  Returns an XML response for a trackback error.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>since:</strong></td><td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">int</td>
+<td><strong><var>$code</var></strong></td>
+<td>The error code</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$message</var></strong></td>
+<td>The error message</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetResponseSuccess">method getResponseSuccess <span class="smalllinenumber">[line 489]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string getResponseSuccess(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>getResponseSuccess  Returns an XML response for a successful trackback.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>The XML code</td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodreceive">method receive <span class="smalllinenumber">[line 456]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code><a href="../Trackback/Services_Trackback.html">object Services_Trackback</a> receive(
+[
+$data = null])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>receive</p>Receives a trackback. The following data has to be set in the data array to fulfill this  operation:       'id'<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>since:</strong></td><td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$data</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodremoveSpamCheck">method removeSpamCheck <span class="smalllinenumber">[line 601]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>bool removeSpamCheck(
+object(Services_Trackback_SpamCheck)
+&$spamCheck)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>removeSpamCheck  Remove a spam check module from the trackback.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>True on success, otherwise PEAR_Error.</td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodcheckSpam">Services_Trackback::checkSpam()</a></td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodaddSpamCheck">Services_Trackback::addSpamCheck()</a></td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.5.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">object(Services_Trackback_SpamCheck)</td>
+<td><strong><var>&$spamCheck</var></strong></td>
+<td>The spam check module to remove.</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodsend">method send <span class="smalllinenumber">[line 346]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed send(
+[string
+$data = null])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>send  This method sends a trackback to the trackback_url saved in it. The  data array of the trackback object can be completed by submitting the  necessary data through the $data parameter of this method.</p>The following data has to be set to call this method:               'title'             Title of the weblog entry sending the trackback.               'url'               URL of the weblog entry sending the trackback.               'excerpt'           Excerpt of the weblog entry sending the trackback.               'blog_name'         Name of the weblog sending the trackback.               'trackback_url'     URL to send the trackback to.  Services_Trackback::send() requires PEAR::HTTP_Request. The options for the HTTP_Request  object are stored in the global options array using the key 'http_request'.<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>True on success, otherwise PEAR_Error.</td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.3.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$data</var></strong></td>
+<td>Additional data to complete the trackback.</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodset">method set <span class="smalllinenumber">[line 681]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed set(
+string
+$key, string
+$val)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>set  Set data of the trackback. Saves the value of a given  key , returning true on success, PEAR_Error on faulure.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>Boolean true on success or a PEAR_Error on failure.</td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.2.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$key</var></strong></td>
+<td>The key to set a value for.</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$val</var></strong></td>
+<td>The value for the key.</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodsetOptions">method setOptions <span class="smalllinenumber">[line 217]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed setOptions(
+array
+$options)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>setOptions  Set options for the trackback.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>Bool true on success, otherwise PEAR_Error.</td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodgetOptions">Services_Trackback::getOptions()</a></td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodcreate">Services_Trackback::create()</a></td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.4.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>public</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">array</td>
+<td><strong><var>$options</var></strong></td>
+<td>Pairs of 'option' =&gt; 'value' as described at @see Services_Trackback::create().</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_checkData">method _checkData <span class="smalllinenumber">[line 801]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _checkData(
+array
+$keys, [array
+$data = null])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>_checkData  Checks a given array of keys for the validity of their data.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>since:</strong></td><td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>protected</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">array</td>
+<td><strong><var>$keys</var></strong></td>
+<td>Data keys to check.</td>
+</tr>
+<tr>
+<td class="type">array</td>
+<td><strong><var>$data</var></strong></td>
+<td>Optionally the data to check (default is the object data).</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_checkURLs">method _checkURLs <span class="smalllinenumber">[line 831]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed _checkURLs(
+string
+$url1, string
+$url2, constant
+$strictness)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>_checkURLs  This little method checks if 2 URLs (the URL to trackback against the trackback  identifier found in the autodiscovery code) are equal.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>True on success, otherwise PEAR_Error.</td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodautodiscover">Services_Trackback::autodiscover()</a></td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.2.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>protected</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$url1</var></strong></td>
+<td>The first URL.</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$url2</var></strong></td>
+<td>The second URL.</td>
+</tr>
+<tr>
+<td class="type">constant</td>
+<td><strong><var>$strictness</var></strong></td>
+<td>How strict to check URLs. Use one of SERVICES_TRACKBACK_STRICTNESS_* constants.</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_fromArray">method _fromArray <span class="smalllinenumber">[line 698]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>mixed _fromArray(
+array
+$data)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Create a Trackback from a $data array.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>True on success, otherwise PEAR_Error.</td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.2.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>protected</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">array</td>
+<td><strong><var>$data</var></strong></td>
+<td>The data array (@see Services_Trackback::create()).</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_getContent">method _getContent <span class="smalllinenumber">[line 720]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _getContent(
+string
+$url)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>_getContent  Receive the content from a specific URL.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>The content.</td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.4.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>protected</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$url</var></strong></td>
+<td>The URL to download data from.</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_getDecodedData">method _getDecodedData <span class="smalllinenumber">[line 775]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _getDecodedData(
+array
+$keys, [array
+$data = null])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>_getDecodedData  Receives a number of data from the internal data store.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>since:</strong></td><td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>protected</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">array</td>
+<td><strong><var>$keys</var></strong></td>
+<td>Data keys to receive</td>
+</tr>
+<tr>
+<td class="type">array</td>
+<td><strong><var>$data</var></strong></td>
+<td>Optionally the data to check (default is the object data).</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_getEncodedData">method _getEncodedData <span class="smalllinenumber">[line 749]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _getEncodedData(
+array
+$keys, [array
+$data = null])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>_getEncodedData  Receives a number of data from the internal data store, encoded for XML usage.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>since:</strong></td><td>0.1.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>protected</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">array</td>
+<td><strong><var>$keys</var></strong></td>
+<td>Data keys to receive</td>
+</tr>
+<tr>
+<td class="type">array</td>
+<td><strong><var>$data</var></strong></td>
+<td>Optionally the data to check (default is the object data).</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_interpretTrackbackResponse">method _interpretTrackbackResponse <span class="smalllinenumber">[line 876]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _interpretTrackbackResponse(
+
+$response)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Interpret the returned XML code, when sending a trackback.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>Mixed true on success, otherwise PEAR_Error.</td>
+</tr>
+<tr>
+<td><strong>see:</strong></td><td><a href="../Trackback/Services_Trackback.html#methodsend">Services_Trackback::send()</a></td>
+</tr>
+<tr>
+<td><strong>since:</strong></td><td>0.3.0</td>
+</tr>
+<tr>
+<td><strong>access:</strong></td><td>protected</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$response</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+</div>
+</div>
+
+
+</div><!-- End #content -->
+
+<div class="credit">
+<p>Documentation generated on Tue, 18 Aug 2009 22:35:13 +0900 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a></p>
+<p><a href="http://validator.w3.org/check/referer">
+XHTML 1.0</a></p>
+</div>
+
+</body>
+</html>

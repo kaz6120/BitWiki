@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<title>Docs For Class Text_Diff</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+<link rel="start" href="./index.html" title="API Documentation" />
+<link rev="made" href="mailto:webmaster@anti-spam.example.com" />
+</head>
+<body>
+
+<!-- Begin #header -->
+<div id="header">
+<h1 id="top">Text_Diff</h1>
+<div id="header-menu">
+<a href="../classtrees_Text_Diff.html" class="menu">class tree: Text_Diff</a> 
+<a href="../elementindex_Text_Diff.html" class="menu">index: Text_Diff</a> 
+<a href="../elementindex.html" class="menu">all elements</a>
+</div>
+</div>
+
+<!-- Begin #menu -->
+<div id="menu">
+<h2>Packages:</h2>
+<ul>
+<li><a href="../li_default.html">default</a></li>
+<li><a href="../li_BitWiki.html">BitWiki</a></li>
+<li><a href="../li_Cache_Lite.html">Cache_Lite</a></li>
+<li><a href="../li_HTTP_Request.html">HTTP_Request</a></li>
+<li><a href="../li_Net_CheckIP.html">Net_CheckIP</a></li>
+<li><a href="../li_Net_DNSBL.html">Net_DNSBL</a></li>
+<li><a href="../li_PEAR.html">PEAR</a></li>
+<li><a href="../li_Smarty.html">Smarty</a></li>
+<li><a href="../li_Text_Diff.html">Text_Diff</a></li>
+<li><a href="../li_Text_Highlighter.html">Text_Highlighter</a></li>
+<li><a href="../li_Trackback.html">Trackback</a></li>
+</ul>
+<h2>Files:</h2>
+<div class="package">
+<ul>
+<li><a href="../Text_Diff/_library---pear---Text---Diff.php.html">Diff.php</a></li><li><a href="../Text_Diff/_library---pear---Text---Diff3.php.html">Diff3.php</a></li><li><a href="../Text_Diff/_library---pear---Text---Diff---Renderer---inline.php.html">inline.php</a></li><li><a href="../Text_Diff/_library---pear---Text---Diff---Renderer.php.html">Renderer.php</a></li><li><a href="../Text_Diff/_library---pear---Text---Diff---Renderer---unified.php.html">unified.php</a></li></ul>
+</div>
+<h2>Classes:</h2>
+<div class="package">
+<ul>
+<li><a href="../Text_Diff/Text_Diff.html">Text_Diff</a></li><li><a href="../Text_Diff/Text_Diff3.html">Text_Diff3</a></li><li><a href="../Text_Diff/Text_Diff3_BlockBuilder.html">Text_Diff3_BlockBuilder</a></li><li><a href="../Text_Diff/Text_Diff3_Op.html">Text_Diff3_Op</a></li><li><a href="../Text_Diff/Text_Diff3_Op_copy.html">Text_Diff3_Op_copy</a></li><li><a href="../Text_Diff/Text_Diff_Engine_native.html">Text_Diff_Engine_native</a></li><li><a href="../Text_Diff/Text_Diff_Engine_xdiff.html">Text_Diff_Engine_xdiff</a></li><li><a href="../Text_Diff/Text_Diff_Op.html">Text_Diff_Op</a></li><li><a href="../Text_Diff/Text_Diff_Op_add.html">Text_Diff_Op_add</a></li><li><a href="../Text_Diff/Text_Diff_Op_change.html">Text_Diff_Op_change</a></li><li><a href="../Text_Diff/Text_Diff_Op_copy.html">Text_Diff_Op_copy</a></li><li><a href="../Text_Diff/Text_Diff_Op_delete.html">Text_Diff_Op_delete</a></li><li><a href="../Text_Diff/Text_Diff_Renderer.html">Text_Diff_Renderer</a></li><li><a href="../Text_Diff/Text_Diff_Renderer_inline.html">Text_Diff_Renderer_inline</a></li><li><a href="../Text_Diff/Text_Diff_Renderer_unified.html">Text_Diff_Renderer_unified</a></li><li><a href="../Text_Diff/Text_MappedDiff.html">Text_MappedDiff</a></li></ul>
+</div>
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+<div id="content-title">
+<h2>Class: Text_Diff</h2>
+<p>Source Location: /library/pear/Text/Diff.php</p>
+</div>
+
+
+<div id="overview">
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre>
+<div class="description">Text_Diff</div><h4>Author(s):</h4>
+<ul>
+<li>Geoffrey T. Dairiki &lt;<a href="mailto:dairiki@dairiki.org">dairiki@dairiki.org</a>&gt;</li>
+</ul>
+
+
+
+
+    
+
+</div><!-- End #overview -->
+
+<div id="variables">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Text_Diff/Text_Diff.html#var$_edits">$_edits</a></li>
+  </ul>
+</div>
+
+
+<div id="methods">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Text_Diff/Text_Diff.html#methodText_Diff">Text_Diff</a></li>
+    <li><a href="../Text_Diff/Text_Diff.html#methodgetDiff">getDiff</a></li>
+    <li><a href="../Text_Diff/Text_Diff.html#methodgetFinal">getFinal</a></li>
+    <li><a href="../Text_Diff/Text_Diff.html#methodgetOriginal">getOriginal</a></li>
+    <li><a href="../Text_Diff/Text_Diff.html#methodisEmpty">isEmpty</a></li>
+    <li><a href="../Text_Diff/Text_Diff.html#methodlcs">lcs</a></li>
+    <li><a href="../Text_Diff/Text_Diff.html#methodreverse">reverse</a></li>
+    <li><a href="../Text_Diff/Text_Diff.html#method_check">_check</a></li>
+    <li><a href="../Text_Diff/Text_Diff.html#method_trimNewlines">_trimNewlines</a></li>
+  </ul>
+</div>
+
+
+
+<div class="child-classes">
+<h3>Child classes:</h3>
+<div class="tags">
+<dl>
+<dt><a href="../Text_Diff/Text_MappedDiff.html">Text_MappedDiff</a></dt>
+<dd>$Horde: framework/Text_Diff/Diff.php,v 1.10 2004/11/01 11:51:15 mdjukic Exp $</dd></dl>
+<dl>
+<dt><a href="../Text_Diff/Text_Diff3.html">Text_Diff3</a></dt>
+<dd>A class for computing three way diffs.</dd></dl>
+</div><!-- End .tags -->
+</div><!-- End .child-classes -->
+
+
+
+<div id="class_details">
+<h3>Class Details</h3>
+<div class="tags">
+[line 16]<br />
+<p>Text_Diff</p>General API for generating and formatting diffs - the differences between  two sequences of strings.The PHP diff code used in this package was originally written by Geoffrey  T. Dairiki and is used with his permission.$Horde: framework/Text_Diff/Diff.php,v 1.10 2004/11/01 11:51:15 mdjukic Exp $<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>author:</strong></td><td>Geoffrey T. Dairiki &lt;<a href="mailto:dairiki@dairiki.org">dairiki@dairiki.org</a>&gt;</td>
+</tr>
+</table>
+</div>
+</div>
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div>
+
+<div id="class_vars">
+<h3>Class Variables</h3>
+<div class="tags">
+<h4 id="var$_edits">$_edits = <span class="value"></span></h4>
+<p>[line 23]</p>
+<p>Array of changes.</p><div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>array</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+</div>
+
+<div id="class_methods">
+<h3>Class Methods</h3>
+<div class="tags">
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodText_Diff">constructor Text_Diff <span class="smalllinenumber">[line 32]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>Text_Diff Text_Diff(
+array
+$from_lines, array
+$to_lines)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Computes diffs between sequences of strings.</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">array</td>
+<td><strong><var>$from_lines</var></strong></td>
+<td>An array of strings.  Typically these are                            lines from a file.</td>
+</tr>
+<tr>
+<td class="type">array</td>
+<td><strong><var>$to_lines</var></strong></td>
+<td>An array of strings.</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetDiff">method getDiff <span class="smalllinenumber">[line 49]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void getDiff(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Returns the array of differences.</p><!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetFinal">method getFinal <span class="smalllinenumber">[line 140]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>array getFinal(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Gets the final set of lines.</p>This reconstructs the $to_lines parameter passed to the constructor.<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>The sequence of strings.</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetOriginal">method getOriginal <span class="smalllinenumber">[line 122]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>array getOriginal(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Gets the original set of lines.</p>This reconstructs the $from_lines parameter passed to the constructor.<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>The original sequence of strings.</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodisEmpty">method isEmpty <span class="smalllinenumber">[line 87]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>boolean isEmpty(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Checks for an empty diff.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>True if two sequences were identical.</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodlcs">method lcs <span class="smalllinenumber">[line 104]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>int lcs(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Computes the length of the Longest Common Subsequence (LCS).</p>This is mostly for diagnostic purposed.<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>The length of the LCS.</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodreverse">method reverse <span class="smalllinenumber">[line 68]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code><a href="../Text_Diff/Text_Diff.html">Text_Diff</a> reverse(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Computes a reversed diff.</p>Example:  <ol><li><div class="src-line">&nbsp;$diff&nbsp;=&nbsp;&amp;new&nbsp;<a href="../Text_Diff/Text_Diff.html#methodText_Diff">Text_Diff</a>($lines1,&nbsp;$lines2);</div></li>
+<li><div class="src-line">&nbsp;$rev&nbsp;=&nbsp;$diff-&gt;<a href="../Text_Diff/Text_Diff.html#methodreverse">reverse</a>();</div></li>
+</ol><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>A Diff object representing the inverse of the                     original diff.  Note that we purposely don't return a                     reference here, since this essentially is a clone()                     method.</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_check">method _check <span class="smalllinenumber">[line 168]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _check(
+
+$from_lines, 
+$to_lines)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Checks a diff for validity.</p>This is here only for debugging purposes.<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$from_lines</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$to_lines</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_trimNewlines">method _trimNewlines <span class="smalllinenumber">[line 158]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _trimNewlines(
+
+&$line, integer
+$key, string
+$line)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Removes trailing newlines from a line of text. This is meant to be used  with array_walk().</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$line</var></strong></td>
+<td>The line to trim.</td>
+</tr>
+<tr>
+<td class="type">integer</td>
+<td><strong><var>$key</var></strong></td>
+<td>The index of the line in the array. Not used.</td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>&$line</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+</div>
+</div>
+
+
+</div><!-- End #content -->
+
+<div class="credit">
+<p>Documentation generated on Tue, 18 Aug 2009 22:34:58 +0900 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a></p>
+<p><a href="http://validator.w3.org/check/referer">
+XHTML 1.0</a></p>
+</div>
+
+</body>
+</html>

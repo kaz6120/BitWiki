@@ -1,0 +1,2728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<title>Docs For Class Smarty_Compiler</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+<link rel="start" href="./index.html" title="API Documentation" />
+<link rev="made" href="mailto:webmaster@anti-spam.example.com" />
+</head>
+<body>
+
+<!-- Begin #header -->
+<div id="header">
+<h1 id="top">Smarty</h1>
+<div id="header-menu">
+<a href="../classtrees_Smarty.html" class="menu">class tree: Smarty</a> 
+<a href="../elementindex_Smarty.html" class="menu">index: Smarty</a> 
+<a href="../elementindex.html" class="menu">all elements</a>
+</div>
+</div>
+
+<!-- Begin #menu -->
+<div id="menu">
+<h2>Packages:</h2>
+<ul>
+<li><a href="../li_default.html">default</a></li>
+<li><a href="../li_BitWiki.html">BitWiki</a></li>
+<li><a href="../li_Cache_Lite.html">Cache_Lite</a></li>
+<li><a href="../li_HTTP_Request.html">HTTP_Request</a></li>
+<li><a href="../li_Net_CheckIP.html">Net_CheckIP</a></li>
+<li><a href="../li_Net_DNSBL.html">Net_DNSBL</a></li>
+<li><a href="../li_PEAR.html">PEAR</a></li>
+<li><a href="../li_Smarty.html">Smarty</a></li>
+<li><a href="../li_Text_Diff.html">Text_Diff</a></li>
+<li><a href="../li_Text_Highlighter.html">Text_Highlighter</a></li>
+<li><a href="../li_Trackback.html">Trackback</a></li>
+</ul>
+<h2>Files:</h2>
+<div class="package">
+<ul>
+<li><a href="../Smarty/_library---smarty---Config_File.class.php.html">Config_File.class.php</a></li><li><a href="../Smarty/_library---smarty---Smarty.class.php.html">Smarty.class.php</a></li><li><a href="../Smarty/_library---smarty---Smarty_Compiler.class.php.html">Smarty_Compiler.class.php</a></li></ul>
+</div>
+subpackage <b>plugins</b><div class="package">
+<ul>
+<li><a href="../Smarty/plugins/_library---smarty---plugins---block.textformat.php.html">block.textformat.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---compiler.assign.php.html">compiler.assign.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.assemble_plugin_filepath.php.html">core.assemble_plugin_filepath.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.assign_smarty_interface.php.html">core.assign_smarty_interface.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.create_dir_structure.php.html">core.create_dir_structure.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.display_debug_console.php.html">core.display_debug_console.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.get_include_path.php.html">core.get_include_path.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.get_microtime.php.html">core.get_microtime.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.get_php_resource.php.html">core.get_php_resource.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.is_secure.php.html">core.is_secure.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.is_trusted.php.html">core.is_trusted.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.load_plugins.php.html">core.load_plugins.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.load_resource_plugin.php.html">core.load_resource_plugin.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.process_cached_inserts.php.html">core.process_cached_inserts.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.process_compiled_include.php.html">core.process_compiled_include.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.read_cache_file.php.html">core.read_cache_file.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.rmdir.php.html">core.rmdir.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.rm_auto.php.html">core.rm_auto.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.run_insert_handler.php.html">core.run_insert_handler.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.smarty_include_php.php.html">core.smarty_include_php.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.write_cache_file.php.html">core.write_cache_file.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.write_compiled_include.php.html">core.write_compiled_include.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.write_compiled_resource.php.html">core.write_compiled_resource.php</a></li><li><a href="../Smarty/plugins/_library---smarty---internals---core.write_file.php.html">core.write_file.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.assign_debug_info.php.html">function.assign_debug_info.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.config_load.php.html">function.config_load.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.counter.php.html">function.counter.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.cycle.php.html">function.cycle.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.debug.php.html">function.debug.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.eval.php.html">function.eval.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.fetch.php.html">function.fetch.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_checkboxes.php.html">function.html_checkboxes.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_image.php.html">function.html_image.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_options.php.html">function.html_options.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_radios.php.html">function.html_radios.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_select_date.php.html">function.html_select_date.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_select_time.php.html">function.html_select_time.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.html_table.php.html">function.html_table.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.mailto.php.html">function.mailto.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.math.php.html">function.math.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.popup.php.html">function.popup.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---function.popup_init.php.html">function.popup_init.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.capitalize.php.html">modifier.capitalize.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.cat.php.html">modifier.cat.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.count_characters.php.html">modifier.count_characters.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.count_paragraphs.php.html">modifier.count_paragraphs.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.count_sentences.php.html">modifier.count_sentences.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.count_words.php.html">modifier.count_words.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.date_format.php.html">modifier.date_format.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.debug_print_var.php.html">modifier.debug_print_var.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.default.php.html">modifier.default.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.escape.php.html">modifier.escape.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.indent.php.html">modifier.indent.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.lower.php.html">modifier.lower.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.nl2br.php.html">modifier.nl2br.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.regex_replace.php.html">modifier.regex_replace.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.replace.php.html">modifier.replace.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.spacify.php.html">modifier.spacify.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.string_format.php.html">modifier.string_format.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.strip.php.html">modifier.strip.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.strip_tags.php.html">modifier.strip_tags.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.truncate.php.html">modifier.truncate.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.upper.php.html">modifier.upper.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---modifier.wordwrap.php.html">modifier.wordwrap.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---outputfilter.trimwhitespace.php.html">outputfilter.trimwhitespace.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---shared.escape_special_chars.php.html">shared.escape_special_chars.php</a></li><li><a href="../Smarty/plugins/_library---smarty---plugins---shared.make_timestamp.php.html">shared.make_timestamp.php</a></li></ul>
+</div>
+<h2>Classes:</h2>
+<div class="package">
+<ul>
+<li><a href="../Smarty/Config_File.html">Config_File</a></li><li><a href="../Smarty/MySmarty.html">MySmarty</a></li><li><a href="../Smarty/Smarty.html">Smarty</a></li><li><a href="../Smarty/Smarty_Compiler.html">Smarty_Compiler</a></li></ul>
+</div>
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+<div id="content-title">
+<h2>Class: Smarty_Compiler</h2>
+<p>Source Location: /library/smarty/Smarty_Compiler.class.php</p>
+</div>
+
+
+<div id="overview">
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre><a href="../Smarty/Smarty.html">Smarty</a>
+   |
+   --Smarty_Compiler</pre>
+<div class="description">Template compiling class</div>
+
+
+
+
+
+</div><!-- End #overview -->
+
+<div id="variables">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_additional_newline">$_additional_newline</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_avar_regexp">$_avar_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_cacheable_state">$_cacheable_state</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_cache_attrs_count">$_cache_attrs_count</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_cache_include">$_cache_include</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_cache_serial">$_cache_serial</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_capture_stack">$_capture_stack</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_current_file">$_current_file</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_current_line_no">$_current_line_no</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_cvar_regexp">$_cvar_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_db_qstr_regexp">$_db_qstr_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_dvar_guts_regexp">$_dvar_guts_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_dvar_regexp">$_dvar_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_folded_blocks">$_folded_blocks</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_func_call_regexp">$_func_call_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_func_regexp">$_func_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_init_smarty_vars">$_init_smarty_vars</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_mod_regexp">$_mod_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_nocache_count">$_nocache_count</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_num_const_regexp">$_num_const_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_obj_call_regexp">$_obj_call_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_obj_ext_regexp">$_obj_ext_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_obj_params_regexp">$_obj_params_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_obj_start_regexp">$_obj_start_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_parenth_param_regexp">$_parenth_param_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_permitted_tokens">$_permitted_tokens</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_plugin_info">$_plugin_info</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_qstr_regexp">$_qstr_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_reg_obj_regexp">$_reg_obj_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_si_qstr_regexp">$_si_qstr_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_strip_depth">$_strip_depth</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_svar_regexp">$_svar_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_var_bracket_regexp">$_var_bracket_regexp</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#var$_var_regexp">$_var_regexp</a></li>
+  </ul>
+</div>
+
+
+<div id="methods">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Smarty/Smarty_Compiler.html#methodSmarty_Compiler">Smarty_Compiler</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_add_plugin">_add_plugin</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_arg_list">_compile_arg_list</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_block_tag">_compile_block_tag</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_capture_tag">_compile_capture_tag</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_compiler_tag">_compile_compiler_tag</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_custom_tag">_compile_custom_tag</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_file">_compile_file</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_foreach_start">_compile_foreach_start</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_if_tag">_compile_if_tag</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_include_php_tag">_compile_include_php_tag</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_include_tag">_compile_include_tag</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_insert_tag">_compile_insert_tag</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_plugin_call">_compile_plugin_call</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_registered_object_tag">_compile_registered_object_tag</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_section_start">_compile_section_start</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_smarty_ref">_compile_smarty_ref</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_compile_tag">_compile_tag</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_expand_quoted_text">_expand_quoted_text</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_load_filters">_load_filters</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_parse_attrs">_parse_attrs</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_parse_conf_var">_parse_conf_var</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_parse_is_expr">_parse_is_expr</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_parse_modifiers">_parse_modifiers</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_parse_parenth_args">_parse_parenth_args</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_parse_section_prop">_parse_section_prop</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_parse_var">_parse_var</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_parse_vars_props">_parse_vars_props</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_parse_var_props">_parse_var_props</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_pop_cacheable_state">_pop_cacheable_state</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_pop_tag">_pop_tag</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_push_cacheable_state">_push_cacheable_state</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_push_tag">_push_tag</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_quote_replace">_quote_replace</a></li>
+    <li><a href="../Smarty/Smarty_Compiler.html#method_syntax_error">_syntax_error</a></li>
+  </ul>
+</div>
+
+
+
+
+
+<div id="inherited-variables">
+<h3>Inherited Variables</h3>
+<div class="tags">
+<h4>Class: <a href="../Smarty/Smarty.html">Smarty</a></h4>
+<dl>
+<dt>
+<a href="../Smarty/Smarty.html#var$autoload_filters">Smarty::$autoload_filters</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$cache_dir">Smarty::$cache_dir</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$cache_handler_func">Smarty::$cache_handler_func</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$cache_lifetime">Smarty::$cache_lifetime</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$cache_modified_check">Smarty::$cache_modified_check</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$caching">Smarty::$caching</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$compiler_class">Smarty::$compiler_class</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$compiler_file">Smarty::$compiler_file</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$compile_check">Smarty::$compile_check</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$compile_dir">Smarty::$compile_dir</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$compile_id">Smarty::$compile_id</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$config_booleanize">Smarty::$config_booleanize</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$config_class">Smarty::$config_class</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$config_dir">Smarty::$config_dir</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$config_fix_newlines">Smarty::$config_fix_newlines</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$config_overwrite">Smarty::$config_overwrite</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$config_read_hidden">Smarty::$config_read_hidden</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$debugging">Smarty::$debugging</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$debugging_ctrl">Smarty::$debugging_ctrl</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$debug_tpl">Smarty::$debug_tpl</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$default_modifiers">Smarty::$default_modifiers</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$default_resource_type">Smarty::$default_resource_type</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$default_template_handler_func">Smarty::$default_template_handler_func</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$error_reporting">Smarty::$error_reporting</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$force_compile">Smarty::$force_compile</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$left_delimiter">Smarty::$left_delimiter</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$php_handling">Smarty::$php_handling</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$plugins_dir">Smarty::$plugins_dir</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$request_use_auto_globals">Smarty::$request_use_auto_globals</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$request_vars_order">Smarty::$request_vars_order</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$right_delimiter">Smarty::$right_delimiter</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$secure_dir">Smarty::$secure_dir</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$security">Smarty::$security</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$security_settings">Smarty::$security_settings</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$template_dir">Smarty::$template_dir</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$trusted_dir">Smarty::$trusted_dir</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$use_sub_dirs">Smarty::$use_sub_dirs</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_cache_including">Smarty::$_cache_including</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_cache_info">Smarty::$_cache_info</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_cache_serials">Smarty::$_cache_serials</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_compile_id">Smarty::$_compile_id</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_config">Smarty::$_config</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_conf_obj">Smarty::$_conf_obj</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_dir_perms">Smarty::$_dir_perms</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_file_perms">Smarty::$_file_perms</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_foreach">Smarty::$_foreach</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_inclusion_depth">Smarty::$_inclusion_depth</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_plugins">Smarty::$_plugins</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_reg_objects">Smarty::$_reg_objects</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_sections">Smarty::$_sections</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_smarty_debug_id">Smarty::$_smarty_debug_id</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_smarty_debug_info">Smarty::$_smarty_debug_info</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_smarty_md5">Smarty::$_smarty_md5</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_smarty_vars">Smarty::$_smarty_vars</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_tag_stack">Smarty::$_tag_stack</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_tpl_vars">Smarty::$_tpl_vars</a>
+</dt>
+<dd>
+   
+</dd>
+<dt>
+<a href="../Smarty/Smarty.html#var$_version">Smarty::$_version</a>
+</dt>
+<dd>
+   
+</dd>
+</dl>
+</div>
+</div>
+
+<div id="inherited-methods">
+<h3>Inherited Methods</h3>
+<div class="tags">
+<h4>Class: <a href="../Smarty/Smarty.html">Smarty</a></h4>
+<dl>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodSmarty">Smarty::Smarty()</a>
+  </dt>
+  <dd>
+    The class constructor.
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodappend">Smarty::append()</a>
+  </dt>
+  <dd>
+    appends values to template variables
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodappend_by_ref">Smarty::append_by_ref()</a>
+  </dt>
+  <dd>
+    appends values to template variables by reference
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodassign">Smarty::assign()</a>
+  </dt>
+  <dd>
+    assigns values to template variables
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodassign_by_ref">Smarty::assign_by_ref()</a>
+  </dt>
+  <dd>
+    assigns values to template variables by reference
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodclear_all_assign">Smarty::clear_all_assign()</a>
+  </dt>
+  <dd>
+    clear all the assigned template variables.
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodclear_all_cache">Smarty::clear_all_cache()</a>
+  </dt>
+  <dd>
+    clear the entire contents of cache (all templates)
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodclear_assign">Smarty::clear_assign()</a>
+  </dt>
+  <dd>
+    clear the given assigned template variable.
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodclear_cache">Smarty::clear_cache()</a>
+  </dt>
+  <dd>
+    clear cached content for the given template and cache id
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodclear_compiled_tpl">Smarty::clear_compiled_tpl()</a>
+  </dt>
+  <dd>
+    clears compiled version of specified template resource,  or all compiled template files if one is not specified.
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodclear_config">Smarty::clear_config()</a>
+  </dt>
+  <dd>
+    clear configuration values
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodconfig_load">Smarty::config_load()</a>
+  </dt>
+  <dd>
+    load configuration values
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methoddisplay">Smarty::display()</a>
+  </dt>
+  <dd>
+    executes &amp; displays the template results
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodfetch">Smarty::fetch()</a>
+  </dt>
+  <dd>
+    executes &amp; returns or displays the template results
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodget_config_vars">Smarty::get_config_vars()</a>
+  </dt>
+  <dd>
+    Returns an array containing config variables
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodget_registered_object">Smarty::get_registered_object()</a>
+  </dt>
+  <dd>
+    return a reference to a registered object
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodget_template_vars">Smarty::get_template_vars()</a>
+  </dt>
+  <dd>
+    Returns an array containing template variables
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodis_cached">Smarty::is_cached()</a>
+  </dt>
+  <dd>
+    test to see if valid cache exists for this template
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodload_filter">Smarty::load_filter()</a>
+  </dt>
+  <dd>
+    load a filter of specified type and name
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodregister_block">Smarty::register_block()</a>
+  </dt>
+  <dd>
+    Registers block function to be used in templates
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodregister_compiler_function">Smarty::register_compiler_function()</a>
+  </dt>
+  <dd>
+    Registers compiler function
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodregister_function">Smarty::register_function()</a>
+  </dt>
+  <dd>
+    Registers custom function to be used in templates
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodregister_modifier">Smarty::register_modifier()</a>
+  </dt>
+  <dd>
+    Registers modifier to be used in templates
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodregister_object">Smarty::register_object()</a>
+  </dt>
+  <dd>
+    Registers object to be used in templates
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodregister_outputfilter">Smarty::register_outputfilter()</a>
+  </dt>
+  <dd>
+    Registers an output filter function to apply  to a template output
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodregister_postfilter">Smarty::register_postfilter()</a>
+  </dt>
+  <dd>
+    Registers a postfilter function to apply  to a compiled template after compilation
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodregister_prefilter">Smarty::register_prefilter()</a>
+  </dt>
+  <dd>
+    Registers a prefilter function to apply  to a template before compiling
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodregister_resource">Smarty::register_resource()</a>
+  </dt>
+  <dd>
+    Registers a resource to fetch a template
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodtemplate_exists">Smarty::template_exists()</a>
+  </dt>
+  <dd>
+    Checks whether requested template exists.
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodtrigger_error">Smarty::trigger_error()</a>
+  </dt>
+  <dd>
+    trigger Smarty error
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodunregister_block">Smarty::unregister_block()</a>
+  </dt>
+  <dd>
+    Unregisters block function
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodunregister_compiler_function">Smarty::unregister_compiler_function()</a>
+  </dt>
+  <dd>
+    Unregisters compiler function
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodunregister_function">Smarty::unregister_function()</a>
+  </dt>
+  <dd>
+    Unregisters custom function
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodunregister_modifier">Smarty::unregister_modifier()</a>
+  </dt>
+  <dd>
+    Unregisters modifier
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodunregister_object">Smarty::unregister_object()</a>
+  </dt>
+  <dd>
+    Unregisters object
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodunregister_outputfilter">Smarty::unregister_outputfilter()</a>
+  </dt>
+  <dd>
+    Unregisters an outputfilter function
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodunregister_postfilter">Smarty::unregister_postfilter()</a>
+  </dt>
+  <dd>
+    Unregisters a postfilter function
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodunregister_prefilter">Smarty::unregister_prefilter()</a>
+  </dt>
+  <dd>
+    Unregisters a prefilter function
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#methodunregister_resource">Smarty::unregister_resource()</a>
+  </dt>
+  <dd>
+    Unregisters a resource
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_compile_resource">Smarty::_compile_resource()</a>
+  </dt>
+  <dd>
+    compile the template
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_compile_source">Smarty::_compile_source()</a>
+  </dt>
+  <dd>
+    compile the given source
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_dequote">Smarty::_dequote()</a>
+  </dt>
+  <dd>
+    Remove starting and ending quotes from the string
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_eval">Smarty::_eval()</a>
+  </dt>
+  <dd>
+    wrapper for eval() retaining $this
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_fetch_resource_info">Smarty::_fetch_resource_info()</a>
+  </dt>
+  <dd>
+    fetch the template info. Gets timestamp, and source  if get_source is true
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_get_auto_filename">Smarty::_get_auto_filename()</a>
+  </dt>
+  <dd>
+    get a concrete filename for automagically created content
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_get_auto_id">Smarty::_get_auto_id()</a>
+  </dt>
+  <dd>
+    returns an auto_id for auto-file-functions
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_get_compile_path">Smarty::_get_compile_path()</a>
+  </dt>
+  <dd>
+    Get the compile path for this resource
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_get_plugin_filepath">Smarty::_get_plugin_filepath()</a>
+  </dt>
+  <dd>
+    get filepath of requested plugin
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_include">Smarty::_include()</a>
+  </dt>
+  <dd>
+    wrapper for include() retaining $this
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_is_compiled">Smarty::_is_compiled()</a>
+  </dt>
+  <dd>
+    test if resource needs compiling
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_parse_resource_name">Smarty::_parse_resource_name()</a>
+  </dt>
+  <dd>
+    parse out the type and name from the resource
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_process_compiled_include_callback">Smarty::_process_compiled_include_callback()</a>
+  </dt>
+  <dd>
+    callback function for preg_replace, to call a non-cacheable block
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_read_file">Smarty::_read_file()</a>
+  </dt>
+  <dd>
+    read in a file
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_run_mod_handler">Smarty::_run_mod_handler()</a>
+  </dt>
+  <dd>
+    Handle modifiers
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_smarty_cache_attrs">Smarty::_smarty_cache_attrs()</a>
+  </dt>
+  <dd>
+    get or set an array of cached attributes for function that is
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_smarty_include">Smarty::_smarty_include()</a>
+  </dt>
+  <dd>
+    called for included templates
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_trigger_fatal_error">Smarty::_trigger_fatal_error()</a>
+  </dt>
+  <dd>
+    trigger Smarty plugin error
+  </dd>
+    <dt>
+    <a href="../Smarty/Smarty.html#method_unlink">Smarty::_unlink()</a>
+  </dt>
+  <dd>
+    unlink a file, possibly using expiration time
+  </dd>
+  </dl>
+</div>
+</div>
+
+<div id="class_details">
+<h3>Class Details</h3>
+<div class="tags">
+[line 35]<br />
+<p>Template compiling class</p></div>
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div>
+
+<div id="class_vars">
+<h3>Class Variables</h3>
+<div class="tags">
+<h4 id="var$_additional_newline">$_additional_newline = <span class="value">&quot;\n&quot;</span></h4>
+<p>[line 75]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_avar_regexp">$_avar_regexp = <span class="value">null</span></h4>
+<p>[line 59]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_cacheable_state">$_cacheable_state = <span class="value">0</span></h4>
+<p>[line 68]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_cache_attrs_count">$_cache_attrs_count = <span class="value">0</span></h4>
+<p>[line 69]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_cache_include">$_cache_include = <span class="value">null</span></h4>
+<p>[line 72]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+<tr>
+<td><strong>Overrides:</strong></td>
+<td>Array</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_cache_serial">$_cache_serial = <span class="value">null</span></h4>
+<p>[line 71]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_capture_stack">$_capture_stack = <span class="value">array()</span></h4>
+<p>[line 44]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_current_file">$_current_file = <span class="value">null</span></h4>
+<p>[line 42]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_current_line_no">$_current_line_no = <span class="value">1</span></h4>
+<p>[line 43]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_cvar_regexp">$_cvar_regexp = <span class="value">null</span></h4>
+<p>[line 57]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_db_qstr_regexp">$_db_qstr_regexp = <span class="value">null</span></h4>
+<p>[line 48]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_dvar_guts_regexp">$_dvar_guts_regexp = <span class="value">null</span></h4>
+<p>[line 55]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_dvar_regexp">$_dvar_regexp = <span class="value">null</span></h4>
+<p>[line 56]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_folded_blocks">$_folded_blocks = <span class="value">array()</span></h4>
+<p>[line 41]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_func_call_regexp">$_func_call_regexp = <span class="value">null</span></h4>
+<p>[line 63]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_func_regexp">$_func_regexp = <span class="value">null</span></h4>
+<p>[line 51]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_init_smarty_vars">$_init_smarty_vars = <span class="value">false</span></h4>
+<p>[line 46]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_mod_regexp">$_mod_regexp = <span class="value">null</span></h4>
+<p>[line 60]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_nocache_count">$_nocache_count = <span class="value">0</span></h4>
+<p>[line 70]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_num_const_regexp">$_num_const_regexp = <span class="value">null</span></h4>
+<p>[line 54]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_obj_call_regexp">$_obj_call_regexp = <span class="value">null</span></h4>
+<p>[line 67]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_obj_ext_regexp">$_obj_ext_regexp = <span class="value">null</span></h4>
+<p>[line 64]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_obj_params_regexp">$_obj_params_regexp = <span class="value">null</span></h4>
+<p>[line 66]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_obj_start_regexp">$_obj_start_regexp = <span class="value">null</span></h4>
+<p>[line 65]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_parenth_param_regexp">$_parenth_param_regexp = <span class="value">null</span></h4>
+<p>[line 62]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_permitted_tokens">$_permitted_tokens = <span class="value">array('true','false','yes','no','on','off','null')</span></h4>
+<p>[line 47]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_plugin_info">$_plugin_info = <span class="value">array()</span></h4>
+<p>[line 45]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_qstr_regexp">$_qstr_regexp = <span class="value">null</span></h4>
+<p>[line 50]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_reg_obj_regexp">$_reg_obj_regexp = <span class="value">null</span></h4>
+<p>[line 52]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_si_qstr_regexp">$_si_qstr_regexp = <span class="value">null</span></h4>
+<p>[line 49]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_strip_depth">$_strip_depth = <span class="value">0</span></h4>
+<p>[line 74]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_svar_regexp">$_svar_regexp = <span class="value">null</span></h4>
+<p>[line 58]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_var_bracket_regexp">$_var_bracket_regexp = <span class="value">null</span></h4>
+<p>[line 53]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_var_regexp">$_var_regexp = <span class="value">null</span></h4>
+<p>[line 61]</p>
+<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>access:</strong></td><td>private</td>
+</tr>
+</table>
+</div>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+</div>
+
+<div id="class_methods">
+<h3>Class Methods</h3>
+<div class="tags">
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodSmarty_Compiler">constructor Smarty_Compiler <span class="smalllinenumber">[line 81]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>Smarty_Compiler Smarty_Compiler(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>The class constructor.</p><!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_add_plugin">method _add_plugin <span class="smalllinenumber">[line 1950]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _add_plugin(
+string
+$type, string
+$name, [boolean?
+$delayed_loading = null])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>add plugin</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$type</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$name</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">boolean?</td>
+<td><strong><var>$delayed_loading</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_arg_list">method _compile_arg_list <span class="smalllinenumber">[line 1397]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _compile_arg_list(
+
+$type, 
+$name, 
+$attrs, 
+&$cache_code)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$type</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$name</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$attrs</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>&$cache_code</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_block_tag">method _compile_block_tag <span class="smalllinenumber">[line 665]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>boolean _compile_block_tag(
+string
+$tag_command, string
+$tag_args, string
+$tag_modifier, 
+&$output, string
+$output)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>compile block function tag</p>sets $output to compiled block function tag<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_command</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_args</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_modifier</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$output</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>&$output</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_capture_tag">method _compile_capture_tag <span class="smalllinenumber">[line 1204]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _compile_capture_tag(
+boolean
+$start, [string
+$tag_args = ''])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Compile {capture} .. {/capture} tags</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">boolean</td>
+<td><strong><var>$start</var></strong></td>
+<td>true if this is the {capture} tag</td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_args</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_compiler_tag">method _compile_compiler_tag <span class="smalllinenumber">[line 596]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>boolean _compile_compiler_tag(
+string
+$tag_command, string
+$tag_args, 
+&$output, string
+$output)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>compile the custom compiler tag</p>sets $output to the compiled custom compiler tag<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_command</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_args</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$output</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>&$output</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_custom_tag">method _compile_custom_tag <span class="smalllinenumber">[line 755]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _compile_custom_tag(
+string
+$tag_command, string
+$tag_args, string
+$tag_modifier, 
+&$output)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>compile custom function tag</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_command</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_args</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_modifier</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>&$output</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_file">method _compile_file <span class="smalllinenumber">[line 225]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>true _compile_file(
+string
+$resource_name, string
+$source_content, 
+&$compiled_content, string
+$compiled_content)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>compile a resource</p>sets $compiled_content to the compiled source<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$resource_name</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$source_content</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$compiled_content</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>&$compiled_content</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_foreach_start">method _compile_foreach_start <span class="smalllinenumber">[line 1143]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _compile_foreach_start(
+string
+$tag_args)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Compile {foreach ...} tag.</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_args</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_if_tag">method _compile_if_tag <span class="smalllinenumber">[line 1239]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _compile_if_tag(
+string
+$tag_args, [boolean
+$elseif = false])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Compile {if ...} tag</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_args</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">boolean</td>
+<td><strong><var>$elseif</var></strong></td>
+<td>if true, uses elseif instead of if</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_include_php_tag">method _compile_include_php_tag <span class="smalllinenumber">[line 1006]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _compile_include_php_tag(
+string
+$tag_args)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Compile {include ...} tag</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_args</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_include_tag">method _compile_include_tag <span class="smalllinenumber">[line 953]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _compile_include_tag(
+string
+$tag_args)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Compile {include ...} tag</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_args</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_insert_tag">method _compile_insert_tag <span class="smalllinenumber">[line 919]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _compile_insert_tag(
+string
+$tag_args)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Compile {insert ...} tag</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_args</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_plugin_call">method _compile_plugin_call <span class="smalllinenumber">[line 2125]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _compile_plugin_call(
+string
+$type, string
+$name)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>compiles call to plugin of type $type with name $name</p>returns a string containing the function-name or method call  without the paramter-list that would have follow to make the  call valid php-syntax<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$type</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$name</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_registered_object_tag">method _compile_registered_object_tag <span class="smalllinenumber">[line 827]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _compile_registered_object_tag(
+string
+$tag_command, array
+$attrs, string
+$tag_modifier)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>compile a registered object tag</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_command</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">array</td>
+<td><strong><var>$attrs</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_modifier</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_section_start">method _compile_section_start <span class="smalllinenumber">[line 1038]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _compile_section_start(
+string
+$tag_args)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Compile {section ...} tag</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_args</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_smarty_ref">method _compile_smarty_ref <span class="smalllinenumber">[line 1969]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _compile_smarty_ref(
+
+&$indexes, string
+$indexes)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Compiles references of type $smarty.foo</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$indexes</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>&$indexes</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_compile_tag">method _compile_tag <span class="smalllinenumber">[line 425]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _compile_tag(
+string
+$template_tag)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Compile a template tag</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$template_tag</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_expand_quoted_text">method _expand_quoted_text <span class="smalllinenumber">[line 1657]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _expand_quoted_text(
+string
+$var_expr)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>expand quoted text with embedded variables</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$var_expr</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_load_filters">method _load_filters <span class="smalllinenumber">[line 2149]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _load_filters(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>load pre- and post-filters</p><!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_parse_attrs">method _parse_attrs <span class="smalllinenumber">[line 1498]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>array _parse_attrs(
+string
+$tag_args)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Parse attribute string</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_args</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_parse_conf_var">method _parse_conf_var <span class="smalllinenumber">[line 1835]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _parse_conf_var(
+string
+$conf_var_expr)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>parse configuration variable expression into PHP code</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$conf_var_expr</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_parse_is_expr">method _parse_is_expr <span class="smalllinenumber">[line 1437]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>array _parse_is_expr(
+string
+$is_arg, array
+$tokens)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Parse is expression</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$is_arg</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">array</td>
+<td><strong><var>$tokens</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_parse_modifiers">method _parse_modifiers <span class="smalllinenumber">[line 1881]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _parse_modifiers(
+
+&$output, string
+$modifier_string, string
+$output)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>parse modifier chain into PHP code</p>sets $output to parsed modified chain<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$output</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$modifier_string</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>&$output</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_parse_parenth_args">method _parse_parenth_args <span class="smalllinenumber">[line 1818]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _parse_parenth_args(
+string
+$parenth_args)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>parse arguments in function call parenthesis</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$parenth_args</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_parse_section_prop">method _parse_section_prop <span class="smalllinenumber">[line 1856]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _parse_section_prop(
+string
+$section_prop_expr)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>parse section property expression into PHP code</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$section_prop_expr</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_parse_var">method _parse_var <span class="smalllinenumber">[line 1683]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _parse_var(
+string
+$var_expr, string
+$output)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>parse variable expression into PHP code</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$var_expr</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$output</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_parse_vars_props">method _parse_vars_props <span class="smalllinenumber">[line 1582]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _parse_vars_props(
+
+&$tokens, array
+$tokens)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>compile multiple variables and section properties tokens into  PHP code</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">array</td>
+<td><strong><var>$tokens</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>&$tokens</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_parse_var_props">method _parse_var_props <span class="smalllinenumber">[line 1597]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _parse_var_props(
+string
+$val, string
+$tag_attrs)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>compile single variable and section properties token into  PHP code</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$val</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$tag_attrs</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_pop_cacheable_state">method _pop_cacheable_state <span class="smalllinenumber">[line 2223]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _pop_cacheable_state(
+
+$type, 
+$name)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>check if the compilation changes from non-cacheable to  cacheable state with the end of the current plugin return  php-code to reflect the transition.</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$type</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$name</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_pop_tag">method _pop_tag <span class="smalllinenumber">[line 2248]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _pop_tag(
+string
+$close_tag)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>pop closing tag-name</p>raise an error if this stack-top doesn't match with the closing tag<h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>the opening tag's name</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$close_tag</var></strong></td>
+<td>the closing tag's name</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_push_cacheable_state">method _push_cacheable_state <span class="smalllinenumber">[line 2205]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _push_cacheable_state(
+
+$type, 
+$name)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>check if the compilation changes from cacheable to  non-cacheable state with the beginning of the current  plugin. return php-code to reflect the transition.</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$type</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$name</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_push_tag">method _push_tag <span class="smalllinenumber">[line 2237]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _push_tag(
+string
+$open_tag)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>push opening tag-name, file-name and line-number on the tag-stack</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$open_tag</var></strong></td>
+<td>the opening tag's name</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_quote_replace">method _quote_replace <span class="smalllinenumber">[line 2180]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string _quote_replace(
+string
+$string)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Quote subpattern references</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$string</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_syntax_error">method _syntax_error <span class="smalllinenumber">[line 2193]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _syntax_error(
+string
+$error_msg, [integer
+$error_type = E_USER_ERROR], [string
+$file = null], [integer
+$line = null])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>display Smarty syntax error</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type">string</td>
+<td><strong><var>$error_msg</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">integer</td>
+<td><strong><var>$error_type</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">string</td>
+<td><strong><var>$file</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type">integer</td>
+<td><strong><var>$line</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+</div>
+</div>
+
+
+</div><!-- End #content -->
+
+<div class="credit">
+<p>Documentation generated on Tue, 18 Aug 2009 22:35:11 +0900 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a></p>
+<p><a href="http://validator.w3.org/check/referer">
+XHTML 1.0</a></p>
+</div>
+
+</body>
+</html>

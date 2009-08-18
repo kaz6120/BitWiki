@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<title>Docs For Class Text_Diff_Renderer</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+<link rel="start" href="./index.html" title="API Documentation" />
+<link rev="made" href="mailto:webmaster@anti-spam.example.com" />
+</head>
+<body>
+
+<!-- Begin #header -->
+<div id="header">
+<h1 id="top">Text_Diff</h1>
+<div id="header-menu">
+<a href="../classtrees_Text_Diff.html" class="menu">class tree: Text_Diff</a> 
+<a href="../elementindex_Text_Diff.html" class="menu">index: Text_Diff</a> 
+<a href="../elementindex.html" class="menu">all elements</a>
+</div>
+</div>
+
+<!-- Begin #menu -->
+<div id="menu">
+<h2>Packages:</h2>
+<ul>
+<li><a href="../li_default.html">default</a></li>
+<li><a href="../li_BitWiki.html">BitWiki</a></li>
+<li><a href="../li_Cache_Lite.html">Cache_Lite</a></li>
+<li><a href="../li_HTTP_Request.html">HTTP_Request</a></li>
+<li><a href="../li_Net_CheckIP.html">Net_CheckIP</a></li>
+<li><a href="../li_Net_DNSBL.html">Net_DNSBL</a></li>
+<li><a href="../li_PEAR.html">PEAR</a></li>
+<li><a href="../li_Smarty.html">Smarty</a></li>
+<li><a href="../li_Text_Diff.html">Text_Diff</a></li>
+<li><a href="../li_Text_Highlighter.html">Text_Highlighter</a></li>
+<li><a href="../li_Trackback.html">Trackback</a></li>
+</ul>
+<h2>Files:</h2>
+<div class="package">
+<ul>
+<li><a href="../Text_Diff/_library---pear---Text---Diff.php.html">Diff.php</a></li><li><a href="../Text_Diff/_library---pear---Text---Diff3.php.html">Diff3.php</a></li><li><a href="../Text_Diff/_library---pear---Text---Diff---Renderer---inline.php.html">inline.php</a></li><li><a href="../Text_Diff/_library---pear---Text---Diff---Renderer.php.html">Renderer.php</a></li><li><a href="../Text_Diff/_library---pear---Text---Diff---Renderer---unified.php.html">unified.php</a></li></ul>
+</div>
+<h2>Classes:</h2>
+<div class="package">
+<ul>
+<li><a href="../Text_Diff/Text_Diff.html">Text_Diff</a></li><li><a href="../Text_Diff/Text_Diff3.html">Text_Diff3</a></li><li><a href="../Text_Diff/Text_Diff3_BlockBuilder.html">Text_Diff3_BlockBuilder</a></li><li><a href="../Text_Diff/Text_Diff3_Op.html">Text_Diff3_Op</a></li><li><a href="../Text_Diff/Text_Diff3_Op_copy.html">Text_Diff3_Op_copy</a></li><li><a href="../Text_Diff/Text_Diff_Engine_native.html">Text_Diff_Engine_native</a></li><li><a href="../Text_Diff/Text_Diff_Engine_xdiff.html">Text_Diff_Engine_xdiff</a></li><li><a href="../Text_Diff/Text_Diff_Op.html">Text_Diff_Op</a></li><li><a href="../Text_Diff/Text_Diff_Op_add.html">Text_Diff_Op_add</a></li><li><a href="../Text_Diff/Text_Diff_Op_change.html">Text_Diff_Op_change</a></li><li><a href="../Text_Diff/Text_Diff_Op_copy.html">Text_Diff_Op_copy</a></li><li><a href="../Text_Diff/Text_Diff_Op_delete.html">Text_Diff_Op_delete</a></li><li><a href="../Text_Diff/Text_Diff_Renderer.html">Text_Diff_Renderer</a></li><li><a href="../Text_Diff/Text_Diff_Renderer_inline.html">Text_Diff_Renderer_inline</a></li><li><a href="../Text_Diff/Text_Diff_Renderer_unified.html">Text_Diff_Renderer_unified</a></li><li><a href="../Text_Diff/Text_MappedDiff.html">Text_MappedDiff</a></li></ul>
+</div>
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+<div id="content-title">
+<h2>Class: Text_Diff_Renderer</h2>
+<p>Source Location: /library/pear/Text/Diff/Renderer.php</p>
+</div>
+
+
+<div id="overview">
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre>
+<div class="description">A class to render Diffs in different formats.</div>
+
+
+
+
+
+</div><!-- End #overview -->
+
+<div id="variables">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#var$_leading_context_lines">$_leading_context_lines</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#var$_trailing_context_lines">$_trailing_context_lines</a></li>
+  </ul>
+</div>
+
+
+<div id="methods">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#methodText_Diff_Renderer">Text_Diff_Renderer</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#methodgetParams">getParams</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#methodrender">render</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#method_added">_added</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#method_block">_block</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#method_blockHeader">_blockHeader</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#method_changed">_changed</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#method_context">_context</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#method_deleted">_deleted</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#method_endBlock">_endBlock</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#method_endDiff">_endDiff</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#method_lines">_lines</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#method_startBlock">_startBlock</a></li>
+    <li><a href="../Text_Diff/Text_Diff_Renderer.html#method_startDiff">_startDiff</a></li>
+  </ul>
+</div>
+
+
+
+<div class="child-classes">
+<h3>Child classes:</h3>
+<div class="tags">
+<dl>
+<dt><a href="../Text_Diff/Text_Diff_Renderer_unified.html">Text_Diff_Renderer_unified</a></dt>
+<dd>&quot;Unified&quot; diff renderer.</dd></dl>
+<dl>
+<dt><a href="../Text_Diff/Text_Diff_Renderer_inline.html">Text_Diff_Renderer_inline</a></dt>
+<dd>&quot;Inline&quot; diff renderer.</dd></dl>
+</div><!-- End .tags -->
+</div><!-- End .child-classes -->
+
+
+
+<div id="class_details">
+<h3>Class Details</h3>
+<div class="tags">
+[line 12]<br />
+<p>A class to render Diffs in different formats.</p>This class renders the diff in classic diff format. It is intended that  this class be customized via inheritance, to obtain fancier outputs.$Horde: framework/Text_Diff/Diff/Renderer.php,v 1.8 2005/05/02 19:44:53 chuck Exp $</div>
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div>
+
+<div id="class_vars">
+<h3>Class Variables</h3>
+<div class="tags">
+<h4 id="var$_leading_context_lines">$_leading_context_lines = <span class="value">0</span></h4>
+<p>[line 20]</p>
+<p>Number of leading context &quot;lines&quot; to preserve.</p>This should be left at zero for this class, but subclasses may want to  set this to other values.<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+<h4 id="var$_trailing_context_lines">$_trailing_context_lines = <span class="value">0</span></h4>
+<p>[line 28]</p>
+<p>Number of trailing context &quot;lines&quot; to preserve.</p>This should be left at zero for this class, but subclasses may want to  set this to other values.<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>Type:</strong></td>
+<td>mixed</td>
+</tr>
+</table>
+</div>
+<div class="top">[ <a href="#top">Top</a> ]</div>
+</div>
+</div>
+
+<div id="class_methods">
+<h3>Class Methods</h3>
+<div class="tags">
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodText_Diff_Renderer">constructor Text_Diff_Renderer <span class="smalllinenumber">[line 33]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>Text_Diff_Renderer Text_Diff_Renderer(
+[
+$params = array()])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Constructor.</p><!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$params</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodgetParams">method getParams <span class="smalllinenumber">[line 48]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>array getParams(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Get any renderer parameters.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>All parameters of this renderer object.</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="methodrender">method render <span class="smalllinenumber">[line 60]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>string render(
+<a href="../Text_Diff/Text_Diff.html">Text_Diff</a>
+$diff)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<p>Renders a diff.</p><h4>Tags:</h4>
+<div class="tags">
+<table summary="tags" class="tags">
+<tr>
+<td><strong>return:</strong></td><td>The formatted output.</td>
+</tr>
+</table>
+</div>
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"><a href="../Text_Diff/Text_Diff.html">Text_Diff</a></td>
+<td><strong><var>$diff</var></strong></td>
+<td>A Text_Diff object.</td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_added">method _added <span class="smalllinenumber">[line 187]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _added(
+
+$lines)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<!-- End docblock.tpl -->
+
+<p>Overridden in child classes as:<br />
+</p>
+<dl>
+<dt><a href="../Text_Diff/Text_Diff_Renderer_unified.html#method_added">Text_Diff_Renderer_unified::_added()</a></dt>
+<dd></dd>
+</dl>
+</p>
+<dl>
+<dt><a href="../Text_Diff/Text_Diff_Renderer_inline.html#method_added">Text_Diff_Renderer_inline::_added()</a></dt>
+<dd></dd>
+</dl>
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$lines</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_block">method _block <span class="smalllinenumber">[line 118]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _block(
+
+$xbeg, 
+$xlen, 
+$ybeg, 
+$ylen, 
+&$edits)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$xbeg</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$xlen</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$ybeg</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$ylen</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>&$edits</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_blockHeader">method _blockHeader <span class="smalllinenumber">[line 155]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _blockHeader(
+
+$xbeg, 
+$xlen, 
+$ybeg, 
+$ylen)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<!-- End docblock.tpl -->
+
+<p>Overridden in child classes as:<br />
+</p>
+<dl>
+<dt><a href="../Text_Diff/Text_Diff_Renderer_unified.html#method_blockHeader">Text_Diff_Renderer_unified::_blockHeader()</a></dt>
+<dd></dd>
+</dl>
+</p>
+<dl>
+<dt><a href="../Text_Diff/Text_Diff_Renderer_inline.html#method_blockHeader">Text_Diff_Renderer_inline::_blockHeader()</a></dt>
+<dd></dd>
+</dl>
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$xbeg</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$xlen</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$ybeg</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$ylen</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_changed">method _changed <span class="smalllinenumber">[line 197]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _changed(
+
+$orig, 
+$final)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<!-- End docblock.tpl -->
+
+<p>Overridden in child classes as:<br />
+</p>
+<dl>
+<dt><a href="../Text_Diff/Text_Diff_Renderer_unified.html#method_changed">Text_Diff_Renderer_unified::_changed()</a></dt>
+<dd></dd>
+</dl>
+</p>
+<dl>
+<dt><a href="../Text_Diff/Text_Diff_Renderer_inline.html#method_changed">Text_Diff_Renderer_inline::_changed()</a></dt>
+<dd></dd>
+</dl>
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$orig</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$final</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_context">method _context <span class="smalllinenumber">[line 182]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _context(
+
+$lines)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<!-- End docblock.tpl -->
+
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$lines</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_deleted">method _deleted <span class="smalllinenumber">[line 192]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _deleted(
+
+$lines)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<!-- End docblock.tpl -->
+
+<p>Overridden in child classes as:<br />
+</p>
+<dl>
+<dt><a href="../Text_Diff/Text_Diff_Renderer_unified.html#method_deleted">Text_Diff_Renderer_unified::_deleted()</a></dt>
+<dd></dd>
+</dl>
+</p>
+<dl>
+<dt><a href="../Text_Diff/Text_Diff_Renderer_inline.html#method_deleted">Text_Diff_Renderer_inline::_deleted()</a></dt>
+<dd></dd>
+</dl>
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$lines</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_endBlock">method _endBlock <span class="smalllinenumber">[line 172]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _endBlock(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_endDiff">method _endDiff <span class="smalllinenumber">[line 150]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _endDiff(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_lines">method _lines <span class="smalllinenumber">[line 177]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _lines(
+
+$lines, [
+$prefix = ' '])</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<!-- End docblock.tpl -->
+
+<p>Overridden in child classes as:<br />
+</p>
+<dl>
+<dt><a href="../Text_Diff/Text_Diff_Renderer_inline.html#method_lines">Text_Diff_Renderer_inline::_lines()</a></dt>
+<dd></dd>
+</dl>
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$lines</var></strong></td>
+<td></td>
+</tr>
+<tr>
+<td class="type"></td>
+<td><strong><var>$prefix</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_startBlock">method _startBlock <span class="smalllinenumber">[line 167]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _startBlock(
+
+$header)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<!-- End docblock.tpl -->
+
+<p>Overridden in child classes as:<br />
+</p>
+<dl>
+<dt><a href="../Text_Diff/Text_Diff_Renderer_inline.html#method_startBlock">Text_Diff_Renderer_inline::_startBlock()</a></dt>
+<dd></dd>
+</dl>
+
+<h4>Parameters:</h4>
+<div class="tags">
+<table summary="Parameters" class="tags">
+<tr>
+<td class="type"></td>
+<td><strong><var>$header</var></strong></td>
+<td></td>
+</tr>
+</table>
+</div><!-- End .tags -->
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+
+<!-- Begin .method -->
+<div class="method">
+<h3 id="method_startDiff">method _startDiff <span class="smalllinenumber">[line 145]</span></h3>
+<!-- Begin .code -->
+<div class="code">
+<code>void _startDiff(
+)</code>
+</div><!-- End .code -->
+
+<!-- Begin docblock.tpl -->
+<!-- End docblock.tpl -->
+
+
+<p class="top">[ <a href="#top">Top</a> ]</p>
+</div><!-- End .method -->
+
+</div>
+</div>
+
+
+</div><!-- End #content -->
+
+<div class="credit">
+<p>Documentation generated on Tue, 18 Aug 2009 22:35:09 +0900 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a></p>
+<p><a href="http://validator.w3.org/check/referer">
+XHTML 1.0</a></p>
+</div>
+
+</body>
+</html>
