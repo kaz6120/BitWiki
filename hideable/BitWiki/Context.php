@@ -1,6 +1,8 @@
 <?php
-/* 
- * $Id: parser.inc.php,v 1.11 2005/11/29 08:41:31 youka Exp $
+/**
+ * Parser
+ *
+ * based on parser.inc.php,v 1.11 2005/11/29 08:41:31 youka 
  *
  * @version 9.8.11
  */

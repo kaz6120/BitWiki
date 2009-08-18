@@ -54,7 +54,7 @@ define('FUZZYLINK_SPELLMISSMINSIZE', 5);
 
 // Core php files
 define('HIDEABLE_DIR', './hideable/');
-
+//define('HIDEABLE_DIR', './hideable/BitWiki/');
 // SQLite database file 
 // (Please don't forget to set permissions read/writable
 define('DATA_DIR', HIDEABLE_DIR . 'data/');
@@ -82,6 +82,7 @@ define('COMPILEDTPL_DIR', HIDEABLE_DIR . 'templates_c/');
 
 
 
-require_once(HIDEABLE_DIR . 'bitwiki.inc.php');
+//require_once(HIDEABLE_DIR . 'bitwiki.inc.php');
+require_once(HIDEABLE_DIR . 'BitWiki.php');
 
 BitWiki::main();

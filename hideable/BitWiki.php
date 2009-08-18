@@ -5,7 +5,7 @@
  * BitWiki is based on kinowiki.inc.php,v 1.6 2005/09/06 01:14:55
  *
  * @since   9.8.11
- * @version 9.8.11
+ * @version 9.8.18 
  */
 
 /**
@@ -25,31 +25,33 @@ define('STARTTIME', mtime());
 ini_set('include_path', 'library/' . PATH_SEPARATOR . ini_get('include_path'));
 ini_set('include_path', 'library/pear/' . PATH_SEPARATOR . ini_get('include_path'));
 
-//require_once('errorhandler.inc.php');
-require_once('exception.inc.php');
-require_once('func.inc.php');
-require_once('database.inc.php');
-require_once('notifier.inc.php');
-require_once('attach.inc.php');
-require_once('autolink.inc.php');
-require_once('backlink.inc.php');
-require_once('charentityref.inc.php');
-require_once('controller.inc.php');
-require_once('command.inc.php');
-require_once('diff.inc.php');
-require_once('fuzzyfunc.inc.php');
-require_once('fuzzylink.inc.php');
-require_once('htmlconverter.inc.php');
-require_once('itaimoji.inc.php');
-require_once('mail.inc.php');
-require_once('page.inc.php');
-require_once('parser.inc.php');
-require_once('plugin.inc.php');
-require_once('renderer.inc.php');
-require_once('search.inc.php');
-require_once('smarty.inc.php');
-require_once('vars.inc.php');
-require_once('version.inc.php');
+// Classes
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/Exception.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/DataBase.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/Notifier.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/Attach.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/AutoLink.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/BackLink.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/Controller.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/Command.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/DiffRenderer.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/FuzzyFunc.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/FuzzyLink.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/HtmlConverter.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/Mail.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/Page.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/Plugin.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/Renderer.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/Search.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/MySmarty.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/Vars.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/Context.php';
+
+// Functions
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/itaimoji.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/functions.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/entityReferences.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'BitWiki/version.php';
 
 
 class BitWiki

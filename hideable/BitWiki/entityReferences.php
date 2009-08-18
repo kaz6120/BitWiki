@@ -1,6 +1,8 @@
 <?php
-/*
- * $Id: charentityref.inc.php,v 1.2 2005/06/15 12:16:14 youka Exp $
+/**
+ * characterEntityReferences.php
+ *
+ * based on charentityref.inc.php,v 1.2 2005/06/15 12:16:14 youka 
  *
  * http://www.w3.org/TR/1999/REC-html401-19991224/sgml/entities.html
  */
