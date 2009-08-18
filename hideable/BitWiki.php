@@ -2,10 +2,18 @@
 /* 
  * BitWiki
  * 
+ * Lightweight PHP and SQLite Wiki Engine
+ *
  * BitWiki is based on kinowiki.inc.php,v 1.6 2005/09/06 01:14:55
  *
- * @since   9.8.11
- * @version 9.8.18 
+ * @package   BitWiki
+ * @author    youka
+ * @author    kaz <kaz6120@gmail.com>
+ * @copyright 2009 BitWiki Project
+ * @link      http://github.com/kaz6120/BitWiki/tree/master
+ * @license   http://www.opensource.org/licenses/bsd-license.php  New BSD License
+ * @since     5.9.6
+ * @version   9.8.18 
  */
 
 /**
